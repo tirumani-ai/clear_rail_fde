@@ -1,0 +1,32 @@
+{
+  "application_id": "APP-26012",
+  "submitted_on": "2026-11-12",
+  "legal_name": "Summitview Solutions Ltd",
+  "trading_name": "Summitview",
+  "registration_number": "38818470",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2023-03-09",
+  "industry": "Apparel retail (online)",
+  "expected_monthly_volume_usd": 50000,
+  "corridors": [
+    "TR",
+    "MX"
+  ],
+  "directors": [
+    {
+      "name": "Jun-ho Pak"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Mei Reddy",
+      "pct": 25
+    },
+    {
+      "name": "Summitview Holdings Ltd",
+      "pct": 75
+    }
+  ],
+  "contact_email": "finance@summitview.example"
+}

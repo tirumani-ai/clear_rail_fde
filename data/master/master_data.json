@@ -1,0 +1,359 @@
+{
+  "provider": "Corridor Payments Ltd",
+  "generated_on": "2026-11-16",
+  "clients": [
+    {
+      "client_id": "CL-1001",
+      "legal_name": "Blue Heron Home Goods Inc",
+      "country": "US",
+      "address": "1450 Peachtree Industrial Blvd, Duluth, GA 30096, USA",
+      "known_payers": [
+        {
+          "name": "Blue Heron Home Goods Inc",
+          "account": "XXXX5260",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1002",
+      "legal_name": "Granite Peak Outdoor LLC",
+      "country": "US",
+      "address": "88 Foundry Road, Denver, CO 80216, USA",
+      "known_payers": [
+        {
+          "name": "Granite Peak Outdoor LLC",
+          "account": "XXXX1815",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1003",
+      "legal_name": "Lakeside Medical Supply Co",
+      "country": "US",
+      "address": "300 Harbor Drive, Cleveland, OH 44114, USA",
+      "known_payers": [
+        {
+          "name": "Lakeside Medical Supply Co",
+          "account": "XXXX9083",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1004",
+      "legal_name": "Tallgrass Apparel Inc",
+      "country": "US",
+      "address": "2101 Commerce St, Dallas, TX 75201, USA",
+      "known_payers": [
+        {
+          "name": "Tallgrass Apparel Inc",
+          "account": "XXXX0166",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1005",
+      "legal_name": "Copperleaf Kitchenware Ltd",
+      "country": "GB",
+      "address": "Unit 4, Riverside Park, Leeds LS11 5DN, UK",
+      "known_payers": [
+        {
+          "name": "Copperleaf Kitchenware Ltd",
+          "account": "XXXX1318",
+          "bank": "Northern Counties Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1006",
+      "legal_name": "Northwind Auto Parts Inc",
+      "country": "US",
+      "address": "7700 Lincoln Ave, Detroit, MI 48202, USA",
+      "known_payers": [
+        {
+          "name": "Northwind Auto Parts Inc",
+          "account": "XXXX6091",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1007",
+      "legal_name": "Sunbeam Solar Systems LLC",
+      "country": "US",
+      "address": "45 Desert Palm Way, Phoenix, AZ 85004, USA",
+      "known_payers": [
+        {
+          "name": "Sunbeam Solar Systems LLC",
+          "account": "XXXX3909",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    },
+    {
+      "client_id": "CL-1008",
+      "legal_name": "Oakridge Furniture Imports Inc",
+      "country": "US",
+      "address": "910 Market Lane, Charlotte, NC 28202, USA",
+      "known_payers": [
+        {
+          "name": "Oakridge Furniture Imports Inc",
+          "account": "XXXX9603",
+          "bank": "First Coastal Bank"
+        }
+      ]
+    }
+  ],
+  "beneficiaries": [
+    {
+      "supplier_id": "SP-2001",
+      "legal_name": "Shakti Textiles Pvt Ltd",
+      "country": "IN",
+      "address": "Plot 22, Ring Road, Surat, Gujarat 395002, India",
+      "invoice_currency": "INR",
+      "bank": {
+        "bank_name": "Deccan Commerce Bank",
+        "bank_country": "IN",
+        "swift": "DCBKIN2X",
+        "account_number": "82462819482199",
+        "ifsc": "DCBK0351819"
+      }
+    },
+    {
+      "supplier_id": "SP-2002",
+      "legal_name": "Godavari Engineering Works Pvt Ltd",
+      "country": "IN",
+      "address": "14 Industrial Estate, Rajahmundry, AP 533101, India",
+      "invoice_currency": "USD",
+      "bank": {
+        "bank_name": "Deccan Commerce Bank",
+        "bank_country": "IN",
+        "swift": "DCBKIN2X",
+        "account_number": "93786579754323",
+        "ifsc": "DCBK0194875"
+      }
+    },
+    {
+      "supplier_id": "SP-2003",
+      "legal_name": "Nilgiri Spice Exports Pvt Ltd",
+      "country": "IN",
+      "address": "8 Spice Market Rd, Kochi, Kerala 682002, India",
+      "invoice_currency": "INR",
+      "bank": {
+        "bank_name": "Malabar Trade Bank",
+        "bank_country": "IN",
+        "swift": "MLTBINMM",
+        "account_number": "49118625276018",
+        "ifsc": "MLTB0955597"
+      }
+    },
+    {
+      "supplier_id": "SP-2004",
+      "legal_name": "Ningbo Brightway Housewares Co Ltd",
+      "country": "CN",
+      "address": "No. 18 Jiangnan Road, Ningbo, Zhejiang, China",
+      "invoice_currency": "USD",
+      "bank": {
+        "bank_name": "Eastern Harbour Bank",
+        "bank_country": "CN",
+        "swift": "EHBKCNMM",
+        "account_number": "114710497465"
+      }
+    },
+    {
+      "supplier_id": "SP-2005",
+      "legal_name": "Shenzhen Lumen Solar Tech Co Ltd",
+      "country": "CN",
+      "address": "Bldg 5, Hi-Tech Park, Shenzhen, Guangdong, China",
+      "invoice_currency": "CNY",
+      "bank": {
+        "bank_name": "Eastern Harbour Bank",
+        "bank_country": "CN",
+        "swift": "EHBKCN2X",
+        "account_number": "752917034236"
+      }
+    },
+    {
+      "supplier_id": "SP-2006",
+      "legal_name": "Talleres Monterrey SA de CV",
+      "country": "MX",
+      "address": "Av. Constitucion 1200, Monterrey, NL 64000, Mexico",
+      "invoice_currency": "MXN",
+      "bank": {
+        "bank_name": "Banco Sierra Madre",
+        "bank_country": "MX",
+        "swift": "BSMXMXMM",
+        "clabe": "712768426846563216"
+      }
+    },
+    {
+      "supplier_id": "SP-2007",
+      "legal_name": "Rheinwerk Komponenten GmbH",
+      "country": "DE",
+      "address": "Industriestrasse 9, 50667 Koeln, Germany",
+      "invoice_currency": "EUR",
+      "bank": {
+        "bank_name": "Rheinland Handelsbank",
+        "bank_country": "DE",
+        "swift": "RHHBDE3M",
+        "iban": "DE68233079244026859952"
+      }
+    },
+    {
+      "supplier_id": "SP-2008",
+      "legal_name": "Saigon Bamboo Crafts JSC",
+      "country": "VN",
+      "address": "45 Le Loi St, District 1, Ho Chi Minh City, Vietnam",
+      "invoice_currency": "USD",
+      "bank": {
+        "bank_name": "Mekong Commercial Bank",
+        "bank_country": "VN",
+        "swift": "MKCBVN2X",
+        "account_number": "786666176031"
+      }
+    },
+    {
+      "supplier_id": "SP-2009",
+      "legal_name": "Anatolia Ceramics AS",
+      "country": "TR",
+      "address": "Organize Sanayi Bolgesi 3, Kutahya, Turkey",
+      "invoice_currency": "EUR",
+      "bank": {
+        "bank_name": "Bosphorus Trade Bank",
+        "bank_country": "TR",
+        "swift": "BSPTTR3M",
+        "account_number": "721590109281"
+      }
+    },
+    {
+      "supplier_id": "SP-2010",
+      "legal_name": "Pennine Software Services Ltd",
+      "country": "GB",
+      "address": "22 Mill Lane, Manchester M1 2AB, UK",
+      "invoice_currency": "GBP",
+      "bank": {
+        "bank_name": "Northern Counties Bank",
+        "bank_country": "GB",
+        "swift": "NCBKGBBB",
+        "iban": "GB48NCBK90139624595711"
+      }
+    }
+  ],
+  "purpose_codes": {
+    "GDI": "Payment for imported goods (needs invoice + transport or customs doc)",
+    "ADV": "Advance payment for goods (needs proforma invoice or contract)",
+    "SVC": "Payment for services (needs service invoice or contract)",
+    "CTR": "Contractor or freelancer fees",
+    "SAL": "Payroll / salary"
+  },
+  "restricted_hs_prefixes": {
+    "9306": "Ammunition",
+    "9301": "Military weapons",
+    "2844": "Radioactive material",
+    "8401": "Nuclear reactors and parts",
+    "9302": "Revolvers and pistols"
+  },
+  "watchlist": {
+    "entities": [
+      "Black Tide Maritime Holdings",
+      "Crescent Ridge Trading FZE",
+      "Volkov Arms Logistics"
+    ],
+    "people": [
+      "Dmitri Varenko",
+      "Selim Karadag",
+      "Jun-ho Pak"
+    ],
+    "vessels": [
+      "MV Northern Lantern",
+      "MV Silent Marlin"
+    ],
+    "ports": [
+      "Port Kestrel"
+    ]
+  },
+  "corridor_rules": {
+    "IN": {
+      "currencies": [
+        "INR",
+        "USD"
+      ],
+      "routing": "IFSC",
+      "purpose_required": true,
+      "row_limit_usd": 250000
+    },
+    "MX": {
+      "currencies": [
+        "MXN",
+        "USD"
+      ],
+      "routing": "CLABE",
+      "purpose_required": false,
+      "row_limit_usd": 200000
+    },
+    "GB": {
+      "currencies": [
+        "GBP"
+      ],
+      "routing": "SORT_CODE+IBAN",
+      "purpose_required": false,
+      "row_limit_usd": 500000
+    },
+    "DE": {
+      "currencies": [
+        "EUR"
+      ],
+      "routing": "IBAN",
+      "purpose_required": false,
+      "row_limit_usd": 500000
+    },
+    "FR": {
+      "currencies": [
+        "EUR"
+      ],
+      "routing": "IBAN",
+      "purpose_required": false,
+      "row_limit_usd": 500000
+    },
+    "US": {
+      "currencies": [
+        "USD"
+      ],
+      "routing": "ABA",
+      "purpose_required": false,
+      "row_limit_usd": 500000
+    }
+  },
+  "fx_rates_per_usd": {
+    "USD": 1.0,
+    "INR": 84.2,
+    "CNY": 7.18,
+    "MXN": 18.9,
+    "EUR": 0.92,
+    "GBP": 0.79
+  },
+  "approval_limits_usd": {
+    "payments_ops_analyst": 100000,
+    "payments_ops_team_lead": 1000000,
+    "compliance_officer": null
+  },
+  "tolerances": {
+    "uc1_name_match_min": 0.85,
+    "uc1_invoice_max_age_days": 365,
+    "uc2_name_match_min": 0.9,
+    "uc2_address_proof_max_age_days": 90,
+    "uc2_ubo_threshold_pct": 25,
+    "uc3_fee_short_usd": 50,
+    "uc3_fee_short_pct": 0.1
+  },
+  "high_risk_industries": [
+    "Cryptocurrency exchange",
+    "Arms and defence trading",
+    "Online gambling",
+    "Precious metals dealer",
+    "Money services business"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "application_id": "APP-26008",
+  "submitted_on": "2026-11-12",
+  "legal_name": "Northgate Imports Ltd",
+  "trading_name": "Northgate",
+  "registration_number": "92210966",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2025-04-09",
+  "industry": "Wholesale of household goods",
+  "expected_monthly_volume_usd": 400000,
+  "corridors": [
+    "VN",
+    "CN"
+  ],
+  "directors": [
+    {
+      "name": "Aarav Adeyemi"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Aarav Adeyemi",
+      "pct": 40
+    },
+    {
+      "name": "Northgate Holdings Ltd",
+      "pct": 60
+    }
+  ],
+  "contact_email": "finance@northgate.example"
+}

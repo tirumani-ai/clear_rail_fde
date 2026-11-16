@@ -1,0 +1,38 @@
+{
+  "application_id": "APP-26004",
+  "submitted_on": "2026-11-16",
+  "legal_name": "Bluestone Trading Ltd",
+  "trading_name": "Bluestone",
+  "registration_number": "63055826",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2019-08-12",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 400000,
+  "corridors": [
+    "TR",
+    "VN"
+  ],
+  "directors": [
+    {
+      "name": "Elena Chen"
+    },
+    {
+      "name": "Vikram Torres"
+    },
+    {
+      "name": "Tom Fischer"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Elena Chen",
+      "pct": 40
+    },
+    {
+      "name": "Vikram Torres",
+      "pct": 50
+    }
+  ],
+  "contact_email": "finance@bluestone.example"
+}

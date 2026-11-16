@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611026",
+  "submitted_at": "2026-11-15T08:27:00Z",
+  "client_id": "CL-1008",
+  "client_name": "Oakridge Furniture Imports Inc",
+  "beneficiary": {
+    "name": "Shakti Textiles Pvt Ltd",
+    "address": "Plot 22, Ring Road, Surat, Gujarat 395002, India",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKIN2X",
+      "account_number": "82462819482199",
+      "ifsc": "DCBK0351819"
+    }
+  },
+  "amount": 427239.22,
+  "currency": "INR",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2001/2026/8075"
+  ],
+  "remittance_info": "INV 2001/2026/8075",
+  "requested_value_date": "2026-11-18"
+}
