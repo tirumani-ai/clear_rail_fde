@@ -1,0 +1,1067 @@
+[
+  {
+    "case_id": "APP-26001",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Redwood Crest Trading Ltd",
+      "registration_number": "10385302",
+      "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
+      "directors_on_form": [
+        "Grace Lin",
+        "Elena Becker"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Grace Lin",
+          "pct": 50
+        },
+        {
+          "name": "Elena Becker",
+          "pct": 40
+        },
+        {
+          "name": "Redwood Crest Holdings Ltd",
+          "pct": 10
+        }
+      ],
+      "industry": "Wholesale of household goods"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "APP-26002",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Amberfield Imports Ltd",
+      "registration_number": "76644552",
+      "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+      "directors_on_form": [
+        "Sara Fischer",
+        "Carlos Kowalski",
+        "Lena Iyer"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Sara Fischer",
+          "pct": 40
+        },
+        {
+          "name": "Carlos Kowalski",
+          "pct": 50
+        },
+        {
+          "name": "Lena Iyer",
+          "pct": 10
+        }
+      ],
+      "industry": "Arms and defence trading"
+    },
+    "planted_problem": "HIGH_RISK_INDUSTRY",
+    "expected_codes": [
+      "HIGH_RISK_INDUSTRY"
+    ],
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "APP-26003",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Highmoor Solutions Ltd",
+      "registration_number": "18697858",
+      "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
+      "directors_on_form": [
+        "Diego Wagner",
+        "Vikram Lin",
+        "Vikram Tanaka"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Diego Wagner",
+          "pct": 25
+        },
+        {
+          "name": "Vikram Lin",
+          "pct": 25
+        },
+        {
+          "name": "Vikram Tanaka",
+          "pct": 25
+        },
+        {
+          "name": "Highmoor Holdings Ltd",
+          "pct": 25
+        }
+      ],
+      "industry": "Import of auto parts"
+    },
+    "planted_problem": "DIRECTOR_MISMATCH",
+    "expected_codes": [
+      "DIRECTOR_MISMATCH"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26004",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Bluestone Trading Ltd",
+      "registration_number": "63055826",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Elena Chen",
+        "Vikram Torres",
+        "Tom Fischer"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Elena Chen",
+          "pct": 40
+        },
+        {
+          "name": "Vikram Torres",
+          "pct": 50
+        },
+        {
+          "name": "Tom Fischer",
+          "pct": 10
+        }
+      ],
+      "industry": "Import of auto parts"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "APP-26005",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Tidewater Supplies Ltd",
+      "registration_number": "75835090",
+      "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+      "directors_on_form": [
+        "Yuki Iyer"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Yuki Iyer",
+          "pct": 25
+        },
+        {
+          "name": "Tidewater Holdings Ltd",
+          "pct": 75
+        }
+      ],
+      "industry": "Import of auto parts"
+    },
+    "planted_problem": "DOC_EXPIRED",
+    "expected_codes": [
+      "DOC_EXPIRED"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26006",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Cedarline Trading Ltd",
+      "registration_number": "10470848",
+      "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+      "directors_on_form": [
+        "Kenji Kowalski"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Kenji Kowalski",
+          "pct": 50
+        },
+        {
+          "name": "Cedarline Holdings Ltd",
+          "pct": 50
+        }
+      ],
+      "industry": "Apparel retail (online)"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "APP-26007",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Meadowgate Supplies Ltd",
+      "registration_number": "37960685",
+      "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+      "directors_on_form": [
+        "Lena Iyer",
+        "Anita Rao",
+        "Jonas Torres"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Lena Iyer",
+          "pct": 50
+        },
+        {
+          "name": "Anita Rao",
+          "pct": 30
+        },
+        {
+          "name": "Jonas Torres",
+          "pct": 20
+        }
+      ],
+      "industry": "Medical equipment distribution"
+    },
+    "planted_problem": "REG_NUMBER_MISMATCH",
+    "expected_codes": [
+      "REG_NUMBER_MISMATCH"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26008",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Northgate Imports Ltd",
+      "registration_number": "92210966",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Aarav Adeyemi"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Aarav Adeyemi",
+          "pct": 40
+        },
+        {
+          "name": "Northgate Holdings Ltd",
+          "pct": 60
+        }
+      ],
+      "industry": "Wholesale of household goods"
+    },
+    "planted_problem": "MISSING_DOCUMENT",
+    "expected_codes": [
+      "MISSING_DOCUMENT"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26009",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Ironvale Solutions Ltd",
+      "registration_number": "89822539",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Diego Brennan",
+        "Yuki Wagner",
+        "Lucia Mehta"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Diego Brennan",
+          "pct": 25
+        },
+        {
+          "name": "Yuki Wagner",
+          "pct": 25
+        },
+        {
+          "name": "Lucia Mehta",
+          "pct": 50
+        }
+      ],
+      "industry": "Apparel retail (online)"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "APP-26010",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Brightline Solutions Ltd",
+      "registration_number": "49677040",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Aarav Torres",
+        "Omar Wagner",
+        "Felix Becker"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Aarav Torres",
+          "pct": 30
+        },
+        {
+          "name": "Omar Wagner",
+          "pct": 40
+        },
+        {
+          "name": "Felix Becker",
+          "pct": 30
+        }
+      ],
+      "industry": "Wholesale of household goods"
+    },
+    "planted_problem": "BANK_HOLDER_MISMATCH",
+    "expected_codes": [
+      "BANK_HOLDER_MISMATCH"
+    ],
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "APP-26011",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation_scan.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Kestrel Bay Trading Ltd",
+      "registration_number": "14620689",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Vikram Nasser",
+        "Yuki Lin",
+        "Carlos Lin"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Vikram Nasser",
+          "pct": 30
+        },
+        {
+          "name": "Yuki Lin",
+          "pct": 40
+        },
+        {
+          "name": "Carlos Lin",
+          "pct": 30
+        }
+      ],
+      "industry": "Food ingredients trading"
+    },
+    "planted_problem": "ADDRESS_MISMATCH",
+    "expected_codes": [
+      "ADDRESS_MISMATCH"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26012",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Summitview Solutions Ltd",
+      "registration_number": "38818470",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Jun-ho Pak"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Mei Reddy",
+          "pct": 25
+        },
+        {
+          "name": "Summitview Holdings Ltd",
+          "pct": 75
+        }
+      ],
+      "industry": "Apparel retail (online)"
+    },
+    "planted_problem": "SCREENING_HIT",
+    "expected_codes": [
+      "SCREENING_HIT"
+    ],
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "APP-26013",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Larkspur Supplies Ltd",
+      "registration_number": "44522530",
+      "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+      "directors_on_form": [
+        "Kenji Reddy",
+        "Hannah Wagner"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Kenji Reddy",
+          "pct": 60
+        },
+        {
+          "name": "Hannah Wagner",
+          "pct": 30
+        },
+        {
+          "name": "Larkspur Holdings Ltd",
+          "pct": 10
+        }
+      ],
+      "industry": "Import of auto parts"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "APP-26014",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Foxglove Supplies Ltd",
+      "registration_number": "40677423",
+      "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+      "directors_on_form": [
+        "Hannah Adeyemi",
+        "Lena Pillai",
+        "Lucia Reddy"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Hannah Adeyemi",
+          "pct": 18
+        },
+        {
+          "name": "Lena Pillai",
+          "pct": 35
+        },
+        {
+          "name": "Lucia Reddy",
+          "pct": 18
+        },
+        {
+          "name": "Vikram Fischer",
+          "pct": 29
+        }
+      ],
+      "industry": "Furniture import"
+    },
+    "planted_problem": "UBO_UNDECLARED",
+    "expected_codes": [
+      "UBO_UNDECLARED"
+    ],
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "APP-26015",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "director_id_2.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Harborpoint Supplies Ltd",
+      "registration_number": "78960007",
+      "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
+      "directors_on_form": [
+        "Vikram Rao",
+        "Omar Haddad"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Vikram Rao",
+          "pct": 50
+        },
+        {
+          "name": "Omar Haddad",
+          "pct": 50
+        }
+      ],
+      "industry": "Medical equipment distribution"
+    },
+    "planted_problem": "LEGAL_NAME_MISMATCH",
+    "expected_codes": [
+      "LEGAL_NAME_MISMATCH"
+    ],
+    "expected_route": "ONBOARDING_ANALYST"
+  },
+  {
+    "case_id": "APP-26016",
+    "use_case": "UC2",
+    "files": [
+      {
+        "file": "application_form.json",
+        "doc_type": "APPLICATION_FORM",
+        "format": "json"
+      },
+      {
+        "file": "certificate_of_incorporation.pdf",
+        "doc_type": "CERTIFICATE_OF_INCORPORATION",
+        "format": "pdf"
+      },
+      {
+        "file": "shareholder_register.xlsx",
+        "doc_type": "SHAREHOLDER_REGISTER",
+        "format": "excel"
+      },
+      {
+        "file": "director_id_1.png",
+        "doc_type": "DIRECTOR_ID",
+        "format": "image"
+      },
+      {
+        "file": "proof_of_address.pdf",
+        "doc_type": "PROOF_OF_ADDRESS",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_reference_letter.pdf",
+        "doc_type": "BANK_REFERENCE_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "legal_name": "Silverbirch Supplies Ltd",
+      "registration_number": "75084754",
+      "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
+      "directors_on_form": [
+        "Lakshmi Kapoor"
+      ],
+      "owners_in_register": [
+        {
+          "name": "Lakshmi Kapoor",
+          "pct": 30
+        },
+        {
+          "name": "Silverbirch Holdings Ltd",
+          "pct": 70
+        }
+      ],
+      "industry": "Furniture import"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "expected_route": "AUTO_CLEAR"
+  }
+]

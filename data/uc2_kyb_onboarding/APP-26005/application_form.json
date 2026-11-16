@@ -1,0 +1,32 @@
+{
+  "application_id": "APP-26005",
+  "submitted_on": "2026-11-11",
+  "legal_name": "Tidewater Supplies Ltd",
+  "trading_name": "Tidewater",
+  "registration_number": "75835090",
+  "country": "GB",
+  "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+  "incorporation_date": "2022-05-26",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 120000,
+  "corridors": [
+    "TR",
+    "CN"
+  ],
+  "directors": [
+    {
+      "name": "Yuki Iyer"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Yuki Iyer",
+      "pct": 25
+    },
+    {
+      "name": "Tidewater Holdings Ltd",
+      "pct": 75
+    }
+  ],
+  "contact_email": "finance@tidewater.example"
+}

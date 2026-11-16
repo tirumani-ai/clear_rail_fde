@@ -1,0 +1,371 @@
+[
+  {
+    "deal_ref": "DL-2026-40001",
+    "client_id": "CL-1006",
+    "sell_currency": "USD",
+    "amount_due": 365401.02,
+    "due_date": "2026-11-16",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40002",
+    "client_id": "CL-1003",
+    "sell_currency": "USD",
+    "amount_due": 22982.47,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40003",
+    "client_id": "CL-1002",
+    "sell_currency": "USD",
+    "amount_due": 388866.99,
+    "due_date": "2026-11-14",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40004",
+    "client_id": "CL-1004",
+    "sell_currency": "USD",
+    "amount_due": 133594.77,
+    "due_date": "2026-11-14",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40005",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 373412.39,
+    "due_date": "2026-11-14",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40006",
+    "client_id": "CL-1008",
+    "sell_currency": "USD",
+    "amount_due": 186448.53,
+    "due_date": "2026-11-14",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40007",
+    "client_id": "CL-1008",
+    "sell_currency": "USD",
+    "amount_due": 358042.4,
+    "due_date": "2026-11-14",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40008",
+    "client_id": "CL-1005",
+    "sell_currency": "GBP",
+    "amount_due": 64386.25,
+    "due_date": "2026-11-16",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40009",
+    "client_id": "CL-1007",
+    "sell_currency": "USD",
+    "amount_due": 249067.29,
+    "due_date": "2026-11-16",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40010",
+    "client_id": "CL-1002",
+    "sell_currency": "USD",
+    "amount_due": 10745.12,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40011",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 356749.93,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40012",
+    "client_id": "CL-1002",
+    "sell_currency": "USD",
+    "amount_due": 101925.62,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40013",
+    "client_id": "CL-1003",
+    "sell_currency": "USD",
+    "amount_due": 392188.98,
+    "due_date": "2026-11-13",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40014",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 171040.24,
+    "due_date": "2026-11-15",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40015",
+    "client_id": "CL-1005",
+    "sell_currency": "GBP",
+    "amount_due": 389203.12,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40016",
+    "client_id": "CL-1006",
+    "sell_currency": "USD",
+    "amount_due": 17013.29,
+    "due_date": "2026-11-16",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40017",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 372542.26,
+    "due_date": "2026-11-13",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40018",
+    "client_id": "CL-1002",
+    "sell_currency": "USD",
+    "amount_due": 14245.66,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40019",
+    "client_id": "CL-1002",
+    "sell_currency": "USD",
+    "amount_due": 44652.73,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40020",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 196733.91,
+    "due_date": "2026-11-16",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40021",
+    "client_id": "CL-1004",
+    "sell_currency": "USD",
+    "amount_due": 392340.72,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40022",
+    "client_id": "CL-1005",
+    "sell_currency": "GBP",
+    "amount_due": 325953.16,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40023",
+    "client_id": "CL-1003",
+    "sell_currency": "USD",
+    "amount_due": 415879.0,
+    "due_date": "2026-11-14",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40024",
+    "client_id": "CL-1003",
+    "sell_currency": "USD",
+    "amount_due": 330537.02,
+    "due_date": "2026-11-16",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40025",
+    "client_id": "CL-1008",
+    "sell_currency": "USD",
+    "amount_due": 211576.24,
+    "due_date": "2026-11-14",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40026",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 13039.23,
+    "due_date": "2026-11-16",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40027",
+    "client_id": "CL-1005",
+    "sell_currency": "GBP",
+    "amount_due": 146122.71,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40028",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 147795.54,
+    "due_date": "2026-11-13",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40029",
+    "client_id": "CL-1003",
+    "sell_currency": "USD",
+    "amount_due": 72048.69,
+    "due_date": "2026-11-16",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40030",
+    "client_id": "CL-1007",
+    "sell_currency": "USD",
+    "amount_due": 218817.31,
+    "due_date": "2026-11-13",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40031",
+    "client_id": "CL-1006",
+    "sell_currency": "USD",
+    "amount_due": 137235.63,
+    "due_date": "2026-11-16",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40032",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 375429.46,
+    "due_date": "2026-11-14",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40033",
+    "client_id": "CL-1007",
+    "sell_currency": "USD",
+    "amount_due": 179211.68,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40034",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 150114.44,
+    "due_date": "2026-11-14",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40035",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 135526.48,
+    "due_date": "2026-11-15",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40036",
+    "client_id": "CL-1008",
+    "sell_currency": "USD",
+    "amount_due": 161309.13,
+    "due_date": "2026-11-16",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40037",
+    "client_id": "CL-1007",
+    "sell_currency": "USD",
+    "amount_due": 96590.3,
+    "due_date": "2026-11-15",
+    "buy_currency": "MXN",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40038",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 307526.6,
+    "due_date": "2026-11-13",
+    "buy_currency": "CNY",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40039",
+    "client_id": "CL-1001",
+    "sell_currency": "USD",
+    "amount_due": 357915.92,
+    "due_date": "2026-11-13",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40040",
+    "client_id": "CL-1006",
+    "sell_currency": "USD",
+    "amount_due": 349297.49,
+    "due_date": "2026-11-15",
+    "buy_currency": "EUR",
+    "status": "AWAITING_FUNDS"
+  },
+  {
+    "deal_ref": "DL-2026-40041",
+    "client_id": "CL-1004",
+    "sell_currency": "USD",
+    "amount_due": 91604.93,
+    "due_date": "2026-11-15",
+    "buy_currency": "INR",
+    "status": "AWAITING_FUNDS"
+  }
+]

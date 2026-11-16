@@ -1,0 +1,38 @@
+{
+  "application_id": "APP-26002",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Amberfield Imports Ltd",
+  "trading_name": "Amberfield",
+  "registration_number": "76644552",
+  "country": "GB",
+  "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+  "incorporation_date": "2025-09-07",
+  "industry": "Arms and defence trading",
+  "expected_monthly_volume_usd": 120000,
+  "corridors": [
+    "CN",
+    "DE"
+  ],
+  "directors": [
+    {
+      "name": "Sara Fischer"
+    },
+    {
+      "name": "Carlos Kowalski"
+    },
+    {
+      "name": "Lena Iyer"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Sara Fischer",
+      "pct": 40
+    },
+    {
+      "name": "Carlos Kowalski",
+      "pct": 50
+    }
+  ],
+  "contact_email": "finance@amberfield.example"
+}

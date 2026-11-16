@@ -1,0 +1,398 @@
+{
+  "CL-1003": [
+    {
+      "payee_name": "Highmoor SA de CV",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB84NCBK26100085771961",
+      "routing_code": "90-11-32",
+      "bic": "NCBKGBBB"
+    },
+    {
+      "payee_name": "Amberfield SARL",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "2533204508",
+      "routing_code": "004870126",
+      "bic": "FCBKUSBB"
+    },
+    {
+      "payee_name": "Tidewater Ltd",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "7175546157",
+      "routing_code": "627320736",
+      "bic": "FCBKUS2X"
+    },
+    {
+      "payee_name": "Northgate LLC",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "27160175537152",
+      "routing_code": "DCBK0530278",
+      "bic": "DCBKIN3M"
+    },
+    {
+      "payee_name": "Grace Wagner",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "204945247157712800",
+      "routing_code": "",
+      "bic": "BSMXMX3M"
+    },
+    {
+      "payee_name": "Jonas Kapoor",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "64331646204207",
+      "routing_code": "DCBK0858270",
+      "bic": "DCBKINBB"
+    },
+    {
+      "payee_name": "Grace Becker",
+      "country": "DE",
+      "currency": "EUR",
+      "account_number": "DE08492228323911974232",
+      "routing_code": "",
+      "bic": "RHHBDE3M"
+    },
+    {
+      "payee_name": "Summitview SARL",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "08554710672432",
+      "routing_code": "DCBK0950259",
+      "bic": "DCBKIN2X"
+    }
+  ],
+  "CL-1005": [
+    {
+      "payee_name": "Ravi Petrova",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR8665611658363745360405232",
+      "routing_code": "",
+      "bic": "LYCRFR2X"
+    },
+    {
+      "payee_name": "Fairhaven SA de CV",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "255366934783372490",
+      "routing_code": "",
+      "bic": "BSMXMXMM"
+    },
+    {
+      "payee_name": "Diego Becker",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "218184609240612354",
+      "routing_code": "",
+      "bic": "BSMXMX3M"
+    },
+    {
+      "payee_name": "Summitview GmbH",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR3031413426456724205560736",
+      "routing_code": "",
+      "bic": "LYCRFRBB"
+    },
+    {
+      "payee_name": "Nadia Brennan",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB34NCBK30609263426084",
+      "routing_code": "80-81-22",
+      "bic": "NCBKGB3M"
+    },
+    {
+      "payee_name": "Tidewater GmbH",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB04NCBK01409903105351",
+      "routing_code": "53-88-95",
+      "bic": "NCBKGBMM"
+    },
+    {
+      "payee_name": "Wei Kapoor",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "675878036827308422",
+      "routing_code": "",
+      "bic": "BSMXMX3M"
+    },
+    {
+      "payee_name": "Priya Torres",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR9755613422773308725422993",
+      "routing_code": "",
+      "bic": "LYCRFRBB"
+    }
+  ],
+  "CL-1004": [
+    {
+      "payee_name": "Brightline GmbH",
+      "country": "DE",
+      "currency": "EUR",
+      "account_number": "DE25950695210232815565",
+      "routing_code": "",
+      "bic": "RHHBDE3M"
+    },
+    {
+      "payee_name": "Nadia Haddad",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB28NCBK70487845884240",
+      "routing_code": "71-60-12",
+      "bic": "NCBKGBBB"
+    },
+    {
+      "payee_name": "Redwood Crest Pvt Ltd",
+      "country": "DE",
+      "currency": "EUR",
+      "account_number": "DE13921088382495222805",
+      "routing_code": "",
+      "bic": "RHHBDE3M"
+    },
+    {
+      "payee_name": "Northgate SARL",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "735010165039666301",
+      "routing_code": "",
+      "bic": "BSMXMXBB"
+    },
+    {
+      "payee_name": "Jonas Iyer",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "644739274244150732",
+      "routing_code": "",
+      "bic": "BSMXMX3M"
+    },
+    {
+      "payee_name": "Priya Becker",
+      "country": "DE",
+      "currency": "EUR",
+      "account_number": "DE70507262401202428512",
+      "routing_code": "",
+      "bic": "RHHBDEMM"
+    },
+    {
+      "payee_name": "Willowbrook GmbH",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB93NCBK09330028939610",
+      "routing_code": "06-40-08",
+      "bic": "NCBKGB2X"
+    },
+    {
+      "payee_name": "Brightline SA de CV",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "382881857153314209",
+      "routing_code": "",
+      "bic": "BSMXMXBB"
+    }
+  ],
+  "CL-1008": [
+    {
+      "payee_name": "Priya Rao",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR2908916269515252150742411",
+      "routing_code": "",
+      "bic": "LYCRFR3M"
+    },
+    {
+      "payee_name": "Highmoor SARL",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR6032980845346832388310107",
+      "routing_code": "",
+      "bic": "LYCRFR3M"
+    },
+    {
+      "payee_name": "Omar Mehta",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "669814911933398039",
+      "routing_code": "",
+      "bic": "BSMXMX2X"
+    },
+    {
+      "payee_name": "Hannah Torres",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "45179205660132",
+      "routing_code": "DCBK0822523",
+      "bic": "DCBKIN3M"
+    },
+    {
+      "payee_name": "Wei Mehta",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "7078519130",
+      "routing_code": "561592772",
+      "bic": "FCBKUS3M"
+    },
+    {
+      "payee_name": "Fairhaven LLC",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB98NCBK92668498114333",
+      "routing_code": "75-58-71",
+      "bic": "NCBKGB3M"
+    },
+    {
+      "payee_name": "Silverbirch SARL",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "6566135964",
+      "routing_code": "047901764",
+      "bic": "FCBKUSMM"
+    },
+    {
+      "payee_name": "Redwood Crest GmbH",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB79NCBK67904514276831",
+      "routing_code": "27-87-80",
+      "bic": "NCBKGB2X"
+    }
+  ],
+  "CL-1002": [
+    {
+      "payee_name": "Willowbrook Pvt Ltd",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR0510818899981089476083028",
+      "routing_code": "",
+      "bic": "LYCRFRMM"
+    },
+    {
+      "payee_name": "Grace Lin",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "9188511311",
+      "routing_code": "544442797",
+      "bic": "FCBKUSBB"
+    },
+    {
+      "payee_name": "Lakshmi Fischer",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "93867699310002",
+      "routing_code": "DCBK0602947",
+      "bic": "DCBKINBB"
+    },
+    {
+      "payee_name": "Northgate Pvt Ltd",
+      "country": "GB",
+      "currency": "GBP",
+      "account_number": "GB29NCBK56127279543068",
+      "routing_code": "02-43-29",
+      "bic": "NCBKGBBB"
+    },
+    {
+      "payee_name": "Redwood Crest Ltd",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "210565518172380831",
+      "routing_code": "",
+      "bic": "BSMXMXMM"
+    },
+    {
+      "payee_name": "Jonas Becker",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "4046129792",
+      "routing_code": "463540136",
+      "bic": "FCBKUSBB"
+    },
+    {
+      "payee_name": "Redwood Crest Ltd",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "1641118015",
+      "routing_code": "128178474",
+      "bic": "FCBKUS3M"
+    },
+    {
+      "payee_name": "Hannah Torres",
+      "country": "DE",
+      "currency": "EUR",
+      "account_number": "DE12717553063135549031",
+      "routing_code": "",
+      "bic": "RHHBDE2X"
+    }
+  ],
+  "CL-1001": [
+    {
+      "payee_name": "Ironvale Ltd",
+      "country": "MX",
+      "currency": "MXN",
+      "account_number": "437932344220375462",
+      "routing_code": "",
+      "bic": "BSMXMXBB"
+    },
+    {
+      "payee_name": "Sara Rao",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR3758322370351885784111966",
+      "routing_code": "",
+      "bic": "LYCRFRMM"
+    },
+    {
+      "payee_name": "Ravi Sato",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR0365875901714208217904156",
+      "routing_code": "",
+      "bic": "LYCRFR2X"
+    },
+    {
+      "payee_name": "Silverbirch Pvt Ltd",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "4281152896",
+      "routing_code": "232665514",
+      "bic": "FCBKUS3M"
+    },
+    {
+      "payee_name": "Felix Brennan",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "67329476323718",
+      "routing_code": "DCBK0530487",
+      "bic": "DCBKIN3M"
+    },
+    {
+      "payee_name": "Lucia Brennan",
+      "country": "FR",
+      "currency": "EUR",
+      "account_number": "FR8953600395049005354545956",
+      "routing_code": "",
+      "bic": "LYCRFRMM"
+    },
+    {
+      "payee_name": "Stonebridge LLC",
+      "country": "IN",
+      "currency": "INR",
+      "account_number": "93022448566423",
+      "routing_code": "DCBK0850525",
+      "bic": "DCBKIN3M"
+    },
+    {
+      "payee_name": "Cedarline LLC",
+      "country": "US",
+      "currency": "USD",
+      "account_number": "0875773553",
+      "routing_code": "111500350",
+      "bic": "FCBKUS2X"
+    }
+  ]
+}

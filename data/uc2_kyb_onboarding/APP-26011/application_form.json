@@ -1,0 +1,42 @@
+{
+  "application_id": "APP-26011",
+  "submitted_on": "2026-11-16",
+  "legal_name": "Kestrel Bay Trading Ltd",
+  "trading_name": "Kestrel Bay",
+  "registration_number": "14620689",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2024-10-19",
+  "industry": "Food ingredients trading",
+  "expected_monthly_volume_usd": 400000,
+  "corridors": [
+    "MX",
+    "TR"
+  ],
+  "directors": [
+    {
+      "name": "Vikram Nasser"
+    },
+    {
+      "name": "Yuki Lin"
+    },
+    {
+      "name": "Carlos Lin"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Vikram Nasser",
+      "pct": 30
+    },
+    {
+      "name": "Yuki Lin",
+      "pct": 40
+    },
+    {
+      "name": "Carlos Lin",
+      "pct": 30
+    }
+  ],
+  "contact_email": "finance@kestrelbay.example"
+}

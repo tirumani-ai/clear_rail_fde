@@ -1,0 +1,42 @@
+{
+  "application_id": "APP-26014",
+  "submitted_on": "2026-11-16",
+  "legal_name": "Foxglove Supplies Ltd",
+  "trading_name": "Foxglove",
+  "registration_number": "40677423",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2017-09-06",
+  "industry": "Furniture import",
+  "expected_monthly_volume_usd": 900000,
+  "corridors": [
+    "CN",
+    "DE"
+  ],
+  "directors": [
+    {
+      "name": "Hannah Adeyemi"
+    },
+    {
+      "name": "Lena Pillai"
+    },
+    {
+      "name": "Lucia Reddy"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Hannah Adeyemi",
+      "pct": 25
+    },
+    {
+      "name": "Lena Pillai",
+      "pct": 50
+    },
+    {
+      "name": "Lucia Reddy",
+      "pct": 25
+    }
+  ],
+  "contact_email": "finance@foxglove.example"
+}

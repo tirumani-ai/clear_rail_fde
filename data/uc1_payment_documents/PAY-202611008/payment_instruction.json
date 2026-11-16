@@ -1,0 +1,25 @@
+{
+  "payment_id": "PAY-202611008",
+  "submitted_at": "2026-11-14T10:16:00Z",
+  "client_id": "CL-1005",
+  "client_name": "Copperleaf Kitchenware Ltd",
+  "beneficiary": {
+    "name": "Pennine Software Services Ltd",
+    "address": "22 Mill Lane, Manchester M1 2AB, UK",
+    "country": "GB",
+    "bank": {
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBBB",
+      "iban": "GB48NCBK90139624595711"
+    }
+  },
+  "amount": 10657.1,
+  "currency": "GBP",
+  "purpose_code": "SVC",
+  "invoice_references": [
+    "2010/2026/3530"
+  ],
+  "remittance_info": "INV 2010/2026/3530",
+  "requested_value_date": "2026-11-18"
+}

@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611014",
+  "submitted_at": "2026-11-16T10:00:00Z",
+  "client_id": "CL-1007",
+  "client_name": "Sunbeam Solar Systems LLC",
+  "beneficiary": {
+    "name": "Godavari Engineering Works Pvt Ltd",
+    "address": "14 Industrial Estate, Rajahmundry, AP 533101, India",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKIN2X",
+      "account_number": "93786579754323",
+      "ifsc": "DCBK0194875"
+    }
+  },
+  "amount": 16174.0,
+  "currency": "USD",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2002/2026/3289"
+  ],
+  "remittance_info": "INV 2002/2026/3289",
+  "requested_value_date": "2026-11-18"
+}

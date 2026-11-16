@@ -1,0 +1,25 @@
+{
+  "payment_id": "PAY-202611011",
+  "submitted_at": "2026-11-16T12:05:00Z",
+  "client_id": "CL-1008",
+  "client_name": "Oakridge Furniture Imports Inc",
+  "beneficiary": {
+    "name": "Anatolia Ceramics AS",
+    "address": "Organize Sanayi Bolgesi 3, Kutahya, Turkey",
+    "country": "TR",
+    "bank": {
+      "bank_name": "Bosphorus Trade Bank",
+      "bank_country": "TR",
+      "swift": "BSPTTR3M",
+      "account_number": "721590109281"
+    }
+  },
+  "amount": 7181.52,
+  "currency": "EUR",
+  "purpose_code": "ADV",
+  "invoice_references": [
+    "2009/2026/1275"
+  ],
+  "remittance_info": "INV 2009/2026/1275",
+  "requested_value_date": "2026-11-18"
+}
