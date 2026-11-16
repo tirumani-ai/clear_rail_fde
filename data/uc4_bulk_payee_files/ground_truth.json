@@ -1,0 +1,188 @@
+[
+  {
+    "case_id": "BATCH-001",
+    "use_case": "UC4",
+    "client_id": "CL-1003",
+    "file": "BATCH-001_CL-1003.csv",
+    "format": "csv",
+    "header": {
+      "row_count": 24,
+      "control_total": 3169954.72
+    },
+    "actual_total": 3169954.72,
+    "column_mapping": null,
+    "extra_unmapped_columns": [],
+    "expected_file_codes": [],
+    "bad_rows": [],
+    "expected_route": "AUTO_RELEASE"
+  },
+  {
+    "case_id": "BATCH-002",
+    "use_case": "UC4",
+    "client_id": "CL-1005",
+    "file": "BATCH-002_CL-1005.xlsx",
+    "format": "xlsx",
+    "header": {
+      "row_count": 24,
+      "control_total": 1326755.07
+    },
+    "actual_total": 1326755.07,
+    "column_mapping": {
+      "row": "Line",
+      "payee_name": "Beneficiary / Vendor",
+      "country": "Ctry",
+      "currency": "CCY",
+      "amount": "Amt to pay",
+      "account_number": "IBAN or A/c",
+      "routing_code": "Sort/IFSC/ABA",
+      "bic": "Bank SWIFT",
+      "purpose_code": "Reason",
+      "reference": "Their ref"
+    },
+    "extra_unmapped_columns": [
+      "Approver initials"
+    ],
+    "expected_file_codes": [
+      "UNMAPPED_COLUMN"
+    ],
+    "bad_rows": [],
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "BATCH-003",
+    "use_case": "UC4",
+    "client_id": "CL-1004",
+    "file": "BATCH-003_CL-1004.csv",
+    "format": "csv",
+    "header": {
+      "row_count": 25,
+      "control_total": 4731647.77
+    },
+    "actual_total": 4731647.77,
+    "column_mapping": null,
+    "extra_unmapped_columns": [],
+    "expected_file_codes": [
+      "BIC_COUNTRY_MISMATCH",
+      "CURRENCY_NOT_SUPPORTED",
+      "DUPLICATE_ROW",
+      "INVALID_IBAN",
+      "INVALID_ROUTING_CODE",
+      "MISSING_PURPOSE_CODE"
+    ],
+    "bad_rows": [
+      {
+        "row": 3,
+        "codes": [
+          "BIC_COUNTRY_MISMATCH"
+        ]
+      },
+      {
+        "row": 7,
+        "codes": [
+          "CURRENCY_NOT_SUPPORTED"
+        ]
+      },
+      {
+        "row": 10,
+        "codes": [
+          "INVALID_IBAN"
+        ]
+      },
+      {
+        "row": 15,
+        "codes": [
+          "INVALID_ROUTING_CODE"
+        ]
+      },
+      {
+        "row": 17,
+        "codes": [
+          "MISSING_PURPOSE_CODE"
+        ]
+      },
+      {
+        "row": 25,
+        "codes": [
+          "DUPLICATE_ROW"
+        ]
+      }
+    ],
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "BATCH-004",
+    "use_case": "UC4",
+    "client_id": "CL-1008",
+    "file": "BATCH-004_CL-1008.xlsx",
+    "format": "xlsx",
+    "header": {
+      "row_count": 24,
+      "control_total": 32709901.17
+    },
+    "actual_total": 32709901.17,
+    "column_mapping": null,
+    "extra_unmapped_columns": [],
+    "expected_file_codes": [
+      "AMOUNT_OVER_LIMIT",
+      "BANK_DETAILS_CHANGED",
+      "SCREENING_HIT"
+    ],
+    "bad_rows": [
+      {
+        "row": 4,
+        "codes": [
+          "BANK_DETAILS_CHANGED"
+        ]
+      },
+      {
+        "row": 5,
+        "codes": [
+          "SCREENING_HIT"
+        ]
+      },
+      {
+        "row": 24,
+        "codes": [
+          "AMOUNT_OVER_LIMIT"
+        ]
+      }
+    ],
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "BATCH-005",
+    "use_case": "UC4",
+    "client_id": "CL-1002",
+    "file": "BATCH-005_CL-1002.csv",
+    "format": "csv",
+    "header": {
+      "row_count": 24,
+      "control_total": 3933169.75
+    },
+    "actual_total": 3932169.75,
+    "column_mapping": null,
+    "extra_unmapped_columns": [],
+    "expected_file_codes": [
+      "CONTROL_TOTAL_MISMATCH"
+    ],
+    "bad_rows": [],
+    "expected_route": "HOLD_FILE"
+  },
+  {
+    "case_id": "BATCH-006",
+    "use_case": "UC4",
+    "client_id": "CL-1001",
+    "file": "BATCH-006_CL-1001_scan.pdf",
+    "format": "pdf",
+    "header": {
+      "row_count": 24,
+      "control_total": 7787512.07
+    },
+    "actual_total": 7787512.07,
+    "column_mapping": null,
+    "extra_unmapped_columns": [],
+    "expected_file_codes": [],
+    "bad_rows": [],
+    "expected_route": "AUTO_RELEASE"
+  }
+]

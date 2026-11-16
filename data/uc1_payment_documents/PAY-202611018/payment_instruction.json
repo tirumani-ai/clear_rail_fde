@@ -1,0 +1,25 @@
+{
+  "payment_id": "PAY-202611018",
+  "submitted_at": "2026-11-16T18:01:00Z",
+  "client_id": "CL-1002",
+  "client_name": "Granite Peak Outdoor LLC",
+  "beneficiary": {
+    "name": "Ningbo Brightway Housewares Co Ltd",
+    "address": "No. 18 Jiangnan Road, Ningbo, Zhejiang, China",
+    "country": "CN",
+    "bank": {
+      "bank_name": "Eastern Harbour Bank",
+      "bank_country": "CN",
+      "swift": "EHBKCNMM",
+      "account_number": "114710497465"
+    }
+  },
+  "amount": 16338.0,
+  "currency": "USD",
+  "purpose_code": "SVC",
+  "invoice_references": [
+    "2004/2026/7170"
+  ],
+  "remittance_info": "INV 2004/2026/7170",
+  "requested_value_date": "2026-11-18"
+}

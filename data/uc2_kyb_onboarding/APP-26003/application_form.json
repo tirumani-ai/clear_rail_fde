@@ -1,0 +1,46 @@
+{
+  "application_id": "APP-26003",
+  "submitted_on": "2026-11-14",
+  "legal_name": "Highmoor Solutions Ltd",
+  "trading_name": "Highmoor",
+  "registration_number": "18697858",
+  "country": "GB",
+  "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
+  "incorporation_date": "2022-12-17",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 50000,
+  "corridors": [
+    "MX",
+    "CN"
+  ],
+  "directors": [
+    {
+      "name": "Diego Wagner"
+    },
+    {
+      "name": "Vikram Lin"
+    },
+    {
+      "name": "Vikram Tanaka"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Diego Wagner",
+      "pct": 25
+    },
+    {
+      "name": "Vikram Lin",
+      "pct": 25
+    },
+    {
+      "name": "Vikram Tanaka",
+      "pct": 25
+    },
+    {
+      "name": "Highmoor Holdings Ltd",
+      "pct": 25
+    }
+  ],
+  "contact_email": "finance@highmoor.example"
+}

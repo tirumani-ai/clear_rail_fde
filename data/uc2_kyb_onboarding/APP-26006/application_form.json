@@ -1,0 +1,32 @@
+{
+  "application_id": "APP-26006",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Cedarline Trading Ltd",
+  "trading_name": "Cedarline",
+  "registration_number": "10470848",
+  "country": "GB",
+  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+  "incorporation_date": "2020-04-17",
+  "industry": "Apparel retail (online)",
+  "expected_monthly_volume_usd": 900000,
+  "corridors": [
+    "IN",
+    "TR"
+  ],
+  "directors": [
+    {
+      "name": "Kenji Kowalski"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Kenji Kowalski",
+      "pct": 50
+    },
+    {
+      "name": "Cedarline Holdings Ltd",
+      "pct": 50
+    }
+  ],
+  "contact_email": "finance@cedarline.example"
+}

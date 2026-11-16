@@ -1,0 +1,25 @@
+{
+  "payment_id": "PAY-202611029",
+  "submitted_at": "2026-11-15T18:27:00Z",
+  "client_id": "CL-1004",
+  "client_name": "Tallgrass Apparel Inc",
+  "beneficiary": {
+    "name": "Pennine Software Services Ltd",
+    "address": "22 Mill Lane, Manchester M1 2AB, UK",
+    "country": "GB",
+    "bank": {
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBBB",
+      "iban": "GB48NCBK90139624595711"
+    }
+  },
+  "amount": 22139.75,
+  "currency": "GBP",
+  "purpose_code": "SVC",
+  "invoice_references": [
+    "2010/2026/2328"
+  ],
+  "remittance_info": "INV 2010/2026/2328",
+  "requested_value_date": "2026-11-18"
+}

@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611020",
+  "submitted_at": "2026-11-13T12:45:00Z",
+  "client_id": "CL-1003",
+  "client_name": "Lakeside Medical Supply Co",
+  "beneficiary": {
+    "name": "Godavari Engineering Works Pvt Ltd",
+    "address": "14 Industrial Estate, Rajahmundry, AP 533101, India",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKIN2X",
+      "account_number": "93786579754323",
+      "ifsc": "DCBK0194875"
+    }
+  },
+  "amount": 21654.0,
+  "currency": "USD",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2002/2025/2630"
+  ],
+  "remittance_info": "INV 2002/2025/2630",
+  "requested_value_date": "2026-11-18"
+}

@@ -1,0 +1,35 @@
+{
+  "application_id": "APP-26013",
+  "submitted_on": "2026-11-11",
+  "legal_name": "Larkspur Supplies Ltd",
+  "trading_name": "Larkspur",
+  "registration_number": "44522530",
+  "country": "GB",
+  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+  "incorporation_date": "2023-03-11",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 2500000,
+  "corridors": [
+    "CN",
+    "TR"
+  ],
+  "directors": [
+    {
+      "name": "Kenji Reddy"
+    },
+    {
+      "name": "Hannah Wagner"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Kenji Reddy",
+      "pct": 60
+    },
+    {
+      "name": "Hannah Wagner",
+      "pct": 30
+    }
+  ],
+  "contact_email": "finance@larkspur.example"
+}

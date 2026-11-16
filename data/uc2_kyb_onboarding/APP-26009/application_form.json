@@ -1,0 +1,42 @@
+{
+  "application_id": "APP-26009",
+  "submitted_on": "2026-11-15",
+  "legal_name": "Ironvale Solutions Ltd",
+  "trading_name": "Ironvale",
+  "registration_number": "89822539",
+  "country": "GB",
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2019-04-18",
+  "industry": "Apparel retail (online)",
+  "expected_monthly_volume_usd": 120000,
+  "corridors": [
+    "CN",
+    "IN"
+  ],
+  "directors": [
+    {
+      "name": "Diego Brennan"
+    },
+    {
+      "name": "Yuki Wagner"
+    },
+    {
+      "name": "Lucia Mehta"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Diego Brennan",
+      "pct": 25
+    },
+    {
+      "name": "Yuki Wagner",
+      "pct": 25
+    },
+    {
+      "name": "Lucia Mehta",
+      "pct": 50
+    }
+  ],
+  "contact_email": "finance@ironvale.example"
+}

@@ -1,0 +1,32 @@
+{
+  "application_id": "APP-26016",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Silverbirch Supplies Ltd",
+  "trading_name": "Silverbirch",
+  "registration_number": "75084754",
+  "country": "GB",
+  "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
+  "incorporation_date": "2018-10-16",
+  "industry": "Furniture import",
+  "expected_monthly_volume_usd": 50000,
+  "corridors": [
+    "IN",
+    "VN"
+  ],
+  "directors": [
+    {
+      "name": "Lakshmi Kapoor"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Lakshmi Kapoor",
+      "pct": 30
+    },
+    {
+      "name": "Silverbirch Holdings Ltd",
+      "pct": 70
+    }
+  ],
+  "contact_email": "finance@silverbirch.example"
+}

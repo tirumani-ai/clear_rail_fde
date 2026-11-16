@@ -1,0 +1,35 @@
+{
+  "application_id": "APP-26001",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Redwood Crest Trading Ltd",
+  "trading_name": "Redwood Crest",
+  "registration_number": "10385302",
+  "country": "GB",
+  "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
+  "incorporation_date": "2022-08-23",
+  "industry": "Wholesale of household goods",
+  "expected_monthly_volume_usd": 50000,
+  "corridors": [
+    "IN",
+    "DE"
+  ],
+  "directors": [
+    {
+      "name": "Grace Lin"
+    },
+    {
+      "name": "Elena Becker"
+    }
+  ],
+  "beneficial_owners": [
+    {
+      "name": "Grace Lin",
+      "pct": 50
+    },
+    {
+      "name": "Elena Becker",
+      "pct": 40
+    }
+  ],
+  "contact_email": "finance@redwoodcrest.example"
+}

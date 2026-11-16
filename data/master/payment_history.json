@@ -1,0 +1,12 @@
+[
+  {
+    "payment_id": "PAY-2026-09724",
+    "client_id": "CL-1002",
+    "invoice_number": "2006/2026/4348",
+    "supplier_id": "SP-2006",
+    "amount": 643885.2,
+    "currency": "MXN",
+    "status": "RELEASED",
+    "released_on": "2026-10-21"
+  }
+]
