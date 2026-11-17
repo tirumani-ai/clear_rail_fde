@@ -109,7 +109,7 @@
   ],
   "beneficiaries": [
     {
-      "supplier_id": "SP-2001",
+      "vendor_id": "VN-2001",
       "legal_name": "Shakti Textiles Pvt Ltd",
       "country": "IN",
       "address": "Plot 22, Ring Road, Surat, Gujarat 395002, India",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "supplier_id": "SP-2002",
+      "vendor_id": "VN-2002",
       "legal_name": "Godavari Engineering Works Pvt Ltd",
       "country": "IN",
       "address": "14 Industrial Estate, Rajahmundry, AP 533101, India",
@@ -137,7 +137,7 @@
       }
     },
     {
-      "supplier_id": "SP-2003",
+      "vendor_id": "VN-2003",
       "legal_name": "Nilgiri Spice Exports Pvt Ltd",
       "country": "IN",
       "address": "8 Spice Market Rd, Kochi, Kerala 682002, India",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "supplier_id": "SP-2004",
+      "vendor_id": "VN-2004",
       "legal_name": "Ningbo Brightway Housewares Co Ltd",
       "country": "CN",
       "address": "No. 18 Jiangnan Road, Ningbo, Zhejiang, China",
@@ -165,7 +165,7 @@
       }
     },
     {
-      "supplier_id": "SP-2005",
+      "vendor_id": "VN-2005",
       "legal_name": "Shenzhen Lumen Solar Tech Co Ltd",
       "country": "CN",
       "address": "Bldg 5, Hi-Tech Park, Shenzhen, Guangdong, China",
@@ -179,7 +179,7 @@
       }
     },
     {
-      "supplier_id": "SP-2006",
+      "vendor_id": "VN-2006",
       "legal_name": "Talleres Monterrey SA de CV",
       "country": "MX",
       "address": "Av. Constitucion 1200, Monterrey, NL 64000, Mexico",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "supplier_id": "SP-2007",
+      "vendor_id": "VN-2007",
       "legal_name": "Rheinwerk Komponenten GmbH",
       "country": "DE",
       "address": "Industriestrasse 9, 50667 Koeln, Germany",
@@ -205,7 +205,7 @@
       }
     },
     {
-      "supplier_id": "SP-2008",
+      "vendor_id": "VN-2008",
       "legal_name": "Saigon Bamboo Crafts JSC",
       "country": "VN",
       "address": "45 Le Loi St, District 1, Ho Chi Minh City, Vietnam",
@@ -218,7 +218,7 @@
       }
     },
     {
-      "supplier_id": "SP-2009",
+      "vendor_id": "VN-2009",
       "legal_name": "Anatolia Ceramics AS",
       "country": "TR",
       "address": "Organize Sanayi Bolgesi 3, Kutahya, Turkey",
@@ -231,7 +231,7 @@
       }
     },
     {
-      "supplier_id": "SP-2010",
+      "vendor_id": "VN-2010",
       "legal_name": "Pennine Software Services Ltd",
       "country": "GB",
       "address": "22 Mill Lane, Manchester M1 2AB, UK",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "supplier_id": "SP-2011",
+      "vendor_id": "VN-2011",
       "legal_name": "Kaveri Digital Solutions Pvt Ltd",
       "country": "IN",
       "address": "5th Floor, Orion Tech Park, Bengaluru, Karnataka 560066, India",
@@ -258,7 +258,7 @@
       }
     },
     {
-      "supplier_id": "SP-2012",
+      "vendor_id": "VN-2012",
       "legal_name": "Hangzhou Cloudpeak Software Co Ltd",
       "country": "CN",
       "address": "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China",
@@ -408,9 +408,9 @@
   ],
   "watchlist": {
     "entities": [
-      "Black Tide Maritime Holdings",
+      "Obsidian Peak Capital Holdings",
       "Crescent Ridge Trading FZE",
-      "Volkov Arms Logistics"
+      "Volkov Defence Industries"
     ],
     "people": [
       "Dmitri Varenko",

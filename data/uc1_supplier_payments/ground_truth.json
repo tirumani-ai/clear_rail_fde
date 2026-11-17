@@ -3,7 +3,7 @@
     "case_id": "PAY-202611001",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2006",
+    "vendor_id": "VN-2006",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -52,7 +52,7 @@
     "case_id": "PAY-202611002",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2009",
+    "vendor_id": "VN-2009",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -96,7 +96,7 @@
     "case_id": "PAY-202611003",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2004",
+    "vendor_id": "VN-2004",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -145,7 +145,7 @@
     "case_id": "PAY-202611004",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2005",
+    "vendor_id": "VN-2005",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -194,7 +194,7 @@
     "case_id": "PAY-202611005",
     "use_case": "UC1",
     "client_id": "CL-1008",
-    "supplier_id": "SP-2006",
+    "vendor_id": "VN-2006",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -244,7 +244,7 @@
     "case_id": "PAY-202611006",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2009",
+    "vendor_id": "VN-2009",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -293,7 +293,7 @@
     "case_id": "PAY-202611007",
     "use_case": "UC1",
     "client_id": "CL-1005",
-    "supplier_id": "SP-2007",
+    "vendor_id": "VN-2007",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -342,7 +342,7 @@
     "case_id": "PAY-202611008",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2002",
+    "vendor_id": "VN-2002",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -396,7 +396,7 @@
     "case_id": "PAY-202611009",
     "use_case": "UC1",
     "client_id": "CL-1005",
-    "supplier_id": "SP-2010",
+    "vendor_id": "VN-2010",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -443,7 +443,7 @@
     "case_id": "PAY-202611010",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2001",
+    "vendor_id": "VN-2001",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -490,7 +490,7 @@
     "case_id": "PAY-202611011",
     "use_case": "UC1",
     "client_id": "CL-1004",
-    "supplier_id": "SP-2005",
+    "vendor_id": "VN-2005",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -546,7 +546,7 @@
     "case_id": "PAY-202611012",
     "use_case": "UC1",
     "client_id": "CL-1005",
-    "supplier_id": "SP-2007",
+    "vendor_id": "VN-2007",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -600,7 +600,7 @@
     "case_id": "PAY-202611013",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2008",
+    "vendor_id": "VN-2008",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -647,7 +647,7 @@
     "case_id": "PAY-202611014",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2007",
+    "vendor_id": "VN-2007",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -696,7 +696,7 @@
     "case_id": "PAY-202611015",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2001",
+    "vendor_id": "VN-2001",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -745,7 +745,7 @@
     "case_id": "PAY-202611016",
     "use_case": "UC1",
     "client_id": "CL-1007",
-    "supplier_id": "SP-2002",
+    "vendor_id": "VN-2002",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -797,7 +797,7 @@
     "case_id": "PAY-202611017",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2009",
+    "vendor_id": "VN-2009",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -844,7 +844,7 @@
     "case_id": "PAY-202611018",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2003",
+    "vendor_id": "VN-2003",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -893,7 +893,7 @@
     "case_id": "PAY-202611019",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2002",
+    "vendor_id": "VN-2002",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -940,7 +940,7 @@
     "case_id": "PAY-202611020",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2011",
+    "vendor_id": "VN-2011",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -987,7 +987,7 @@
     "case_id": "PAY-202611021",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2008",
+    "vendor_id": "VN-2008",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1042,7 +1042,7 @@
     "case_id": "PAY-202611022",
     "use_case": "UC1",
     "client_id": "CL-1005",
-    "supplier_id": "SP-2008",
+    "vendor_id": "VN-2008",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1089,7 +1089,7 @@
     "case_id": "PAY-202611023",
     "use_case": "UC1",
     "client_id": "CL-1005",
-    "supplier_id": "SP-2005",
+    "vendor_id": "VN-2005",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1136,7 +1136,7 @@
     "case_id": "PAY-202611024",
     "use_case": "UC1",
     "client_id": "CL-1001",
-    "supplier_id": "SP-2005",
+    "vendor_id": "VN-2005",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1183,7 +1183,7 @@
     "case_id": "PAY-202611025",
     "use_case": "UC1",
     "client_id": "CL-1004",
-    "supplier_id": "SP-2003",
+    "vendor_id": "VN-2003",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1232,7 +1232,7 @@
     "case_id": "PAY-202611026",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2006",
+    "vendor_id": "VN-2006",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1281,7 +1281,7 @@
     "case_id": "PAY-202611027",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2004",
+    "vendor_id": "VN-2004",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1328,7 +1328,7 @@
     "case_id": "PAY-202611028",
     "use_case": "UC1",
     "client_id": "CL-1004",
-    "supplier_id": "SP-2006",
+    "vendor_id": "VN-2006",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1377,7 +1377,7 @@
     "case_id": "PAY-202611029",
     "use_case": "UC1",
     "client_id": "CL-1003",
-    "supplier_id": "SP-2004",
+    "vendor_id": "VN-2004",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1424,7 +1424,7 @@
     "case_id": "PAY-202611030",
     "use_case": "UC1",
     "client_id": "CL-1008",
-    "supplier_id": "SP-2002",
+    "vendor_id": "VN-2002",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1471,7 +1471,7 @@
     "case_id": "PAY-202611031",
     "use_case": "UC1",
     "client_id": "CL-1002",
-    "supplier_id": "SP-2007",
+    "vendor_id": "VN-2007",
     "files": [
       {
         "file": "payment_instruction.json",
@@ -1518,7 +1518,7 @@
     "case_id": "PAY-202611032",
     "use_case": "UC1",
     "client_id": "CL-1006",
-    "supplier_id": "SP-2007",
+    "vendor_id": "VN-2007",
     "files": [
       {
         "file": "payment_instruction.json",
