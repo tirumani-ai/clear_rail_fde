@@ -1,17 +1,23 @@
 """
-Sample-data generator for ClearRail (cross-border payment document reconciliation).
+Sample-data generator for ClearRail (cross-border payment operations).
+
+Seven use cases for a fictional B2B payments provider: UC1 supplier invoice
+payments, UC2 KYB onboarding, UC3 incoming funds, UC4 bulk payee files, UC5
+restricted-corridor payments, UC6 FX deal drawdowns, UC7 tuition payments.
 
 Everything here is FICTIONAL: Corridor Payments Ltd (stand-in for the payment
-provider), every client, supplier, person, bank, account number, vessel and
-watchlist entry. Account numbers pass format checksums so validators can be
+provider), every client, supplier, university, student, person, bank, account
+number and watchlist entry. Account numbers pass format checksums so validators can be
 tested, but they are random and belong to no one.
 
 Usage:
-    python generate.py --out ../data --seed 7
-    python generate.py --out ../data --payments 60 --applications 24
+    python generate.py                       # writes into data/ (the folder this script sits in)
+    python generate.py --out /tmp/x --seed 7 --payments 60
 
-Writes four use-case folders, shared master data and ground_truth.json files
-that the evaluation script can score against.
+Writes seven use-case folders, shared master data and ground_truth.json files
+that the evaluation script can score against. Each use case draws from its own
+random stream (seed + use case), so changing one use case's generator leaves
+the others' files unchanged.
 """
 from __future__ import annotations
 
@@ -20,8 +26,10 @@ import csv
 import io
 import json
 import random
+import re
 import shutil
-from datetime import date, timedelta
+import zipfile
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -62,40 +70,66 @@ SUPPLIERS = [  # id, name, country, city address, invoice currency, bank name, b
     ("SP-2008", "Saigon Bamboo Crafts JSC", "VN", "45 Le Loi St, District 1, Ho Chi Minh City, Vietnam", "USD", "Mekong Commercial Bank", "MKCB"),
     ("SP-2009", "Anatolia Ceramics AS", "TR", "Organize Sanayi Bolgesi 3, Kutahya, Turkey", "EUR", "Bosphorus Trade Bank", "BSPT"),
     ("SP-2010", "Pennine Software Services Ltd", "GB", "22 Mill Lane, Manchester M1 2AB, UK", "GBP", "Northern Counties Bank", "NCBK"),
+    ("SP-2011", "Kaveri Digital Solutions Pvt Ltd", "IN", "5th Floor, Orion Tech Park, Bengaluru, Karnataka 560066, India", "INR", "Deccan Commerce Bank", "DCBK"),
+    ("SP-2012", "Hangzhou Cloudpeak Software Co Ltd", "CN", "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China", "CNY", "Eastern Harbour Bank", "EHBK"),
 ]
+SERVICE_SUPPLIERS = {"SP-2010", "SP-2011", "SP-2012"}
 
-GOODS = {  # supplier id -> list of (description, HS code, unit, unit price in USD)
-    "SP-2001": [("Cotton bedsheet set, queen", "6302.31", "set", 14.5), ("Cotton towel, bath", "6302.60", "pcs", 3.2)],
-    "SP-2002": [("Cast iron pump housing", "8413.91", "pcs", 62.0), ("Steel flange DN100", "7307.91", "pcs", 9.8)],
-    "SP-2003": [("Black pepper, whole, 25 kg bag", "0904.11", "bag", 128.0), ("Cardamom, green, 10 kg", "0908.31", "box", 210.0)],
-    "SP-2004": [("Stainless steel cookware set", "7323.93", "set", 21.0), ("Glass storage jar 1L", "7013.99", "pcs", 1.9)],
-    "SP-2005": [("Monocrystalline solar panel 400W", "8541.43", "pcs", 96.0), ("MC4 connector pair", "8536.69", "pair", 1.1)],
-    "SP-2006": [("Brake disc, front", "8708.30", "pcs", 34.0), ("Alloy wheel 17in", "8708.70", "pcs", 71.0)],
-    "SP-2007": [("Hydraulic valve block", "8481.20", "pcs", 145.0), ("Precision bearing 6205", "8482.10", "pcs", 6.4)],
-    "SP-2008": [("Bamboo side table", "9403.82", "pcs", 38.0), ("Rattan storage basket", "4602.12", "pcs", 7.5)],
-    "SP-2009": [("Porcelain floor tile 60x60, box", "6907.21", "box", 18.0), ("Ceramic vase", "6913.90", "pcs", 12.0)],
+GOODS = {  # supplier id -> list of (description, unit, unit price in USD)
+    "SP-2001": [("Cotton bedsheet set, queen", "set", 14.5), ("Cotton towel, bath", "pcs", 3.2)],
+    "SP-2002": [("Cast iron pump housing", "pcs", 62.0), ("Steel flange DN100", "pcs", 9.8)],
+    "SP-2003": [("Black pepper, whole, 25 kg bag", "bag", 128.0), ("Cardamom, green, 10 kg", "box", 210.0)],
+    "SP-2004": [("Stainless steel cookware set", "set", 21.0), ("Glass storage jar 1L", "pcs", 1.9)],
+    "SP-2005": [("Monocrystalline solar panel 400W", "pcs", 96.0), ("MC4 connector pair", "pair", 1.1)],
+    "SP-2006": [("Brake disc, front", "pcs", 34.0), ("Alloy wheel 17in", "pcs", 71.0)],
+    "SP-2007": [("Hydraulic valve block", "pcs", 145.0), ("Precision bearing 6205", "pcs", 6.4)],
+    "SP-2008": [("Bamboo side table", "pcs", 38.0), ("Rattan storage basket", "pcs", 7.5)],
+    "SP-2009": [("Porcelain floor tile 60x60, box", "box", 18.0), ("Ceramic vase", "pcs", 12.0)],
 }
-RESTRICTED_LINE = ("Sporting rifle cartridges, 500 rounds", "9306.30", "box", 240.0)
-RESTRICTED_HS = {"9306": "Ammunition", "9301": "Military weapons", "2844": "Radioactive material",
-                 "8401": "Nuclear reactors and parts", "9302": "Revolvers and pistols"}
-FX_TO = {"USD": 1.0, "INR": 84.2, "CNY": 7.18, "MXN": 18.9, "EUR": 0.92, "GBP": 0.79}
+SERVICES = {"SP-2010": "Software development services", "SP-2011": "Software development services",
+            "SP-2012": "Cloud platform engineering services"}
+FX_TO = {"USD": 1.0, "INR": 84.2, "CNY": 7.18, "MXN": 18.9, "EUR": 0.92, "GBP": 0.79, "CAD": 1.37, "AUD": 1.52}
 
 WATCHLIST = {  # fictional - not a real sanctions list
     "entities": ["Black Tide Maritime Holdings", "Crescent Ridge Trading FZE", "Volkov Arms Logistics"],
     "people": ["Dmitri Varenko", "Selim Karadag", "Jun-ho Pak"],
-    "vessels": ["MV Northern Lantern", "MV Silent Marlin"],
-    "ports": ["Port Kestrel"],
 }
-VESSELS = ["MV Ocean Pioneer", "MV Coral Bay", "MV Pacific Meridian", "MV Atlantic Dawn", "MV Jade Horizon"]
-PORTS = {"IN": "Nhava Sheva", "CN": "Ningbo", "MX": "Manzanillo", "DE": "Hamburg", "VN": "Cat Lai", "TR": "Ambarli"}
-DEST_PORTS = {"US": "Savannah", "GB": "Felixstowe"}
+
+# UC5: corridors whose currency needs proof of purpose before money leaves (fictional policy, not real regulation)
+RESTRICTED_CORRIDORS = {
+    "IN": {"currency": "INR", "routing_code": "IFSC", "allowed_purposes": ["GDI", "ADV", "SVC", "CTR"],
+           "required_docs": {"GDI": ["INVOICE"], "ADV": ["PROFORMA_INVOICE"], "SVC": ["INVOICE", "CONTRACT"],
+                             "CTR": ["INVOICE", "CONTRACT"]},
+           "declaration_required_over_usd": 10000, "per_payment_limit_usd": 250000},
+    "CN": {"currency": "CNY", "routing_code": "CNAPS", "allowed_purposes": ["GDI", "ADV", "SVC"],
+           "required_docs": {"GDI": ["INVOICE", "CONTRACT"], "ADV": ["PROFORMA_INVOICE", "CONTRACT"],
+                             "SVC": ["INVOICE", "CONTRACT"]},
+           "declaration_required_over_usd": 0, "per_payment_limit_usd": 500000},
+}
+
+# UC7: fictional universities that collect fees through the provider. id, name, country, currency, address,
+# bank name, bank code, student-number prefix, term name
+INSTITUTIONS = [
+    ("ED-3001", "University of Westhaven", "GB", "GBP", "Westhaven Campus, Bristol BS8 1TH, UK",
+     "Northern Counties Bank", "NCBK", "W", "Spring term 2027"),
+    ("ED-3002", "Northbridge State University", "US", "USD", "400 College Avenue, Northbridge, MA 01534, USA",
+     "First Coastal Bank", "FCBK", "NB", "Spring semester 2027"),
+    ("ED-3003", "Maple Ridge Institute of Technology", "CA", "CAD", "1200 Ridge Road NW, Calgary, AB T2N 1N4, Canada",
+     "Laurentian Trust Bank", "LTBK", "MR", "Winter term 2027"),
+    ("ED-3004", "Southern Cross Metropolitan University", "AU", "AUD", "90 Harbour Street, Sydney NSW 2000, Australia",
+     "Coral Coast Bank", "CCBK", "SC", "Semester 1 2027"),
+]
+PROGRAMMES = ["MSc Data Science", "MBA (full time)", "BEng Mechanical Engineering", "MSc Finance",
+              "BSc Computer Science", "MA International Relations", "MEng Civil Engineering"]
+SPONSORS = ["Bright Futures Education Trust", "Lotus Scholars Foundation", "Meridian Engineering Pvt Ltd"]
 
 PURPOSE_CODES = {
-    "GDI": "Payment for imported goods (needs invoice + transport or customs doc)",
-    "ADV": "Advance payment for goods (needs proforma invoice or contract)",
-    "SVC": "Payment for services (needs service invoice or contract)",
-    "CTR": "Contractor or freelancer fees",
+    "GDI": "Payment for goods (needs invoice + purchase order or sales contract)",
+    "ADV": "Advance payment for goods (needs proforma invoice)",
+    "SVC": "Payment for services (needs invoice + services contract)",
+    "CTR": "Contractor or freelancer fees (needs invoice + contract)",
     "SAL": "Payroll / salary",
+    "EDU": "Education / tuition fees (needs fee invoice from the institution)",
 }
 
 CORRIDOR_RULES = {
@@ -197,9 +231,29 @@ def account_no(n: int = 12) -> str:
 # --------------------------------------------------------------------------
 # Document rendering: one layout, two renderers (clean PDF, scanned image/PDF)
 # --------------------------------------------------------------------------
+FIXED_TIME = datetime(2026, 11, 16, 9, 0, 0)  # stamped into every file, so a rerun gives identical bytes
+
+
+def save_xlsx(wb: Workbook, path: Path) -> None:
+    """Save a workbook with fixed timestamps (openpyxl and zipfile otherwise stamp the current time)."""
+    wb.properties.created = wb.properties.modified = FIXED_TIME
+    stamp = FIXED_TIME.strftime("%Y-%m-%dT%H:%M:%SZ").encode()
+    buf = io.BytesIO()
+    wb.save(buf)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(buf) as src, zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED) as dst:
+        for item in src.infolist():
+            info = zipfile.ZipInfo(item.filename, date_time=FIXED_TIME.timetuple()[:6])
+            info.compress_type = zipfile.ZIP_DEFLATED
+            data = src.read(item.filename)
+            if item.filename == "docProps/core.xml":  # openpyxl stamps 'modified' with the save time
+                data = re.sub(rb"(<dcterms:modified[^>]*>)[^<]*", rb"\g<1>" + stamp, data)
+            dst.writestr(info, data)
+
+
 def render_pdf(path: Path, pages: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    c = canvas.Canvas(str(path), pagesize=A4)
+    c = canvas.Canvas(str(path), pagesize=A4, invariant=1)
     w, h = A4
     for doc in pages:
         y = h - 22 * mm
@@ -316,7 +370,8 @@ def scanify(img: Image.Image, strength: float = 1.0) -> Image.Image:
 def render_scan_pdf(path: Path, pages: list[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     imgs = [scanify(render_image(p)).convert("RGB") for p in pages]
-    imgs[0].save(path, "PDF", resolution=150, save_all=True, append_images=imgs[1:])
+    imgs[0].save(path, "PDF", resolution=150, save_all=True, append_images=imgs[1:],
+                 creationDate=FIXED_TIME.timetuple(), modDate=FIXED_TIME.timetuple())
 
 
 def render_png(path: Path, doc: dict, phone_photo: bool = False) -> None:
@@ -348,22 +403,46 @@ def build_master(out: Path) -> dict:
             acct |= {"account_number": account_no(12)}
         suppliers.append({"supplier_id": sid, "legal_name": name, "country": ctry, "address": addr,
                           "invoice_currency": cur, "bank": acct})
+    # everything below draws after the values above, so adding to it never changes them
+    for s in suppliers:
+        if s["country"] == "CN":
+            s["bank"]["cnaps"] = "".join(rng.choice("0123456789") for _ in range(12))
+    institutions = []
+    for iid, name, ctry, cur, addr, bank, code, prefix, term in INSTITUTIONS:
+        acct = {"bank_name": bank, "bank_country": ctry, "swift": bic(code, ctry)}
+        if ctry == "GB":
+            acct |= {"iban": iban("GB", code), "sort_code": sort_code()}
+        elif ctry == "US":
+            acct |= {"aba": aba(), "account_number": account_no(10)}
+        elif ctry == "CA":
+            acct |= {"transit": account_no(5), "institution_no": account_no(3), "account_number": account_no(7)}
+        else:
+            acct |= {"bsb": f"{account_no(3)}-{account_no(3)}", "account_number": account_no(9)}
+        institutions.append({"institution_id": iid, "legal_name": name, "country": ctry, "address": addr,
+                             "fee_currency": cur, "student_no_prefix": prefix, "current_term": term,
+                             "collection_account": {"account_holder": name} | acct})
     master = {
         "provider": PROVIDER,
         "generated_on": iso(TODAY),
         "clients": clients,
         "beneficiaries": suppliers,
         "purpose_codes": PURPOSE_CODES,
-        "restricted_hs_prefixes": RESTRICTED_HS,
+        "restricted_corridors": RESTRICTED_CORRIDORS,
+        "institutions": institutions,
         "watchlist": WATCHLIST,
         "corridor_rules": CORRIDOR_RULES,
         "fx_rates_per_usd": FX_TO,
         "approval_limits_usd": {"payments_ops_analyst": 100000, "payments_ops_team_lead": 1000000,
                                 "compliance_officer": None},
+        "routes": {"UC6_dealer": "Dealing desk: extends a deal window or books a top-up deal; ops cannot"},
         "tolerances": {"uc1_name_match_min": 0.85, "uc1_invoice_max_age_days": 365,
                        "uc2_name_match_min": 0.9, "uc2_address_proof_max_age_days": 90,
                        "uc2_ubo_threshold_pct": 25,
-                       "uc3_fee_short_usd": 50, "uc3_fee_short_pct": 0.1},
+                       "uc3_fee_short_usd": 50, "uc3_fee_short_pct": 0.1,
+                       "uc5_declaration_max_age_days": 30,
+                       "uc6_invoice_required_over_usd": 25000,
+                       "uc7_name_match_min": 0.9, "uc7_annual_limit_usd": 100000,
+                       "uc7_duplicate_window_days": 30, "uc7_invoice_max_overdue_days": 180},
         "high_risk_industries": ["Cryptocurrency exchange", "Arms and defence trading", "Online gambling",
                                  "Precious metals dealer", "Money services business"],
     }
@@ -372,139 +451,291 @@ def build_master(out: Path) -> dict:
 
 
 # --------------------------------------------------------------------------
-# Use case 1: payment supporting documents
+# Use case 1: supplier invoice payments
 # --------------------------------------------------------------------------
 UC1_PROBLEMS = ["AMOUNT_EXCEEDS_INVOICE", "INVOICE_REUSED", "CURRENCY_MISMATCH", "BENEFICIARY_NAME_MISMATCH",
-                "BENEFICIARY_COUNTRY_MISMATCH", "PURPOSE_CODE_MISMATCH", "MISSING_TRANSPORT_DOC",
-                "CONSIGNEE_MISMATCH", "STALE_INVOICE", "RESTRICTED_GOODS", "SCREENING_HIT",
-                "POSSIBLE_DUPLICATE", "SUSPICIOUS_CONTENT"]
-COMPLIANCE_CODES = {"BENEFICIARY_COUNTRY_MISMATCH", "CONSIGNEE_MISMATCH", "RESTRICTED_GOODS", "SCREENING_HIT",
-                    "SUSPICIOUS_CONTENT", "UBO_UNDECLARED", "BANK_HOLDER_MISMATCH", "HIGH_RISK_INDUSTRY",
-                    "THIRD_PARTY_PAYER"}
+                "BENEFICIARY_COUNTRY_MISMATCH", "BANK_DETAILS_CHANGED", "INVOICE_BANK_MISMATCH",
+                "PURPOSE_CODE_MISMATCH", "MISSING_SUPPORTING_DOC", "BUYER_MISMATCH", "PO_MISMATCH",
+                "STALE_INVOICE", "SCREENING_HIT", "POSSIBLE_DUPLICATE", "SUSPICIOUS_CONTENT"]
+UC1_COMPLIANCE = {"BENEFICIARY_COUNTRY_MISMATCH", "INVOICE_BANK_MISMATCH", "BUYER_MISMATCH", "SCREENING_HIT",
+                  "SUSPICIOUS_CONTENT"}
+COMPLIANCE_CODES = {"UBO_UNDECLARED", "BANK_HOLDER_MISMATCH", "HIGH_RISK_INDUSTRY", "THIRD_PARTY_PAYER",
+                    "SCREENING_HIT", "SUSPICIOUS_CONTENT"}  # UC2
 
 
-def uc1_route(codes: list[str], amount_usd: float) -> str:
+def payments_route(codes: list[str], amount_usd: float, compliance: set[str]) -> str:
+    """Shared by UC1, UC5 and UC7: compliance codes win, then the analyst / team-lead approval limit."""
     if not codes:
         return "AUTO_CLEAR"
-    if COMPLIANCE_CODES & set(codes):
+    if compliance & set(codes):
         return "COMPLIANCE_OFFICER"
     return "PAYMENTS_OPS_TEAM_LEAD" if amount_usd > 100000 else "PAYMENTS_OPS_ANALYST"
 
 
-def invoice_doc(inv: dict, supplier: dict, client: dict, footer: str | None = None) -> dict:
+ACCOUNT_LABELS = [("iban", "IBAN"), ("clabe", "CLABE"), ("account_number", "Account"), ("ifsc", "IFSC"),
+                  ("cnaps", "CNAPS"), ("aba", "ABA"), ("sort_code", "Sort code"), ("bsb", "BSB"),
+                  ("transit", "Transit"), ("institution_no", "Institution")]
+
+
+def account_id(bank: dict) -> str:
+    return bank.get("iban") or bank.get("clabe") or bank.get("account_number", "")
+
+
+def bank_line(bank: dict) -> str:
+    parts = [bank["bank_name"], f"SWIFT {bank['swift']}"]
+    parts += [f"{label} {bank[k]}" for k, label in ACCOUNT_LABELS if bank.get(k)]
+    return ", ".join(parts)
+
+
+def changed_bank(bank: dict) -> dict:
+    """Same bank, new account number in the same format (what a change-of-bank-details request looks like)."""
+    nb = dict(bank)
+    if "iban" in nb:
+        nb["iban"] = iban(nb["bank_country"], nb["swift"][:4])
+    elif "clabe" in nb:
+        nb["clabe"] = clabe()
+    else:
+        nb["account_number"] = account_no(len(nb["account_number"]))
+    return nb
+
+
+def goods_lines(sid: str, cur: str, target_usd: float | None = None) -> list[dict]:
+    picks = rng.sample(GOODS[sid], k=rng.randint(1, len(GOODS[sid])))
+    qtys = [rng.randint(40, 1200) if usd < 50 else rng.randint(10, 300) for _, _, usd in picks]
+    if target_usd:  # scale quantities so the invoice lands near a chosen size
+        scale = target_usd / sum(q * usd for q, (_, _, usd) in zip(qtys, picks))
+        qtys = [max(1, round(q * scale)) for q in qtys]
+    lines = []
+    for q, (desc, unit, usd) in zip(qtys, picks):
+        price = round(usd * FX_TO[cur], 2)
+        lines.append({"description": desc, "qty": q, "unit": unit, "unit_price": price, "amount": round(q * price, 2)})
+    return lines
+
+
+def service_lines(sid: str, cur: str, target_usd: float | None = None) -> list[dict]:
+    rate = round(95 * FX_TO[cur], 2)
+    hours = max(8, round(target_usd / 95)) if target_usd else rng.randint(80, 400)
+    return [{"description": SERVICES[sid], "qty": hours, "unit": "hrs", "unit_price": rate,
+             "amount": round(hours * rate, 2)}]
+
+
+def invoice_title(inv: dict) -> str:
+    return "PROFORMA INVOICE" if inv["proforma"] else ("INVOICE" if inv["services"] else "COMMERCIAL INVOICE")
+
+
+def invoice_doc(inv: dict, supplier: dict, buyer: dict, footer: str | None = None) -> dict:
+    cur = inv["currency"]
     return {
-        "title": "PROFORMA INVOICE" if inv["proforma"] else "COMMERCIAL INVOICE",
+        "title": invoice_title(inv),
         "issuer": supplier["legal_name"],
-        "fields": [("Invoice No", inv["number"]), ("Invoice Date", inv["date"]),
+        "fields": [("Invoice No", inv["number"]), ("Invoice Date", inv["date"]), ("Due Date", inv["due_date"]),
                    ("Seller", supplier["legal_name"]), ("Seller Address", supplier["address"]),
-                   ("Buyer", client["legal_name"]), ("Buyer Address", client["address"]),
-                   ("Payment Terms", inv["terms"]), ("Incoterms", inv["incoterms"])],
-        "table": {"cols": ["#", "Description", "HS Code", "Qty", "Unit", f"Price ({inv['currency']})",
-                           f"Amount ({inv['currency']})"],
-                  "x": [18, 25, 92, 113, 127, 141, 167],
-                  "rows": [[i + 1, ln["description"][:34], ln["hs_code"], ln["qty"], ln["unit"],
-                            money(ln["unit_price"]), money(ln["amount"])] for i, ln in enumerate(inv["lines"])]},
-        "totals": [("Total", f"{inv['currency']} {money(inv['total'])}")],
-        "notes": [f"Bank: {supplier['bank']['bank_name']}, SWIFT {supplier['bank']['swift']}",
-                  "Goods remain property of the seller until paid in full."],
+                   ("Buyer", buyer["legal_name"]), ("Buyer Address", buyer["address"]),
+                   ("Your Ref", inv.get("po_ref") or "-"), ("Payment Terms", inv["terms"])],
+        "table": {"cols": ["#", "Description", "Qty", "Unit", f"Price ({cur})", f"Amount ({cur})"],
+                  "x": [18, 25, 108, 123, 140, 167],
+                  "rows": [[i + 1, ln["description"][:42], ln["qty"], ln["unit"], money(ln["unit_price"]),
+                            money(ln["amount"])] for i, ln in enumerate(inv["lines"])]},
+        "totals": [("Total", f"{cur} {money(inv['total'])}")],
+        "notes": [f"Pay to: {bank_line(inv['bank'])}", f"Authorised signatory: {inv['signatory']}"],
         "footer": footer,
     }
 
 
-def transport_doc(p: dict, supplier: dict, client: dict) -> dict:
-    t = p["transport"]
+def render_xlsx_invoice(path: Path, inv: dict, supplier: dict, buyer: dict, footer: str | None = None) -> None:
+    """An invoice as the supplier's own spreadsheet: real date and number cells, not text."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Invoice"
+    ws["A1"] = invoice_title(inv)
+    ws["A1"].font = Font(bold=True, size=14)
+    ws["A2"] = supplier["legal_name"]
+    r = 4
+    for label, value in [("Invoice No", inv["number"]), ("Invoice Date", date.fromisoformat(inv["date"])),
+                         ("Due Date", date.fromisoformat(inv["due_date"])),
+                         ("Seller", supplier["legal_name"]), ("Seller Address", supplier["address"]),
+                         ("Buyer", buyer["legal_name"]), ("Buyer Address", buyer["address"]),
+                         ("Your Ref", inv.get("po_ref") or "-"), ("Currency", inv["currency"]),
+                         ("Payment Terms", inv["terms"])]:
+        ws.cell(r, 1, label).font = Font(bold=True)
+        cell = ws.cell(r, 2, value)
+        if isinstance(value, date):
+            cell.number_format = "DD-MMM-YYYY"
+        r += 1
+    r += 1
+    for j, col in enumerate(["#", "Description", "Qty", "Unit", "Unit Price", "Amount"], 1):
+        ws.cell(r, j, col).font = Font(bold=True)
+    for i, ln in enumerate(inv["lines"], 1):
+        r += 1
+        for j, value in enumerate([i, ln["description"], ln["qty"], ln["unit"], ln["unit_price"], ln["amount"]], 1):
+            cell = ws.cell(r, j, value)
+            if j >= 5:
+                cell.number_format = "#,##0.00"
+    r += 2
+    ws.cell(r, 5, f"Total ({inv['currency']})").font = Font(bold=True)
+    total = ws.cell(r, 6, inv["total"])
+    total.font, total.number_format = Font(bold=True), "#,##0.00"
+    r += 2
+    ws.cell(r, 1, f"Pay to: {bank_line(inv['bank'])}")
+    ws.cell(r + 1, 1, f"Authorised signatory: {inv['signatory']}")
+    if footer:  # hidden instruction: white 6pt text in a cell far to the right
+        ws.cell(2, 12, footer).font = Font(color="FFFFFF", size=6)
+    for col, width in zip("ABCDEF", [16, 40, 8, 8, 14, 16]):
+        ws.column_dimensions[col].width = width
+    save_xlsx(wb, path)
+
+
+def po_doc(po: dict, client: dict, supplier: dict) -> dict:
+    cur = po["currency"]
     return {
-        "title": "BILL OF LADING",
-        "issuer": "Blue Meridian Shipping Lines (fictional)",
-        "fields": [("B/L No", t["number"]), ("Date of Issue", t["date"]), ("Shipper", supplier["legal_name"]),
-                   ("Consignee", t["consignee"]), ("Notify Party", client["legal_name"]),
-                   ("Vessel / Voyage", f"{t['vessel']} / V{rng.randint(100, 999)}"),
-                   ("Port of Loading", t["port_loading"]), ("Port of Discharge", t["port_discharge"]),
-                   ("Invoice Ref", p["invoice"]["number"])],
-        "table": {"cols": ["Marks", "Description of goods", "Packages", "Gross weight (kg)"],
-                  "x": [18, 45, 128, 155],
-                  "rows": [[f"CTN-{i + 1}", ln["description"][:40], ln["packages"], ln["weight"]]
-                           for i, ln in enumerate(p["invoice"]["lines"])]},
-        "notes": ["SHIPPED on board in apparent good order and condition.", "Freight: Prepaid"],
+        "title": "PURCHASE ORDER",
+        "issuer": client["legal_name"],
+        "fields": [("PO No", po["number"]), ("PO Date", po["date"]), ("Buyer", client["legal_name"]),
+                   ("Supplier", supplier["legal_name"]), ("Supplier Address", supplier["address"]),
+                   ("Currency", cur), ("Terms", "Payment against supplier invoice quoting this PO")],
+        "table": {"cols": ["#", "Description", "Qty", "Unit", f"Price ({cur})", f"Amount ({cur})"],
+                  "x": [18, 25, 108, 123, 140, 167],
+                  "rows": [[i + 1, ln["description"][:42], ln["qty"], ln["unit"], money(ln["unit_price"]),
+                            money(ln["amount"])] for i, ln in enumerate(po["lines"])]},
+        "totals": [("PO Total", f"{cur} {money(po['total'])}")],
+        "notes": [f"Approved by: {po['approver']}, Procurement"],
     }
 
 
-def customs_doc(p: dict, supplier: dict, client: dict) -> dict:
-    inv = p["invoice"]
+def contract_doc(c: dict, supplier: dict, client: dict, title: str = "SERVICES AGREEMENT - SUMMARY") -> dict:
     return {
-        "title": "EXPORT DECLARATION",
-        "issuer": f"Customs authority of {supplier['country']} (specimen)",
-        "fields": [("Declaration No", p["customs_no"]), ("Date", inv["date"]), ("Exporter", supplier["legal_name"]),
-                   ("Importer", client["legal_name"]), ("Destination country", client["country"]),
-                   ("Invoice Ref", inv["number"]), ("Declared value", f"{inv['currency']} {money(inv['total'])}")],
-        "table": {"cols": ["HS Code", "Description", "Qty"], "x": [18, 45, 160],
-                  "rows": [[ln["hs_code"], ln["description"][:50], ln["qty"]] for ln in inv["lines"]]},
-    }
-
-
-def contract_doc(p: dict, supplier: dict, client: dict) -> dict:
-    inv = p["invoice"]
-    return {
-        "title": "SERVICES AGREEMENT - SUMMARY",
+        "title": title,
         "issuer": supplier["legal_name"],
-        "fields": [("Agreement No", p["contract_no"]), ("Effective date", inv["date"]),
+        "fields": [("Agreement No", c["number"]), ("Effective date", c["date"]),
                    ("Provider", supplier["legal_name"]), ("Client", client["legal_name"]),
-                   ("Services", "Software development and support, 12 months"),
-                   ("Contract value", f"{inv['currency']} {money(inv['total'] * 4)}"),
-                   ("Billing", "Quarterly in arrears")],
-        "notes": ["Signed for and on behalf of both parties."],
+                   ("Scope", c["scope"]), ("Contract value", f"{c['currency']} {money(c['value'])}"),
+                   ("Term", c.get("term", "12 months")), ("Billing", c.get("billing", "Monthly in arrears"))],
+        "notes": [f"Signed for the provider: {c['signatory']}", f"Signed for the client: {c['client_signatory']}"],
     }
+
+
+def bank_letter_doc(supplier: dict, client: dict, bank: dict, changed: bool, signer: str, when: date) -> dict:
+    return {
+        "title": "CHANGE OF BANK DETAILS" if changed else "CONFIRMATION OF BANK DETAILS",
+        "issuer": supplier["legal_name"],
+        "fields": [("Date", iso(when)), ("To", client["legal_name"]), ("From", supplier["legal_name"]),
+                   ("Account holder", supplier["legal_name"]), ("Bank", bank["bank_name"]),
+                   ("Bank country", bank["bank_country"]), ("SWIFT", bank["swift"])]
+                  + [(label, bank[k]) for k, label in ACCOUNT_LABELS if bank.get(k)]
+                  + [("Effective from", iso(when + timedelta(days=1)))],
+        "notes": ["Please use the account above for all payments from the effective date." if changed
+                  else "Our bank details are unchanged. Please continue to pay the account above.",
+                  f"Signed: {signer}, Finance Director"],
+    }
+
+
+def write_doc(folder: Path, stem: str, page: dict, fmt: str) -> str:
+    if fmt == "image":
+        name = f"{stem}_photo.png"
+        render_png(folder / name, page, phone_photo=True)
+    elif fmt == "scanned_pdf":
+        name = f"{stem}_scan.pdf"
+        render_scan_pdf(folder / name, [page])
+    else:
+        name = f"{stem}.pdf"
+        render_pdf(folder / name, [page])
+    return name
+
+
+def write_invoice(folder: Path, inv: dict, sup: dict, buyer: dict, fmt: str, footer: str | None) -> str:
+    if fmt == "excel":
+        render_xlsx_invoice(folder / "invoice.xlsx", inv, sup, buyer, footer)
+        return "invoice.xlsx"
+    return write_doc(folder, "invoice", invoice_doc(inv, sup, buyer, footer), fmt)
+
+
+def plan_cases(problems: list[str], coverage: list[tuple], n: int, defaults: dict | None = None) -> list[tuple]:
+    """Every problem once, every coverage case once, then plain clean cases up to n; shuffled."""
+    defaults = defaults or {}
+    forced = [(p, dict(defaults.get(p, {}))) for p in problems] + [(p, dict(v)) for p, v in coverage]
+    plan = forced + [(None, {}) for _ in range(max(0, n - len(forced)))]
+    rng.shuffle(plan)
+    return plan
+
+
+# Planted so every document type and format appears in a case that should clear, plus the cumulative rule.
+UC1_COVERAGE = [
+    (None, {"kind": "goods", "invoice_format": "excel"}),
+    (None, {"kind": "services", "invoice_format": "excel"}),
+    (None, {"kind": "advance", "invoice_format": "scanned_pdf"}),
+    (None, {"kind": "advance"}),
+    (None, {"partial": True}),                         # balance payment after a 30% advance: clears
+    ("AMOUNT_EXCEEDS_INVOICE", {"partial": True}),     # full invoice amount after a 30% advance
+    (None, {"bank_letter": "image"}),                  # supplier re-confirms the saved account: clears
+    ("BANK_DETAILS_CHANGED", {"bank_letter": "image"}),
+    (None, {"po_format": "scanned_pdf"}),
+]
 
 
 def uc1(out: Path, master: dict, n: int) -> None:
-    base = out / "uc1_payment_documents"
-    clients = {c["client_id"]: c for c in master["clients"]}
+    base = out / "uc1_supplier_payments"
+    clients = master["clients"]
     sups = {s["supplier_id"]: s for s in master["beneficiaries"]}
-    plan = UC1_PROBLEMS + [None] * max(0, n - len(UC1_PROBLEMS))
-    rng.shuffle(plan)
     truth, history = [], []
     bundle_done = False
-    for i, problem in enumerate(plan[:n]):
+    plan = plan_cases(UC1_PROBLEMS, UC1_COVERAGE, n, {"BANK_DETAILS_CHANGED": {"bank_letter": "pdf"}})
+    for i, (problem, v) in enumerate(plan):
         pid = f"PAY-{2026_11_000 + i + 1}"
-        services = problem is None and rng.random() < 0.12
-        sid = "SP-2010" if services else rng.choice([s for s in sups if s != "SP-2010"])
-        sup, cli = sups[sid], clients[rng.choice(list(clients))]
+        kind = v.get("kind") or ("goods" if problem or v else
+                                 rng.choices(["goods", "services", "advance"], [0.7, 0.15, 0.15])[0])
+        services, proforma = kind == "services", kind == "advance"
+        sid = rng.choice(sorted(SERVICE_SUPPLIERS) if services else sorted(GOODS))
+        sup, cli = sups[sid], rng.choice(clients)
         cur = sup["invoice_currency"]
         inv_date = TODAY - timedelta(days=rng.randint(10, 120))
         if problem == "STALE_INVOICE":
             inv_date = TODAY - timedelta(days=rng.randint(400, 520))
-        lines = []
-        if services:
-            hours = rng.randint(80, 400)
-            rate = round(95 * FX_TO[cur], 2)
-            lines.append({"description": "Software development services", "hs_code": "-", "qty": hours,
-                          "unit": "hrs", "unit_price": rate, "amount": round(hours * rate, 2)})
-        else:
-            for desc, hs, unit, usd in rng.sample(GOODS[sid], k=rng.randint(1, len(GOODS[sid]))):
-                q = rng.randint(40, 1200) if usd < 50 else rng.randint(10, 300)
-                price = round(usd * FX_TO[cur], 2)
-                lines.append({"description": desc, "hs_code": hs, "qty": q, "unit": unit, "unit_price": price,
-                              "amount": round(q * price, 2), "packages": max(1, q // 20),
-                              "weight": round(q * rng.uniform(0.8, 12), 1)})
-            if problem == "RESTRICTED_GOODS":
-                desc, hs, unit, usd = RESTRICTED_LINE
-                q = rng.randint(5, 30)
-                lines.append({"description": desc, "hs_code": hs, "qty": q, "unit": unit,
-                              "unit_price": round(usd * FX_TO[cur], 2), "amount": round(q * usd * FX_TO[cur], 2),
-                              "packages": q, "weight": q * 14.0})
+        lines = service_lines(sid, cur) if services else goods_lines(sid, cur)
         total = round(sum(ln["amount"] for ln in lines), 2)
-        proforma = (not services) and problem is None and rng.random() < 0.15
+        partial = v.get("partial", False)
+        if proforma:
+            terms = "100% advance"
+        elif partial:
+            terms = "30% advance, 70% on delivery"
+        else:
+            terms = rng.choice(["Net 30", "Net 60", "30% advance, 70% on delivery"])
         inv = {"number": f"{sid[-4:]}/{inv_date.year}/{rng.randint(1000, 9999)}", "date": iso(inv_date),
-               "currency": cur, "lines": lines, "total": total, "proforma": proforma,
-               "terms": "100% advance" if proforma else rng.choice(["Net 30", "Net 60", "30% advance, 70% on B/L"]),
-               "incoterms": "-" if services else rng.choice(["FOB", "CIF", "CFR"])}
+               "due_date": iso(inv_date + timedelta(days=60 if terms == "Net 60" else 30)),
+               "currency": cur, "lines": lines, "total": total, "proforma": proforma, "services": services,
+               "terms": terms, "bank": dict(sup["bank"]), "signatory": person(), "po_ref": None}
+        po = contract = None
+        if services:
+            contract = {"number": f"PSS-{rng.randint(100, 999)}", "currency": cur, "value": round(total * 4, 2),
+                        "date": iso(inv_date - timedelta(days=rng.randint(60, 300))), "scope": SERVICES[sid],
+                        "signatory": person(), "client_signatory": person()}
+            inv["po_ref"] = contract["number"]
+        else:
+            po = {"number": f"PO-{cli['client_id'][-4:]}-{rng.randint(10000, 99999)}", "currency": cur,
+                  "date": iso(inv_date - timedelta(days=rng.randint(5, 40))), "lines": [dict(ln) for ln in lines],
+                  "approver": person()}
+            if problem == "PO_MISMATCH":  # supplier invoiced more than was ordered
+                for ln in po["lines"]:
+                    ln["qty"] = max(1, int(ln["qty"] * 0.8))
+                    ln["amount"] = round(ln["qty"] * ln["unit_price"], 2)
+            po["total"] = round(sum(ln["amount"] for ln in po["lines"]), 2)
+            inv["po_ref"] = po["number"]
         purpose = "SVC" if services else ("ADV" if proforma else "GDI")
         amount, pay_cur = total, cur
-        ben_name, ben_bank = sup["legal_name"], dict(sup["bank"])
+        ben_name, ben_bank, buyer = sup["legal_name"], dict(sup["bank"]), cli
         codes = [problem] if problem else []
+        paid_before = 0.0
+        if partial:  # an earlier 30% advance on the same invoice was already released
+            paid_before = round(total * 0.3, 2)
+            history.append({"payment_id": f"PAY-2026-09{rng.randint(100, 999)}", "client_id": cli["client_id"],
+                            "invoice_number": inv["number"], "supplier_id": sid, "amount": paid_before,
+                            "currency": cur, "status": "RELEASED",
+                            "released_on": iso(inv_date + timedelta(days=5))})
+            amount = round(total - paid_before, 2)
         if problem == "AMOUNT_EXCEEDS_INVOICE":
-            amount = round(total * rng.uniform(1.06, 1.25), 2)
+            amount = total if partial else round(total * rng.uniform(1.06, 1.25), 2)
         if problem == "INVOICE_REUSED":
+            paid_before = total
             history.append({"payment_id": f"PAY-2026-09{rng.randint(100, 999)}", "client_id": cli["client_id"],
                             "invoice_number": inv["number"], "supplier_id": sid, "amount": total,
                             "currency": cur, "status": "RELEASED",
@@ -513,83 +744,78 @@ def uc1(out: Path, master: dict, n: int) -> None:
             pay_cur = "USD" if cur != "USD" else "EUR"
         if problem == "BENEFICIARY_NAME_MISMATCH":
             ben_name = rng.choice(["Crestline Global Traders Ltd", "Harbourview Sourcing LLP", "Apex Link Commerce FZE"])
-        if problem == "BENEFICIARY_COUNTRY_MISMATCH":
+        if problem == "BENEFICIARY_COUNTRY_MISMATCH":  # also a new account, so the saved-details check fires too
             ben_bank = {"bank_name": "Gulf Horizon Bank", "bank_country": "AE", "swift": "GHBKAEAD",
                         "account_number": account_no(13)}
+            codes.append("BANK_DETAILS_CHANGED")
+        if problem == "BANK_DETAILS_CHANGED":
+            ben_bank = changed_bank(sup["bank"])
+        if problem == "INVOICE_BANK_MISMATCH":  # invoice altered to show another account; instruction uses saved
+            inv["bank"] = changed_bank(sup["bank"])
         if problem == "PURPOSE_CODE_MISMATCH":
             purpose = "SVC"
+        if problem == "BUYER_MISMATCH":  # paying an invoice addressed to a different company
+            buyer = rng.choice([c for c in clients if c["client_id"] != cli["client_id"]])
+        if problem == "SCREENING_HIT":
+            inv["signatory"] = rng.choice(WATCHLIST["people"])
         amount_usd = round(amount / FX_TO[pay_cur], 2)
-        p = {"invoice": inv}
         folder = base / pid
         files = []
-        instruction = {
-            "payment_id": pid, "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 3)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
+        dump(folder / "payment_instruction.json", {
+            "payment_id": pid,
+            "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 3)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
             "client_id": cli["client_id"], "client_name": cli["legal_name"],
-            "beneficiary": {"name": ben_name, "address": sup["address"], "country": sup["country"], "bank": ben_bank},
+            "beneficiary": {"beneficiary_id": sid, "name": ben_name, "address": sup["address"],
+                            "country": sup["country"], "bank": ben_bank},
             "amount": amount, "currency": pay_cur, "purpose_code": purpose,
             "invoice_references": [inv["number"]], "remittance_info": f"INV {inv['number']}",
             "requested_value_date": iso(TODAY + timedelta(days=2)),
-        }
-        dump(folder / "payment_instruction.json", instruction)
+        })
         files.append({"file": "payment_instruction.json", "doc_type": "PAYMENT_INSTRUCTION", "format": "json"})
         footer = INJECTION if problem == "SUSPICIOUS_CONTENT" else None
-        invd = invoice_doc(inv, sup, cli, footer)
-        scanned = rng.random() < 0.3
-        # transport / supporting docs
-        support_pages = []
-        if not services and not proforma and problem != "MISSING_TRANSPORT_DOC":
-            consignee = cli["legal_name"]
-            if problem == "CONSIGNEE_MISMATCH":
-                consignee = rng.choice(["Crescent Ridge Trading FZE", "Bayfront Logistics Ltd"])
-                if consignee == "Crescent Ridge Trading FZE":
-                    codes.append("SCREENING_HIT")
-            vessel = WATCHLIST["vessels"][0] if problem == "SCREENING_HIT" else rng.choice(VESSELS)
-            p["transport"] = {"number": f"BMSL{rng.randint(10**7, 10**8 - 1)}",
-                              "date": iso(inv_date + timedelta(days=rng.randint(3, 20))),
-                              "consignee": consignee, "vessel": vessel, "port_loading": PORTS[sup["country"]],
-                              "port_discharge": DEST_PORTS[cli["country"]]}
-            support_pages.append(("bill_of_lading", "BILL_OF_LADING", transport_doc(p, sup, cli)))
-            if sup["country"] in ("IN", "CN") or rng.random() < 0.3:
-                p["customs_no"] = f"EXD-{sup['country']}-{rng.randint(10**6, 10**7 - 1)}"
-                support_pages.append(("export_declaration", "EXPORT_DECLARATION", customs_doc(p, sup, cli)))
-        if services:
-            p["contract_no"] = f"PSS-{rng.randint(100, 999)}"
-            support_pages.append(("services_agreement", "SERVICES_AGREEMENT", contract_doc(p, sup, cli)))
-        if proforma:
-            p["contract_no"] = f"PO-{rng.randint(10000, 99999)}"
-        # write files; one goods payment gets a single scanned bundle
-        if not bundle_done and problem is None and support_pages and not services:
-            render_scan_pdf(folder / "bundle_scan.pdf", [invd] + [pg for _, _, pg in support_pages])
+        inv_type = "PROFORMA_INVOICE" if proforma else "COMMERCIAL_INVOICE"
+        inv_fmt = v.get("invoice_format") or rng.choices(["pdf", "scanned_pdf", "excel"], [0.65, 0.25, 0.10])[0]
+        po_written = po is not None and problem != "MISSING_SUPPORTING_DOC"
+        if not bundle_done and problem is None and not v and po_written:  # invoice + PO scanned together
+            render_scan_pdf(folder / "bundle_scan.pdf", [invoice_doc(inv, sup, buyer), po_doc(po, cli, sup)])
             files.append({"file": "bundle_scan.pdf", "format": "scanned_pdf", "bundle": True,
-                          "segments": [{"pages": [1], "doc_type": "PROFORMA_INVOICE" if proforma else "COMMERCIAL_INVOICE"}]
-                          + [{"pages": [k + 2], "doc_type": t} for k, (_, t, _) in enumerate(support_pages)]})
+                          "segments": [{"pages": [1], "doc_type": inv_type},
+                                       {"pages": [2], "doc_type": "PURCHASE_ORDER"}]})
             bundle_done = True
         else:
-            inv_name = "invoice_scan.pdf" if scanned else "invoice.pdf"
-            (render_scan_pdf if scanned else render_pdf)(folder / inv_name, [invd])
-            files.append({"file": inv_name, "doc_type": "PROFORMA_INVOICE" if proforma else "COMMERCIAL_INVOICE",
-                          "format": "scanned_pdf" if scanned else "pdf"})
-            for stem, dtype, pg in support_pages:
-                if rng.random() < 0.2:
-                    render_png(folder / f"{stem}_photo.png", pg, phone_photo=True)
-                    files.append({"file": f"{stem}_photo.png", "doc_type": dtype, "format": "image"})
-                else:
-                    render_pdf(folder / f"{stem}.pdf", [pg])
-                    files.append({"file": f"{stem}.pdf", "doc_type": dtype, "format": "pdf"})
+            files.append({"file": write_invoice(folder, inv, sup, buyer, inv_fmt, footer), "doc_type": inv_type,
+                          "format": inv_fmt})
+            if po_written:
+                po_fmt = v.get("po_format") or ("scanned_pdf" if rng.random() < 0.15 else "pdf")
+                files.append({"file": write_doc(folder, "purchase_order", po_doc(po, cli, sup), po_fmt),
+                              "doc_type": "PURCHASE_ORDER", "format": po_fmt})
+        if contract:
+            files.append({"file": write_doc(folder, "services_agreement", contract_doc(contract, sup, cli), "pdf"),
+                          "doc_type": "SERVICES_CONTRACT", "format": "pdf"})
+        letter_fmt = v.get("bank_letter")
+        if letter_fmt:
+            changed = problem == "BANK_DETAILS_CHANGED"
+            letter = bank_letter_doc(sup, cli, ben_bank, changed, person(), TODAY - timedelta(days=rng.randint(2, 20)))
+            files.append({"file": write_doc(folder, "bank_details_letter", letter, letter_fmt),
+                          "doc_type": "BANK_DETAILS_LETTER", "format": letter_fmt})
         if problem == "POSSIBLE_DUPLICATE":
-            render_scan_pdf(folder / "invoice_copy_scan.pdf", [invd])
-            files.append({"file": "invoice_copy_scan.pdf", "doc_type": "COMMERCIAL_INVOICE",
-                          "format": "scanned_pdf", "duplicate_of": files[1]["file"]})
+            render_scan_pdf(folder / "invoice_copy_scan.pdf", [invoice_doc(inv, sup, buyer)])
+            files.append({"file": "invoice_copy_scan.pdf", "doc_type": inv_type, "format": "scanned_pdf",
+                          "duplicate_of": files[1]["file"]})
         truth.append({
-            "case_id": pid, "use_case": "UC1", "client_id": cli["client_id"], "supplier_id": sid,
-            "files": files,
-            "expected_fields": {"invoice_number": inv["number"], "invoice_date": inv["date"],
-                                "invoice_total": total, "invoice_currency": cur, "seller": sup["legal_name"],
-                                "buyer": cli["legal_name"], "payment_amount": amount, "payment_currency": pay_cur,
-                                "purpose_code": purpose,
-                                "hs_codes": [ln["hs_code"] for ln in lines if ln["hs_code"] != "-"]},
+            "case_id": pid, "use_case": "UC1", "client_id": cli["client_id"], "supplier_id": sid, "files": files,
+            "expected_fields": {
+                "invoice_number": inv["number"], "invoice_date": inv["date"], "due_date": inv["due_date"],
+                "invoice_total": total, "invoice_currency": cur, "seller": sup["legal_name"],
+                "buyer": buyer["legal_name"], "invoice_bank_account": account_id(inv["bank"]),
+                "invoice_signatory": inv["signatory"],
+                "po_number": po["number"] if po_written else None, "po_total": po["total"] if po_written else None,
+                "contract_number": contract["number"] if contract else None,
+                "payment_amount": amount, "payment_currency": pay_cur, "purpose_code": purpose,
+                "beneficiary_account": account_id(ben_bank), "invoice_paid_before": paid_before,
+                "bank_letter_account": account_id(ben_bank) if letter_fmt else None},
             "planted_problem": problem, "expected_codes": sorted(set(codes)),
-            "payment_amount_usd": amount_usd, "expected_route": uc1_route(codes, amount_usd),
+            "payment_amount_usd": amount_usd, "expected_route": payments_route(codes, amount_usd, UC1_COMPLIANCE),
         })
     dump(out / "master" / "payment_history.json", history)
     dump(base / "ground_truth.json", truth)
@@ -711,7 +937,7 @@ def uc2(out: Path, master: dict, n: int) -> None:
             c.font = Font(bold=True)
         for o in register:
             ws.append([o["name"], o["pct"] * 100, o["pct"]])
-        wb.save(folder / "shareholder_register.xlsx")
+        save_xlsx(wb, folder / "shareholder_register.xlsx")
         files.append({"file": "shareholder_register.xlsx", "doc_type": "SHAREHOLDER_REGISTER", "format": "excel"})
         for k, d in enumerate(form_directors[:2]):
             idd = {"title": "IDENTITY CARD - SPECIMEN", "issuer": "NOT A REAL DOCUMENT",
@@ -997,7 +1223,7 @@ def uc4(out: Path, master: dict, rows_per_file: int) -> None:
             for r in out_rows:
                 ws.append([r[k] for k in STD_COLS] + ([rng.choice(["JB", "MK", "TS"])] if style == "odd_headers" else []))
             base.mkdir(parents=True, exist_ok=True)
-            wb.save(base / f"{stem}.xlsx"); fname = f"{stem}.xlsx"
+            save_xlsx(wb, base / f"{stem}.xlsx"); fname = f"{stem}.xlsx"
         else:
             pages, chunk = [], 14
             for k in range(0, len(out_rows), chunk):
@@ -1024,26 +1250,572 @@ def uc4(out: Path, master: dict, rows_per_file: int) -> None:
     dump(base / "ground_truth.json", truth)
 
 
+
+# --------------------------------------------------------------------------
+# Use case 5: restricted-corridor payments
+# --------------------------------------------------------------------------
+UC5_PROBLEMS = ["MISSING_PURPOSE_CODE", "PURPOSE_NOT_ALLOWED", "MISSING_REQUIRED_DOC", "DECLARATION_MISMATCH",
+                "DECLARATION_INVALID", "AMOUNT_EXCEEDS_SUPPORT", "OVER_CORRIDOR_LIMIT", "INVALID_ROUTING_CODE",
+                "BANK_HOLDER_MISMATCH", "SCREENING_HIT", "SUSPICIOUS_CONTENT"]
+UC5_COMPLIANCE = {"PURPOSE_NOT_ALLOWED", "OVER_CORRIDOR_LIMIT", "BANK_HOLDER_MISMATCH", "SCREENING_HIT",
+                  "SUSPICIOUS_CONTENT"}
+UC5_COVERAGE = [
+    (None, {"corridor": "IN", "small": True}),        # under the declaration threshold: no declaration, clears
+    (None, {"corridor": "CN", "purpose": "SVC"}),
+    (None, {"corridor": "IN", "purpose": "CTR"}),
+    (None, {"corridor": "CN", "purpose": "ADV"}),
+    (None, {"corridor": "IN", "declaration_format": "scanned_pdf", "invoice_format": "excel"}),
+    (None, {"corridor": "CN", "bank_letter": "image"}),
+    ("DECLARATION_INVALID", {"variant": "unsigned"}),  # the main-list one is signed but too old
+]
+UC5_DEFAULTS = {"MISSING_REQUIRED_DOC": {"corridor": "CN"}, "BANK_HOLDER_MISMATCH": {"bank_letter": "pdf"},
+                "DECLARATION_INVALID": {"variant": "expired"}}
+
+
+def declaration_doc(d: dict, footer: str | None = None) -> dict:
+    return {
+        "title": f"OUTWARD REMITTANCE DECLARATION ({d['currency']})",
+        "issuer": PROVIDER,
+        "fields": [("Declaration No", d["number"]), ("Remitter", d["remitter"]), ("Beneficiary", d["beneficiary"]),
+                   ("Beneficiary country", d["country"]), ("Currency", d["currency"]),
+                   ("Amount", money(d["amount"])),
+                   ("Purpose code", d["purpose"] or "(blank)"),
+                   ("Purpose", PURPOSE_CODES.get(d["purpose"], "-").split(" (")[0]),
+                   ("Documents attached", ", ".join(d["documents"])),
+                   ("Declared by", d["signatory"]), ("Date signed", d["date_signed"] if d["signed"] else "")],
+        "notes": ["I declare that the payment above is for the stated purpose and that the documents are genuine.",
+                  f"Signature: {'/s/ ' + d['signatory'] if d['signed'] else '________________ (NOT SIGNED)'}"],
+        "footer": footer,
+    }
+
+
+def bank_confirmation_doc(bank: dict, holder: str, when: date) -> dict:
+    return {
+        "title": "BANK ACCOUNT CONFIRMATION",
+        "issuer": bank["bank_name"],
+        "fields": [("Date", iso(when)), ("Account holder", holder), ("Bank", bank["bank_name"]),
+                   ("SWIFT", bank["swift"])] + [(label, bank[k]) for k, label in ACCOUNT_LABELS if bank.get(k)]
+                  + [("Account status", "Active")],
+        "notes": ["This letter confirms the account details above at the date shown.", "Branch operations"],
+    }
+
+
+def uc5(out: Path, master: dict, n: int) -> None:
+    base = out / "uc5_corridor_payments"
+    clients = master["clients"]
+    sups = {s["supplier_id"]: s for s in master["beneficiaries"]}
+    truth = []
+    for i, (problem, v) in enumerate(plan_cases(UC5_PROBLEMS, UC5_COVERAGE, n, UC5_DEFAULTS)):
+        cid = f"CRP-{26000 + i + 1}"
+        corr = v.get("corridor") or rng.choice(["IN", "CN"])
+        rules = master["restricted_corridors"][corr]
+        cur = rules["currency"]
+        allowed = rules["allowed_purposes"]
+        purpose = v.get("purpose") or rng.choices(allowed, [5, 2, 2, 1][:len(allowed)])[0]
+        services = purpose in ("SVC", "CTR")
+        sid = rng.choice(sorted(s for s, x in sups.items()
+                                if x["country"] == corr and (s in SERVICE_SUPPLIERS) == services))
+        sup, cli = sups[sid], rng.choice(clients)
+        if v.get("small"):
+            target = rng.uniform(2000, 8000)
+        elif problem == "OVER_CORRIDOR_LIMIT":
+            target = rules["per_payment_limit_usd"] * rng.uniform(1.15, 1.4)
+        else:
+            target = rng.uniform(15000, 180000)
+        lines = service_lines(sid, cur, target) if services else goods_lines(sid, cur, target)
+        total = round(sum(ln["amount"] for ln in lines), 2)
+        inv_date = TODAY - timedelta(days=rng.randint(5, 90))
+        proforma = purpose == "ADV"
+        inv = {"number": f"{sid[-4:]}/{inv_date.year}/{rng.randint(1000, 9999)}", "date": iso(inv_date),
+               "due_date": iso(inv_date + timedelta(days=30)), "currency": cur, "lines": lines, "total": total,
+               "proforma": proforma, "services": services, "terms": "100% advance" if proforma else "Net 30",
+               "bank": dict(sup["bank"]), "signatory": person(), "po_ref": None}
+        stated = purpose  # what the instruction and declaration say
+        if problem == "MISSING_PURPOSE_CODE":
+            stated = ""
+        if problem == "PURPOSE_NOT_ALLOWED":
+            stated = "SAL"
+        amount = total
+        if problem == "AMOUNT_EXCEEDS_SUPPORT":
+            amount = round(total * rng.uniform(1.1, 1.3), 2)
+        amount_usd = round(amount / FX_TO[cur], 2)
+        codes = [problem] if problem else []
+        needs = rules["required_docs"][purpose]
+        contract = None
+        if "CONTRACT" in needs or rng.random() < 0.3:
+            contract = {"number": f"{'SC' if not services else 'SA'}-{corr}-{rng.randint(1000, 9999)}",
+                        "currency": cur, "value": round(total * rng.choice([1, 1, 2, 3]), 2),
+                        "date": iso(inv_date - timedelta(days=rng.randint(20, 200))),
+                        "scope": SERVICES[sid] if services else f"Supply of {lines[0]['description'].lower()}",
+                        "billing": "Monthly in arrears" if services else "Per delivery, against invoice",
+                        "signatory": person(), "client_signatory": person()}
+            inv["po_ref"] = contract["number"]
+        contract_written = contract is not None and problem != "MISSING_REQUIRED_DOC"
+        ben_bank = dict(sup["bank"])
+        if problem == "INVALID_ROUTING_CODE":
+            if corr == "IN":  # IFSC: 4 letters, then a 0, then 6 characters; this one breaks the 0
+                ben_bank["ifsc"] = ben_bank["ifsc"][:4] + "7" + ben_bank["ifsc"][5:]
+            else:             # CNAPS: 12 digits; this one has 11
+                ben_bank["cnaps"] = ben_bank["cnaps"][:11]
+        if problem == "SCREENING_HIT":
+            inv["signatory"] = rng.choice(WATCHLIST["people"])
+        folder = base / cid
+        files = []
+        dump(folder / "payment_instruction.json", {
+            "payment_id": cid,
+            "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 3)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
+            "client_id": cli["client_id"], "client_name": cli["legal_name"],
+            "beneficiary": {"beneficiary_id": sid, "name": sup["legal_name"], "address": sup["address"],
+                            "country": corr, "bank": ben_bank},
+            "amount": amount, "currency": cur, "purpose_code": stated,
+            "invoice_references": [inv["number"]], "requested_value_date": iso(TODAY + timedelta(days=2)),
+        })
+        files.append({"file": "payment_instruction.json", "doc_type": "PAYMENT_INSTRUCTION", "format": "json"})
+        inv_type = "PROFORMA_INVOICE" if proforma else "COMMERCIAL_INVOICE"
+        inv_fmt = v.get("invoice_format") or rng.choices(["pdf", "scanned_pdf", "excel"], [0.65, 0.25, 0.10])[0]
+        files.append({"file": write_invoice(folder, inv, sup, cli, inv_fmt, None), "doc_type": inv_type,
+                      "format": inv_fmt})
+        if contract_written:
+            title = "SERVICES AGREEMENT - SUMMARY" if services else "SALES CONTRACT - SUMMARY"
+            fmt = "scanned_pdf" if rng.random() < 0.2 else "pdf"
+            files.append({"file": write_doc(folder, "contract", contract_doc(contract, sup, cli, title), fmt),
+                          "doc_type": "CONTRACT", "format": fmt})
+        decl = None
+        if amount_usd > rules["declaration_required_over_usd"]:
+            decl = {"number": f"ORD-{corr}-{rng.randint(10**5, 10**6 - 1)}", "remitter": cli["legal_name"],
+                    "beneficiary": sup["legal_name"], "country": corr, "currency": cur, "amount": amount,
+                    "purpose": stated, "signatory": person(), "signed": True,
+                    "date_signed": iso(TODAY - timedelta(days=rng.randint(0, 20))),
+                    "documents": ["Invoice"] + (["Contract"] if contract else [])}
+            if problem == "DECLARATION_MISMATCH":
+                decl["amount"] = round(amount * rng.uniform(0.6, 0.9), 2)
+            if problem == "DECLARATION_INVALID":
+                if v.get("variant") == "unsigned":
+                    decl["signed"] = False
+                else:
+                    decl["date_signed"] = iso(TODAY - timedelta(days=rng.randint(45, 90)))
+            footer = INJECTION if problem == "SUSPICIOUS_CONTENT" else None
+            fmt = v.get("declaration_format") or rng.choices(["pdf", "scanned_pdf", "image"], [0.6, 0.25, 0.15])[0]
+            files.append({"file": write_doc(folder, "remittance_declaration", declaration_doc(decl, footer), fmt),
+                          "doc_type": "REMITTANCE_DECLARATION", "format": fmt})
+        letter_fmt = v.get("bank_letter") or ("pdf" if rng.random() < 0.35 else None)
+        holder = sup["legal_name"]
+        if letter_fmt:
+            if problem == "BANK_HOLDER_MISMATCH":
+                holder = rng.choice(["Harbourview Sourcing LLP", "Lotus Bay Trading Co", "R. Mehta (personal account)"])
+            when = TODAY - timedelta(days=rng.randint(3, 60))
+            files.append({"file": write_doc(folder, "bank_confirmation", bank_confirmation_doc(ben_bank, holder, when),
+                                            letter_fmt), "doc_type": "BANK_CONFIRMATION_LETTER", "format": letter_fmt})
+        truth.append({
+            "case_id": cid, "use_case": "UC5", "client_id": cli["client_id"], "supplier_id": sid, "files": files,
+            "expected_fields": {
+                "corridor": corr, "payment_amount": amount, "payment_currency": cur, "purpose_code": stated,
+                "routing_code": ben_bank.get("ifsc") or ben_bank.get("cnaps"),
+                "invoice_number": inv["number"], "invoice_total": total, "invoice_currency": cur,
+                "seller": sup["legal_name"], "buyer": cli["legal_name"], "invoice_signatory": inv["signatory"],
+                "contract_number": contract["number"] if contract_written else None,
+                "contract_value": contract["value"] if contract_written else None,
+                "declaration_number": decl["number"] if decl else None,
+                "declaration_amount": decl["amount"] if decl else None,
+                "declaration_purpose": decl["purpose"] if decl else None,
+                "declaration_date_signed": decl["date_signed"] if decl and decl["signed"] else None,
+                "declaration_signed": decl["signed"] if decl else None,
+                "bank_letter_holder": holder if letter_fmt else None},
+            "planted_problem": problem, "expected_codes": sorted(set(codes)),
+            "payment_amount_usd": amount_usd, "expected_route": payments_route(codes, amount_usd, UC5_COMPLIANCE),
+        })
+    dump(base / "ground_truth.json", truth)
+
+
+# --------------------------------------------------------------------------
+# Use case 6: FX deal drawdowns
+# --------------------------------------------------------------------------
+UC6_PROBLEMS = ["UNKNOWN_DEAL_REF", "DEAL_CLIENT_MISMATCH", "CURRENCY_MISMATCH", "OUTSIDE_WINDOW",
+                "EXCEEDS_DEAL_BALANCE", "DEAL_NOT_FUNDED", "CONFIRMATION_MISMATCH", "INVOICE_MISMATCH",
+                "DUPLICATE_DRAWDOWN", "SCREENING_HIT", "SUSPICIOUS_CONTENT"]
+UC6_COMPLIANCE = {"DEAL_CLIENT_MISMATCH", "SCREENING_HIT", "SUSPICIOUS_CONTENT"}
+UC6_DEALER = {"OUTSIDE_WINDOW", "EXCEEDS_DEAL_BALANCE"}
+UC6_COVERAGE = [
+    (None, {"final": True}),                          # uses exactly the remaining balance
+    (None, {"last_day": True}),                       # value date is the last day of the window
+    (None, {"product": "FORWARD"}),                   # fixed-date forward settling on its maturity date
+    (None, {"small": True}),                          # under the invoice threshold, no invoice attached
+    (None, {"confirmation_format": "scanned_pdf"}),
+    (None, {"history": 3}),
+]
+
+
+def uc6_route(codes: list[str]) -> str:
+    if not codes:
+        return "AUTO_CLEAR"
+    if UC6_COMPLIANCE & set(codes):
+        return "COMPLIANCE_OFFICER"
+    return "DEALER" if UC6_DEALER & set(codes) else "TREASURY_OPS_ANALYST"
+
+
+def confirmation_doc(deal: dict, client: dict) -> dict:
+    window = ([("Maturity date", deal["window_end"])] if deal["product"] == "FORWARD"
+              else [("Window opens", deal["window_start"]), ("Window closes", deal["window_end"])])
+    return {
+        "title": "FX DEAL CONFIRMATION",
+        "issuer": PROVIDER,
+        "fields": [("Deal reference", deal["deal_ref"]), ("Client", client["legal_name"]),
+                   ("Client ID", client["client_id"]), ("Trade date", deal["trade_date"]),
+                   ("Product", "Window forward" if deal["product"] == "WINDOW_FORWARD" else "Forward"),
+                   ("Client buys", f"{deal['buy_currency']} {money(deal['buy_amount'])}"),
+                   ("Client sells", f"{deal['sell_currency']} {money(deal['sell_amount'])}"),
+                   ("Exchange rate", f"1 {deal['sell_currency']} = {deal['rate']:.4f} {deal['buy_currency']}")]
+                  + window,
+        "notes": ["Drawdowns may be paid to third-party beneficiaries on the client's instruction.",
+                  "Total drawdowns may not exceed the amount bought. Unused balance settles at window close."],
+    }
+
+
+def uc6(out: Path, master: dict, n: int) -> None:
+    base = out / "uc6_fx_drawdowns"
+    clients = master["clients"]
+    sups = [s for s in master["beneficiaries"]]
+    truth, deals = [], []
+    min_invoice = master["tolerances"]["uc6_invoice_required_over_usd"]
+    for i, (problem, v) in enumerate(plan_cases(UC6_PROBLEMS, UC6_COVERAGE, n)):
+        did = f"DD-{26000 + i + 1}"
+        cli = rng.choice(clients)
+        home = "GBP" if cli["country"] == "GB" else "USD"
+        sup = rng.choice([s for s in sups if s["invoice_currency"] not in (home, "USD")]
+                         or [s for s in sups if s["invoice_currency"] != home])
+        buy = sup["invoice_currency"]
+        # the drawdown and its invoice
+        inv = None
+        if v.get("small"):
+            amount = round(rng.uniform(3000, min_invoice * 0.8) * FX_TO[buy], 2)
+        else:
+            sid = sup["supplier_id"]
+            target = rng.uniform(30000, 250000)
+            lines = service_lines(sid, buy, target) if sid in SERVICE_SUPPLIERS else goods_lines(sid, buy, target)
+            inv_date = TODAY - timedelta(days=rng.randint(5, 60))
+            total = round(sum(ln["amount"] for ln in lines), 2)
+            inv = {"number": f"{sid[-4:]}/{inv_date.year}/{rng.randint(1000, 9999)}", "date": iso(inv_date),
+                   "due_date": iso(inv_date + timedelta(days=30)), "currency": buy, "lines": lines, "total": total,
+                   "proforma": False, "services": sid in SERVICE_SUPPLIERS, "terms": "Net 30",
+                   "bank": dict(sup["bank"]), "signatory": person(), "po_ref": None}
+            amount = total if rng.random() < 0.7 else round(total * rng.uniform(0.4, 0.9), 2)
+            if problem == "INVOICE_MISMATCH":  # drawdown larger than the invoice it cites
+                amount = round(total * rng.uniform(1.15, 1.4), 2)
+        # the deal it draws on, and its earlier drawdowns
+        product = v.get("product", "WINDOW_FORWARD")
+        trade = TODAY - timedelta(days=rng.randint(100, 150) if problem == "OUTSIDE_WINDOW" else rng.randint(30, 150))
+        start = min(trade + timedelta(days=rng.randint(7, 21)), TODAY - timedelta(days=1))
+        end = TODAY + timedelta(days=rng.randint(20, 150))
+        if v.get("last_day") or product == "FORWARD":
+            end = TODAY + timedelta(days=2)
+        if product == "FORWARD":
+            start = end
+        if problem == "OUTSIDE_WINDOW":
+            end = TODAY - timedelta(days=rng.randint(3, 25))
+        # earlier drawdowns: clean cases always keep at least the drawdown amount available
+        buy_amount = round(amount * (rng.uniform(5, 8) if problem == "DUPLICATE_DRAWDOWN" else rng.uniform(2.5, 6)), -2)
+        k = v.get("history") or (0 if product == "FORWARD" else rng.choice([0, 1, 1, 2]))
+        if v.get("final"):
+            used, k = round(buy_amount - amount, 2), max(k, 1)
+        elif problem == "EXCEEDS_DEAL_BALANCE":
+            used, k = round(buy_amount - amount * rng.uniform(0.5, 0.85), 2), max(k, 1)
+        else:
+            used = round((buy_amount - amount) * rng.uniform(0.05, 0.6), 2) if k else 0.0
+        splits = sorted(rng.uniform(0, 1) for _ in range(k - 1))
+        parts = [round(used * (b - a), 2) for a, b in zip([0] + splits, splits + [1])]
+        if parts:
+            parts[-1] = round(used - sum(parts[:-1]), 2)
+        prior = []
+        for j, p in enumerate(parts):
+            other = rng.choice([s for s in sups if s["invoice_currency"] == buy])
+            when = start + timedelta(days=rng.randint(0, max(0, (min(TODAY, end) - start).days - 1)))
+            prior.append({"drawdown_id": f"DD-25{rng.randint(1000, 9999)}", "beneficiary": other["legal_name"],
+                          "amount": p, "currency": buy, "value_date": iso(when), "invoice_reference": None,
+                          "status": "SETTLED"})
+        rate = round(FX_TO[buy] / FX_TO[home] * rng.uniform(0.985, 1.015), 4)
+        deal = {"deal_ref": f"FWD-2026-{rng.randint(10000, 99999)}", "client_id": cli["client_id"],
+                "product": product, "trade_date": iso(trade), "window_start": iso(start), "window_end": iso(end),
+                "buy_currency": buy, "buy_amount": buy_amount, "sell_currency": home,
+                "sell_amount": round(buy_amount / rate, 2), "rate": rate,
+                "funding_status": "AWAITING_FUNDS" if problem == "DEAL_NOT_FUNDED" else "FUNDED",
+                "drawdowns": prior}
+        deal_client = cli
+        if problem == "DEAL_CLIENT_MISMATCH":  # the deal belongs to another client
+            deal_client = rng.choice([c for c in clients if c["client_id"] != cli["client_id"]
+                                      and c["country"] == cli["country"]] or
+                                     [c for c in clients if c["client_id"] != cli["client_id"]])
+            deal["client_id"] = deal_client["client_id"]
+        if problem == "DUPLICATE_DRAWDOWN":  # the same payment already went out a few days ago
+            deal["drawdowns"].append({"drawdown_id": f"DD-25{rng.randint(1000, 9999)}",
+                                      "beneficiary": sup["legal_name"], "amount": amount, "currency": buy,
+                                      "value_date": iso(TODAY - timedelta(days=rng.randint(2, 10))),
+                                      "invoice_reference": inv["number"] if inv else None, "status": "SETTLED"})
+        deals.append(deal)
+        remaining = round(deal["buy_amount"] - sum(d["amount"] for d in deal["drawdowns"]), 2)
+        shown = dict(deal)
+        if problem == "CONFIRMATION_MISMATCH":  # the attached confirmation disagrees with the booking
+            shown["rate"] = round(rate * rng.choice([1.012, 0.988]), 4)
+            shown["buy_amount"] = round(buy_amount * rng.choice([1.1, 1.25]), -2)
+            shown["sell_amount"] = round(shown["buy_amount"] / shown["rate"], 2)
+        ref = deal["deal_ref"]
+        if problem == "UNKNOWN_DEAL_REF":  # two digits swapped when the client typed it
+            digits = ref[-5:]
+            swapped = digits[:2] + digits[3] + digits[2] + digits[4]
+            if swapped == digits:
+                swapped = digits[:4] + str((int(digits[4]) + 1) % 10)
+            ref = ref[:-5] + swapped
+        pay_cur = home if problem == "CURRENCY_MISMATCH" else buy
+        if problem == "SCREENING_HIT" and inv:
+            inv["signatory"] = rng.choice(WATCHLIST["people"])
+        folder = base / did
+        files = []
+        dump(folder / "drawdown_instruction.json", {
+            "drawdown_id": did,
+            "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 2)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
+            "client_id": cli["client_id"], "client_name": cli["legal_name"], "deal_ref": ref,
+            "beneficiary": {"beneficiary_id": sup["supplier_id"], "name": sup["legal_name"],
+                            "country": sup["country"], "bank": sup["bank"]},
+            "amount": amount, "currency": pay_cur, "value_date": iso(TODAY + timedelta(days=2)),
+            "invoice_reference": inv["number"] if inv else None, "purpose_code": "SVC" if inv and inv["services"] else "GDI",
+        })
+        files.append({"file": "drawdown_instruction.json", "doc_type": "DRAWDOWN_INSTRUCTION", "format": "json"})
+        fmt = v.get("confirmation_format") or ("scanned_pdf" if rng.random() < 0.2 else "pdf")
+        files.append({"file": write_doc(folder, "deal_confirmation", confirmation_doc(shown, deal_client), fmt),
+                      "doc_type": "DEAL_CONFIRMATION", "format": fmt})
+        if inv:
+            footer = INJECTION if problem == "SUSPICIOUS_CONTENT" else None
+            ifmt = rng.choices(["pdf", "scanned_pdf", "excel"], [0.7, 0.2, 0.1])[0]
+            files.append({"file": write_invoice(folder, inv, sup, cli, ifmt, footer), "doc_type": "COMMERCIAL_INVOICE",
+                          "format": ifmt})
+        codes = [problem] if problem else []
+        if problem == "SUSPICIOUS_CONTENT" and not inv:
+            raise AssertionError("injection case needs an invoice")
+        truth.append({
+            "case_id": did, "use_case": "UC6", "client_id": cli["client_id"], "deal_ref": deal["deal_ref"],
+            "files": files,
+            "expected_fields": {
+                "deal_ref_on_instruction": ref, "drawdown_amount": amount, "drawdown_currency": pay_cur,
+                "confirmation_rate": shown["rate"], "confirmation_buy_amount": shown["buy_amount"],
+                "confirmation_buy_currency": buy, "confirmation_client": deal_client["legal_name"],
+                "window_start": deal["window_start"], "window_end": deal["window_end"],
+                "invoice_number": inv["number"] if inv else None, "invoice_total": inv["total"] if inv else None,
+                "invoice_signatory": inv["signatory"] if inv else None,
+                "deal_remaining_before": remaining},
+            "planted_problem": problem, "expected_codes": codes,
+            "payment_amount_usd": round(amount / FX_TO[pay_cur], 2), "expected_route": uc6_route(codes),
+        })
+    dump(out / "master" / "fx_contracts.json", deals)
+    dump(base / "ground_truth.json", truth)
+
+
+# --------------------------------------------------------------------------
+# Use case 7: tuition payments
+# --------------------------------------------------------------------------
+UC7_PROBLEMS = ["BENEFICIARY_NOT_INSTITUTION", "AMOUNT_EXCEEDS_FEES", "STUDENT_NAME_MISMATCH",
+                "STUDENT_ID_MISMATCH", "CURRENCY_MISMATCH", "STALE_DOCUMENT", "UNSUPPORTED_THIRD_PARTY_PAYER",
+                "OVER_ANNUAL_LIMIT", "DUPLICATE_PAYMENT", "SCREENING_HIT", "SUSPICIOUS_CONTENT"]
+UC7_COMPLIANCE = {"BENEFICIARY_NOT_INSTITUTION", "UNSUPPORTED_THIRD_PARTY_PAYER", "OVER_ANNUAL_LIMIT",
+                  "SCREENING_HIT", "SUSPICIOUS_CONTENT"}
+UC7_COVERAGE = [
+    (None, {"payer": "PARENT"}),
+    (None, {"payer": "SPONSOR"}),                      # sponsor with a sponsorship letter: clears
+    (None, {"payer": "SELF", "family_name_first": True, "id_card": True}),  # same name, other order
+    (None, {"partial": True}),                         # pays half the balance now
+    (None, {"invoice_format": "scanned_pdf"}),
+    (None, {"earlier_term": True}),                    # paid last term too, still under the annual limit
+]
+UC7_DEFAULTS = {"STUDENT_ID_MISMATCH": {"id_card": True}, "UNSUPPORTED_THIRD_PARTY_PAYER": {"payer": "SPONSOR"},
+                "SCREENING_HIT": {"payer": "PARENT"}}
+PAYER_COUNTRIES = ["IN", "CN", "NG", "VN", "KE"]
+
+
+def fee_invoice_doc(f: dict, inst: dict, footer: str | None = None) -> dict:
+    cur = inst["fee_currency"]
+    return {
+        "title": "STUDENT FEE INVOICE",
+        "issuer": inst["legal_name"],
+        "fields": [("Invoice No", f["number"]), ("Invoice date", f["date"]), ("Student name", f["student"]),
+                   ("Student no", f["student_no"]), ("Programme", f["programme"]), ("Term", f["term"]),
+                   ("Due date", f["due_date"])],
+        "table": {"cols": ["Item", f"Amount ({cur})"], "x": [18, 150],
+                  "rows": [[d, money(a)] for d, a in f["items"]]},
+        "totals": [("Total fees", f"{cur} {money(f['total'])}"), ("Paid to date", f"{cur} {money(f['paid'])}"),
+                   ("Balance due", f"{cur} {money(f['balance'])}")],
+        "notes": [f"Pay to: {inst['legal_name']}, {bank_line(inst['collection_account'])}",
+                  f"Quote the student number {f['student_no']} as the payment reference."],
+        "footer": footer,
+    }
+
+
+def uc7(out: Path, master: dict, n: int) -> None:
+    base = out / "uc7_tuition_payments"
+    insts = master["institutions"]
+    limit = master["tolerances"]["uc7_annual_limit_usd"]
+    truth, history = [], []
+    for i, (problem, v) in enumerate(plan_cases(UC7_PROBLEMS, UC7_COVERAGE, n, UC7_DEFAULTS)):
+        tid = f"TUI-{26000 + i + 1}"
+        inst = rng.choice(insts)
+        cur = inst["fee_currency"]
+        first, last = rng.choice(FIRST), rng.choice(LAST)
+        student = f"{first} {last}"
+        student_no = f"{inst['student_no_prefix']}{rng.randint(10**6, 10**7 - 1)}"
+        programme = rng.choice(PROGRAMMES)
+        items = [("Tuition fee", round(rng.uniform(9000, 26000) * FX_TO[cur], -1))]
+        if rng.random() < 0.5:
+            items.append(("Accommodation", round(rng.uniform(3500, 8000) * FX_TO[cur], -1)))
+        items.append(("Student services fee", round(rng.uniform(250, 600) * FX_TO[cur], -1)))
+        total = round(sum(a for _, a in items), 2)
+        paid = round(rng.choice([0, 0, 2000, 3000]) * FX_TO[cur], 2)
+        balance = round(total - paid, 2)
+        inv_date = TODAY - timedelta(days=rng.randint(10, 40))
+        due = TODAY + timedelta(days=rng.randint(10, 60))
+        term = inst["current_term"]
+        if problem == "STALE_DOCUMENT":  # last year's invoice, long overdue
+            inv_date = TODAY - timedelta(days=rng.randint(380, 460))
+            due = inv_date + timedelta(days=30)
+            term = term.replace("2027", "2025")
+        fee = {"number": f"{inst['student_no_prefix']}-FEE-{rng.randint(100000, 999999)}", "date": iso(inv_date),
+               "student": student, "student_no": student_no, "programme": programme, "term": term,
+               "due_date": iso(due), "items": items, "total": total, "paid": paid, "balance": balance}
+        payer_kind = v.get("payer") or rng.choices(["SELF", "PARENT", "SPONSOR"], [3, 5, 1])[0]
+        payer_country = rng.choice(PAYER_COUNTRIES)
+        if payer_kind == "SELF":
+            payer = student
+        elif payer_kind == "PARENT":
+            payer = f"{rng.choice(FIRST)} {last}"
+        else:
+            payer = rng.choice(SPONSORS)
+        if problem == "SCREENING_HIT":
+            payer = rng.choice(WATCHLIST["people"])
+        amount = balance
+        if v.get("partial"):
+            amount = round(balance * 0.5, 2)
+        if problem == "AMOUNT_EXCEEDS_FEES":
+            amount = round(balance * rng.uniform(1.1, 1.3), 2)
+        if problem == "OVER_ANNUAL_LIMIT":  # big earlier payments this year push it over
+            amount = round(max(balance, 30000 * FX_TO[cur]), 2)
+            fee["items"].append(("Lab and field-trip fees", round(amount - balance, 2)))
+            fee["total"] = round(sum(a for _, a in fee["items"]), 2)
+            fee["balance"] = round(fee["total"] - fee["paid"], 2)
+        pay_cur = cur
+        if problem == "CURRENCY_MISMATCH":
+            pay_cur = "USD" if cur != "USD" else "CAD"
+        amount_usd = round(amount / FX_TO[pay_cur], 2)
+        ben = {"name": inst["legal_name"], "country": inst["country"], "bank": dict(inst["collection_account"])}
+        if problem == "BENEFICIARY_NOT_INSTITUTION":  # an 'agent' account that is not the university's
+            short = inst["legal_name"].split(" of ")[-1].split()[0]
+            ben = {"name": f"{short} Student Fee Services Ltd", "country": "AE",
+                   "bank": {"account_holder": f"{short} Student Fee Services Ltd", "bank_name": "Gulf Horizon Bank",
+                            "bank_country": "AE", "swift": "GHBKAEAD", "account_number": account_no(13)}}
+        if v.get("earlier_term") or problem == "OVER_ANNUAL_LIMIT":
+            earlier_usd = (limit - amount_usd * 0.4) if problem == "OVER_ANNUAL_LIMIT" else rng.uniform(8000, 25000)
+            for k, share in enumerate([0.55, 0.45] if problem == "OVER_ANNUAL_LIMIT" else [1.0]):
+                history.append({"payment_id": f"TUI-25{rng.randint(1000, 9999)}", "student_no": student_no,
+                                "institution_id": inst["institution_id"],
+                                "invoice_reference": f"{inst['student_no_prefix']}-FEE-{rng.randint(100000, 999999)}",
+                                "amount": round(earlier_usd * share * FX_TO[cur], 2), "currency": cur,
+                                "amount_usd": round(earlier_usd * share, 2),
+                                "paid_on": iso(TODAY - timedelta(days=rng.randint(60, 300)))})
+        if problem == "DUPLICATE_PAYMENT":
+            history.append({"payment_id": f"TUI-26{rng.randint(1000, 9999)}", "student_no": student_no,
+                            "institution_id": inst["institution_id"], "invoice_reference": fee["number"],
+                            "amount": amount, "currency": cur, "amount_usd": amount_usd,
+                            "paid_on": iso(TODAY - timedelta(days=rng.randint(3, 15)))})
+        folder = base / tid
+        files = []
+        dump(folder / "payment_instruction.json", {
+            "payment_id": tid,
+            "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 3)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
+            "payer": {"name": payer, "country": payer_country, "relationship_to_student": payer_kind},
+            "student": {"name": student, "student_no": student_no},
+            "institution_id": inst["institution_id"], "beneficiary": ben,
+            "amount": amount, "currency": pay_cur, "purpose_code": "EDU", "invoice_reference": fee["number"],
+        })
+        files.append({"file": "payment_instruction.json", "doc_type": "PAYMENT_INSTRUCTION", "format": "json"})
+        footer = INJECTION if problem == "SUSPICIOUS_CONTENT" else None
+        fmt = v.get("invoice_format") or rng.choices(["pdf", "scanned_pdf"], [0.75, 0.25])[0]
+        files.append({"file": write_doc(folder, "fee_invoice", fee_invoice_doc(fee, inst, footer), fmt),
+                      "doc_type": "FEE_INVOICE", "format": fmt})
+        offer_name = student
+        if problem == "STUDENT_NAME_MISMATCH":  # the offer letter is for someone else
+            offer_name = f"{rng.choice([f for f in FIRST if f != first])} {last}"
+        offer = {"title": "OFFER OF ADMISSION", "issuer": inst["legal_name"],
+                 "fields": [("Date", iso(TODAY - timedelta(days=rng.randint(120, 300)))), ("Applicant", offer_name),
+                            ("Student no", student_no), ("Programme", programme),
+                            ("Start", inst["current_term"] if problem != "STALE_DOCUMENT" else term),
+                            ("Offer type", "Unconditional")],
+                 "notes": ["We are pleased to offer you a place on the programme above.", "Admissions Office"]}
+        files.append({"file": write_doc(folder, "offer_letter", offer, "pdf"), "doc_type": "OFFER_LETTER",
+                      "format": "pdf"})
+        card_name, card_no = student, student_no
+        if v.get("family_name_first"):
+            card_name = f"{last.upper()} {first}"
+        if problem == "STUDENT_ID_MISMATCH":
+            card_no = f"{inst['student_no_prefix']}{rng.randint(10**6, 10**7 - 1)}"
+        has_card = v.get("id_card") or rng.random() < 0.5
+        if has_card:
+            card = {"title": "STUDENT ID CARD - SPECIMEN", "issuer": inst["legal_name"],
+                    "fields": [("Name", card_name), ("Student no", card_no), ("Programme", programme),
+                               ("Valid until", iso(TODAY + timedelta(days=rng.randint(300, 900))))],
+                    "notes": ["SPECIMEN - generated test data, not a real document"]}
+            render_png(folder / "student_id.png", card, phone_photo=rng.random() < 0.6)
+            files.append({"file": "student_id.png", "doc_type": "STUDENT_ID", "format": "image"})
+        if payer_kind == "SPONSOR" and problem != "UNSUPPORTED_THIRD_PARTY_PAYER":
+            letter = {"title": "SPONSORSHIP LETTER", "issuer": payer,
+                      "fields": [("Date", iso(TODAY - timedelta(days=rng.randint(10, 90)))), ("Sponsor", payer),
+                                 ("Student", student), ("Student no", student_no),
+                                 ("Institution", inst["legal_name"]), ("Covers", "Tuition and fees, academic year 2026-27")],
+                      "notes": [f"Signed: {person()}, Trustee"]}
+            files.append({"file": write_doc(folder, "sponsor_letter", letter, "pdf"), "doc_type": "SPONSOR_LETTER",
+                          "format": "pdf"})
+        codes = [problem] if problem else []
+        truth.append({
+            "case_id": tid, "use_case": "UC7", "institution_id": inst["institution_id"], "files": files,
+            "expected_fields": {
+                "payer": payer, "payer_relationship": payer_kind, "student": student, "student_no": student_no,
+                "invoice_number": fee["number"], "invoice_balance_due": fee["balance"], "invoice_currency": cur,
+                "invoice_due_date": fee["due_date"], "term": term, "offer_letter_name": offer_name,
+                "id_card_name": card_name if has_card else None, "id_card_student_no": card_no if has_card else None,
+                "payment_amount": amount, "payment_currency": pay_cur, "beneficiary": ben["name"]},
+            "planted_problem": problem, "expected_codes": codes,
+            "payment_amount_usd": amount_usd, "expected_route": payments_route(codes, amount_usd, UC7_COMPLIANCE),
+        })
+    dump(out / "master" / "tuition_payment_history.json", history)
+    dump(base / "ground_truth.json", truth)
+
+
 # --------------------------------------------------------------------------
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--out", default="../data")
+    ap.add_argument("--out", default=str(Path(__file__).resolve().parent.parent))
     ap.add_argument("--seed", type=int, default=7)
-    ap.add_argument("--payments", type=int, default=30, help="UC1 payment cases (min 13)")
+    ap.add_argument("--payments", type=int, default=32, help="UC1 supplier payments (min 24: problems + coverage)")
     ap.add_argument("--applications", type=int, default=16, help="UC2 KYB cases (min 10)")
     ap.add_argument("--credits", type=int, default=40, help="UC3 credit cases (min 11)")
     ap.add_argument("--rows", type=int, default=24, help="UC4 rows per payee file")
+    ap.add_argument("--corridor-payments", type=int, default=24, help="UC5 corridor payments (min 18)")
+    ap.add_argument("--drawdowns", type=int, default=24, help="UC6 FX drawdowns (min 17)")
+    ap.add_argument("--tuition", type=int, default=24, help="UC7 tuition payments (min 17)")
     a = ap.parse_args()
-    rng.seed(a.seed)
     out = Path(a.out)
-    if out.exists():
-        shutil.rmtree(out)
+    # remove only what this script writes, never the folder itself (this script may live inside it)
+    for name in ["master", "uc1_payment_documents", "uc1_supplier_payments", "uc2_kyb_onboarding",
+                 "uc3_incoming_funds", "uc4_bulk_payee_files", "uc5_corridor_payments", "uc6_fx_drawdowns",
+                 "uc7_tuition_payments"]:
+        shutil.rmtree(out / name, ignore_errors=True)
+    rng.seed(a.seed)
     master = build_master(out)
-    uc1(out, master, max(a.payments, len(UC1_PROBLEMS)))
-    uc2(out, master, max(a.applications, len(UC2_PROBLEMS)))
-    uc3(out, master, max(a.credits, len(UC3_PROBLEMS)))
-    uc4(out, master, a.rows)
-    files = [p for p in out.rglob("*") if p.is_file()]
+    steps = [(uc1, max(a.payments, len(UC1_PROBLEMS) + len(UC1_COVERAGE))),
+             (uc2, max(a.applications, len(UC2_PROBLEMS))),
+             (uc3, max(a.credits, len(UC3_PROBLEMS))),
+             (uc4, a.rows),
+             (uc5, max(a.corridor_payments, len(UC5_PROBLEMS) + len(UC5_COVERAGE))),
+             (uc6, max(a.drawdowns, len(UC6_PROBLEMS) + len(UC6_COVERAGE))),
+             (uc7, max(a.tuition, len(UC7_PROBLEMS) + len(UC7_COVERAGE)))]
+    for fn, n in steps:
+        rng.seed(f"{a.seed}:{fn.__name__}")  # own stream per use case
+        fn(out, master, n)
+    files = [p for p in out.rglob("*") if p.is_file() and "datagen" not in p.parts]
     print(f"Wrote {len(files)} files to {out.resolve()}")
 
 

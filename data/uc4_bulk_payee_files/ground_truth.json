@@ -7,9 +7,9 @@
     "format": "csv",
     "header": {
       "row_count": 24,
-      "control_total": 3169954.72
+      "control_total": 2891425.0
     },
-    "actual_total": 3169954.72,
+    "actual_total": 2891425.0,
     "column_mapping": null,
     "extra_unmapped_columns": [],
     "expected_file_codes": [],
@@ -24,9 +24,9 @@
     "format": "xlsx",
     "header": {
       "row_count": 24,
-      "control_total": 1326755.07
+      "control_total": 6980505.15
     },
-    "actual_total": 1326755.07,
+    "actual_total": 6980505.15,
     "column_mapping": {
       "row": "Line",
       "payee_name": "Beneficiary / Vendor",
@@ -56,9 +56,9 @@
     "format": "csv",
     "header": {
       "row_count": 25,
-      "control_total": 4731647.77
+      "control_total": 3117734.48
     },
-    "actual_total": 4731647.77,
+    "actual_total": 3117734.48,
     "column_mapping": null,
     "extra_unmapped_columns": [],
     "expected_file_codes": [
@@ -71,31 +71,31 @@
     ],
     "bad_rows": [
       {
-        "row": 3,
-        "codes": [
-          "BIC_COUNTRY_MISMATCH"
-        ]
-      },
-      {
-        "row": 7,
-        "codes": [
-          "CURRENCY_NOT_SUPPORTED"
-        ]
-      },
-      {
-        "row": 10,
+        "row": 4,
         "codes": [
           "INVALID_IBAN"
         ]
       },
       {
-        "row": 15,
+        "row": 17,
+        "codes": [
+          "CURRENCY_NOT_SUPPORTED"
+        ]
+      },
+      {
+        "row": 18,
         "codes": [
           "INVALID_ROUTING_CODE"
         ]
       },
       {
-        "row": 17,
+        "row": 21,
+        "codes": [
+          "BIC_COUNTRY_MISMATCH"
+        ]
+      },
+      {
+        "row": 23,
         "codes": [
           "MISSING_PURPOSE_CODE"
         ]
@@ -117,9 +117,9 @@
     "format": "xlsx",
     "header": {
       "row_count": 24,
-      "control_total": 32709901.17
+      "control_total": 28179422.89
     },
-    "actual_total": 32709901.17,
+    "actual_total": 28179422.89,
     "column_mapping": null,
     "extra_unmapped_columns": [],
     "expected_file_codes": [
@@ -129,21 +129,21 @@
     ],
     "bad_rows": [
       {
-        "row": 4,
+        "row": 5,
         "codes": [
           "BANK_DETAILS_CHANGED"
         ]
       },
       {
-        "row": 5,
+        "row": 15,
         "codes": [
-          "SCREENING_HIT"
+          "AMOUNT_OVER_LIMIT"
         ]
       },
       {
-        "row": 24,
+        "row": 20,
         "codes": [
-          "AMOUNT_OVER_LIMIT"
+          "SCREENING_HIT"
         ]
       }
     ],
@@ -157,9 +157,9 @@
     "format": "csv",
     "header": {
       "row_count": 24,
-      "control_total": 3933169.75
+      "control_total": 3028020.85
     },
-    "actual_total": 3932169.75,
+    "actual_total": 3025520.35,
     "column_mapping": null,
     "extra_unmapped_columns": [],
     "expected_file_codes": [
@@ -176,9 +176,9 @@
     "format": "pdf",
     "header": {
       "row_count": 24,
-      "control_total": 7787512.07
+      "control_total": 4485725.54
     },
-    "actual_total": 7787512.07,
+    "actual_total": 4485725.54,
     "column_mapping": null,
     "extra_unmapped_columns": [],
     "expected_file_codes": [],

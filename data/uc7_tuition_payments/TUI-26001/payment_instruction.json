@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26001",
+  "submitted_at": "2026-11-16T14:56:00Z",
+  "payer": {
+    "name": "Grace Wagner",
+    "country": "NG",
+    "relationship_to_student": "PARENT"
+  },
+  "student": {
+    "name": "Anita Wagner",
+    "student_no": "W9388769"
+  },
+  "institution_id": "ED-3001",
+  "beneficiary": {
+    "name": "University of Westhaven",
+    "country": "GB",
+    "bank": {
+      "account_holder": "University of Westhaven",
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBMM",
+      "iban": "GB92NCBK37265167612220",
+      "sort_code": "19-75-59"
+    }
+  },
+  "amount": 13570.0,
+  "currency": "USD",
+  "purpose_code": "EDU",
+  "invoice_reference": "W-FEE-129749"
+}

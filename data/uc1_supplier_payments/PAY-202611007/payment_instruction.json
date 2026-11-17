@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611007",
+  "submitted_at": "2026-11-14T12:56:00Z",
+  "client_id": "CL-1005",
+  "client_name": "Copperleaf Kitchenware Ltd",
+  "beneficiary": {
+    "beneficiary_id": "SP-2007",
+    "name": "Rheinwerk Komponenten GmbH",
+    "address": "Industriestrasse 9, 50667 Koeln, Germany",
+    "country": "DE",
+    "bank": {
+      "bank_name": "Rheinland Handelsbank",
+      "bank_country": "DE",
+      "swift": "RHHBDE3M",
+      "iban": "DE68233079244026859952"
+    }
+  },
+  "amount": 6621.41,
+  "currency": "EUR",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2007/2026/2741"
+  ],
+  "remittance_info": "INV 2007/2026/2741",
+  "requested_value_date": "2026-11-18"
+}

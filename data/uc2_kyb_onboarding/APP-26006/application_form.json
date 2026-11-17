@@ -1,32 +1,38 @@
 {
   "application_id": "APP-26006",
-  "submitted_on": "2026-11-13",
-  "legal_name": "Cedarline Trading Ltd",
-  "trading_name": "Cedarline",
-  "registration_number": "10470848",
+  "submitted_on": "2026-11-16",
+  "legal_name": "Silverbirch Trading Ltd",
+  "trading_name": "Silverbirch",
+  "registration_number": "71975545",
   "country": "GB",
-  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
-  "incorporation_date": "2020-04-17",
-  "industry": "Apparel retail (online)",
-  "expected_monthly_volume_usd": 900000,
+  "registered_address": "77 Castle Street, Edinburgh EH2 3AH, UK",
+  "incorporation_date": "2016-02-09",
+  "industry": "Software consulting",
+  "expected_monthly_volume_usd": 50000,
   "corridors": [
-    "IN",
-    "TR"
+    "MX",
+    "DE"
   ],
   "directors": [
     {
-      "name": "Kenji Kowalski"
+      "name": "Felix Becker"
+    },
+    {
+      "name": "Anita Chen"
+    },
+    {
+      "name": "Anita Morales"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Kenji Kowalski",
+      "name": "Felix Becker",
       "pct": 50
     },
     {
-      "name": "Cedarline Holdings Ltd",
-      "pct": 50
+      "name": "Anita Chen",
+      "pct": 30
     }
   ],
-  "contact_email": "finance@cedarline.example"
+  "contact_email": "finance@silverbirch.example"
 }

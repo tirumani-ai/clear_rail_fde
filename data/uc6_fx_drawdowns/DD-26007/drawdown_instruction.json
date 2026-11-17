@@ -1,0 +1,24 @@
+{
+  "drawdown_id": "DD-26007",
+  "submitted_at": "2026-11-16T10:00:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "deal_ref": "FWD-2026-83318",
+  "beneficiary": {
+    "beneficiary_id": "SP-2003",
+    "name": "Nilgiri Spice Exports Pvt Ltd",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Malabar Trade Bank",
+      "bank_country": "IN",
+      "swift": "MLTBINMM",
+      "account_number": "49118625276018",
+      "ifsc": "MLTB0955597"
+    }
+  },
+  "amount": 14281277.71,
+  "currency": "INR",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2003/2026/2979",
+  "purpose_code": "GDI"
+}

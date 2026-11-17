@@ -1,0 +1,23 @@
+{
+  "drawdown_id": "DD-26019",
+  "submitted_at": "2026-11-14T17:18:00Z",
+  "client_id": "CL-1002",
+  "client_name": "Granite Peak Outdoor LLC",
+  "deal_ref": "FWD-2026-39791",
+  "beneficiary": {
+    "beneficiary_id": "SP-2006",
+    "name": "Talleres Monterrey SA de CV",
+    "country": "MX",
+    "bank": {
+      "bank_name": "Banco Sierra Madre",
+      "bank_country": "MX",
+      "swift": "BSMXMXMM",
+      "clabe": "712768426846563216"
+    }
+  },
+  "amount": 1151784.9,
+  "currency": "MXN",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2006/2026/9391",
+  "purpose_code": "GDI"
+}

@@ -7,63 +7,401 @@
       <Id>CORRIDOR-COLLECTIONS-20261116</Id>
       <Acct><Id><Othr><Id>COLLECTIONS-USD-GBP-EUR</Id></Othr></Id><Ownr><Nm>Corridor Payments Ltd</Nm></Ownr></Acct>
       <Ntry>
-        <Amt Ccy="USD">373412.39</Amt>
+        <Amt Ccy="GBP">175913.22</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26988772694</AcctSvcrRef>
+        <AcctSvcrRef>FT26175690325</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0006</EndToEndId></Refs>
+          <Refs><EndToEndId>CR-20261116-0013</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40013</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">40048.80</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26195324916</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0040</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40039</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">372135.58</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26784854793</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0025</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40024</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">9229.72</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26444010081</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0014</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40014</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">425880.61</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26368204349</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0016</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40016</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">183417.62</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26679992533</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0020</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40020</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">293465.72</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26462639413</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0041</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40040</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">115807.42</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26240023219</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0027</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40025</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">183417.62</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26679992533</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0021</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40020</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">256404.63</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26980307742</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0011</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40011</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">432863.08</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26975801098</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0005</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
           <RmtInf><Ustrd>/RFB/DL-2026-40005</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">196733.91</Amt>
+        <Amt Ccy="USD">118073.54</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26194638842</AcctSvcrRef>
+        <AcctSvcrRef>FT26836776359</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0004</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40004</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">192604.38</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26797820799</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0015</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40015</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">51530.32</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26204926682</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0038</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40037</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">266255.14</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26300596504</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0035</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40033</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">286326.33</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26697294711</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0023</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40022</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">243984.60</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26335095881</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0007</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>Copperleaf Kitchenwa SUPPLIER PMT</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">94955.36</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26985614568</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0034</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40032</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">257599.36</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26194580241</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0033</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>R Patel</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1818</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40031</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">32383.85</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26987413897</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0018</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40018</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">123396.13</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26348393492</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0010</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40010</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">417850.74</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26544089932</AcctSvcrRef>
         <NtryDtls><TxDtls>
           <Refs><EndToEndId>CR-20261116-0022</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>PAYMENT</Ustrd></RmtInf>
+          <RmtInf><Ustrd>/RFB/DL-2026-40021</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">22982.47</Amt>
+        <Amt Ccy="USD">336087.87</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26463576016</AcctSvcrRef>
+        <AcctSvcrRef>FT26856471256</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0002</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40002</Ustrd></RmtInf>
+          <Refs><EndToEndId>CR-20261116-0012</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40012</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">307526.60</Amt>
+        <Amt Ccy="USD">115014.27</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26373519212</AcctSvcrRef>
+        <AcctSvcrRef>FT26875543608</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0039</EndToEndId></Refs>
+          <Refs><EndToEndId>CR-20261116-0019</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40038</Ustrd></RmtInf>
+          <RmtInf><Ustrd>/RFB/DL-2026-40019</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">91604.93</Amt>
+        <Amt Ccy="USD">277595.93</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26294017921</AcctSvcrRef>
+        <AcctSvcrRef>FT26845603380</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0029</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40027</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">182829.52</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26415984190</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0037</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Tallgrass Apparel Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX0166</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40036</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">406273.91</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26792227349</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0030</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40028</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">75216.87</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26275890346</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0003</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40003</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">13871.97</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26778307243</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0028</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40026</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">53072.19</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26913330793</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0001</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-99849</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">118326.21</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26704884037</AcctSvcrRef>
         <NtryDtls><TxDtls>
           <Refs><EndToEndId>CR-20261116-0042</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Tallgrass Apparel Inc</Nm></Dbtr>
@@ -72,414 +410,37 @@
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">746416.02</Amt>
+        <Amt Ccy="USD">314580.68</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26774978973</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0025</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40023 DL-2026-40024</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">186448.53</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26318540283</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0007</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40006</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">349297.49</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26611730563</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0041</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Harbourview Sourcing LLP</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX8485</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40040</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">101925.62</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26208836223</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0014</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40012</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">96590.30</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26751651987</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0038</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40037</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">160278.57</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26839942180</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0013</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40011</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">358042.40</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26440477083</AcctSvcrRef>
+        <AcctSvcrRef>FT26997456060</AcctSvcrRef>
         <NtryDtls><TxDtls>
           <Refs><EndToEndId>CR-20261116-0008</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40008</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">49769.89</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26692909852</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0024</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40007</Ustrd></RmtInf>
+          <RmtInf><Ustrd>/RFB/DL-2026-40023</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">150114.44</Amt>
+        <Amt Ccy="USD">197501.84</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26268878587</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0035</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40034</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">135526.48</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26394042783</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0036</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40035</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">17013.29</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26709356414</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0018</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40016</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">147795.54</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26826793790</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0029</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40028</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">13039.23</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26517630478</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0027</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40026</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="GBP">389203.12</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26136765800</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0017</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40015</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="GBP">64386.25</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26875968022</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0009</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-99409</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">92832.80</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26276121260</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0030</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40029</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">365401.02</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26620416409</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0001</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40001</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">14223.77</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26542829487</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0020</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40018</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">10745.12</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26753571200</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0011</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40010</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">133594.77</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26370123329</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0005</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Tallgrass Apparel Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX0166</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40004</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">375429.46</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26364259708</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0033</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40032</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">392188.98</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26804071242</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0015</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40013</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">44652.73</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26262955599</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0021</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40019</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">218817.31</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26942483827</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0031</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40030</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">388866.99</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26609526494</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0004</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40003</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="GBP">146122.71</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26753853155</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0028</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40027</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">196471.36</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26847757575</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0012</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40011</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">137235.63</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26750497519</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0032</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40031</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">388866.99</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26609526494</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0003</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Granite Peak Outdoor LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX1815</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40003</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">171040.24</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26703551850</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0016</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40014</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">249067.29</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26422558917</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0010</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>Sunbeam Solar System SUPPLIER PMT</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">150940.04</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26404201052</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0034</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Sunbeam Solar Systems LLC</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX3909</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40033</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">211576.24</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26870098492</AcctSvcrRef>
+        <AcctSvcrRef>FT26853054881</AcctSvcrRef>
         <NtryDtls><TxDtls>
           <Refs><EndToEndId>CR-20261116-0026</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
@@ -488,68 +449,107 @@
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">392340.72</Amt>
+        <Amt Ccy="USD">154614.34</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26119087986</AcctSvcrRef>
+        <AcctSvcrRef>FT26906759684</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0023</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Tallgrass Apparel Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX0166</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40021</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="USD">357915.92</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26675688772</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0040</EndToEndId></Refs>
-          <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
-            <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40039</Ustrd></RmtInf>
-        </TxDtls></NtryDtls>
-      </Ntry>
-      <Ntry>
-        <Amt Ccy="EUR">148404.40</Amt>
-        <CdtDbtInd>CRDT</CdtDbtInd>
-        <Sts><Cd>BOOK</Cd></Sts>
-        <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26956189470</AcctSvcrRef>
-        <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0037</EndToEndId></Refs>
+          <Refs><EndToEndId>CR-20261116-0032</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Oakridge Furniture Imports Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX9603</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40036</Ustrd></RmtInf>
+          <RmtInf><Ustrd>PAYMENT</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="GBP">325953.16</Amt>
+        <Amt Ccy="USD">403732.87</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26887651280</AcctSvcrRef>
+        <AcctSvcrRef>FT26187328537</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0024</EndToEndId></Refs>
+          <Refs><EndToEndId>CR-20261116-0036</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40034 DL-2026-40035</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">258387.94</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26406647053</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0039</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Northwind Auto Parts Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX6091</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40038</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">405672.46</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26603022490</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0017</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Copperleaf Kitchenware Ltd</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX1318</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40022</Ustrd></RmtInf>
+          <RmtInf><Ustrd>/RFB/DL-2026-40017</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
       <Ntry>
-        <Amt Ccy="USD">372542.26</Amt>
+        <Amt Ccy="USD">379045.58</Amt>
         <CdtDbtInd>CRDT</CdtDbtInd>
         <Sts><Cd>BOOK</Cd></Sts>
         <ValDt><Dt>2026-11-16</Dt></ValDt>
-        <AcctSvcrRef>FT26579395330</AcctSvcrRef>
+        <AcctSvcrRef>FT26403559580</AcctSvcrRef>
         <NtryDtls><TxDtls>
-          <Refs><EndToEndId>CR-20261116-0019</EndToEndId></Refs>
+          <Refs><EndToEndId>CR-20261116-0009</EndToEndId></Refs>
           <RltdPties><Dbtr><Nm>Blue Heron Home Goods Inc</Nm></Dbtr>
             <DbtrAcct><Id><Othr><Id>XXXX5260</Id></Othr></Id></DbtrAcct></RltdPties>
-          <RmtInf><Ustrd>/RFB/DL-2026-40017</Ustrd></RmtInf>
+          <RmtInf><Ustrd>/RFB/DL-2026-40009</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">405515.09</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26340965338</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0031</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40029</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">321024.74</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26159697134</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0002</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Tallgrass Apparel Inc</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX0166</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40002</Ustrd></RmtInf>
+        </TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">281746.99</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-11-16</Dt></ValDt>
+        <AcctSvcrRef>FT26906846776</AcctSvcrRef>
+        <NtryDtls><TxDtls>
+          <Refs><EndToEndId>CR-20261116-0006</EndToEndId></Refs>
+          <RltdPties><Dbtr><Nm>Lakeside Medical Supply Co</Nm></Dbtr>
+            <DbtrAcct><Id><Othr><Id>XXXX9083</Id></Othr></Id></DbtrAcct></RltdPties>
+          <RmtInf><Ustrd>/RFB/DL-2026-40006</Ustrd></RmtInf>
         </TxDtls></NtryDtls>
       </Ntry>
     </Stmt>

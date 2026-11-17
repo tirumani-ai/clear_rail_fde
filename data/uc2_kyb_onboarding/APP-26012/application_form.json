@@ -1,32 +1,39 @@
 {
   "application_id": "APP-26012",
-  "submitted_on": "2026-11-12",
-  "legal_name": "Summitview Solutions Ltd",
-  "trading_name": "Summitview",
-  "registration_number": "38818470",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Brightline Trading Ltd",
+  "trading_name": "Brightline",
+  "registration_number": "78677107",
   "country": "GB",
-  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
-  "incorporation_date": "2023-03-09",
-  "industry": "Apparel retail (online)",
+  "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+  "incorporation_date": "2018-11-01",
+  "industry": "Online gambling",
   "expected_monthly_volume_usd": 50000,
   "corridors": [
-    "TR",
-    "MX"
+    "DE",
+    "VN"
   ],
   "directors": [
     {
-      "name": "Jun-ho Pak"
+      "name": "Vikram Brennan"
+    },
+    {
+      "name": "Vikram Pillai"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Mei Reddy",
+      "name": "Vikram Brennan",
+      "pct": 40
+    },
+    {
+      "name": "Vikram Pillai",
       "pct": 25
     },
     {
-      "name": "Summitview Holdings Ltd",
-      "pct": 75
+      "name": "Brightline Holdings Ltd",
+      "pct": 35
     }
   ],
-  "contact_email": "finance@summitview.example"
+  "contact_email": "finance@brightline.example"
 }

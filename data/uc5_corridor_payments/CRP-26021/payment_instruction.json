@@ -1,0 +1,26 @@
+{
+  "payment_id": "CRP-26021",
+  "submitted_at": "2026-11-16T11:13:00Z",
+  "client_id": "CL-1004",
+  "client_name": "Tallgrass Apparel Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2001",
+    "name": "Shakti Textiles Pvt Ltd",
+    "address": "Plot 22, Ring Road, Surat, Gujarat 395002, India",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKIN2X",
+      "account_number": "82462819482199",
+      "ifsc": "DCBK0351819"
+    }
+  },
+  "amount": 29450600.32,
+  "currency": "INR",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2001/2026/5454"
+  ],
+  "requested_value_date": "2026-11-18"
+}

@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26003",
+  "submitted_at": "2026-11-16T09:37:00Z",
+  "payer": {
+    "name": "Lotus Scholars Foundation",
+    "country": "KE",
+    "relationship_to_student": "SPONSOR"
+  },
+  "student": {
+    "name": "Grace Sato",
+    "student_no": "W5027243"
+  },
+  "institution_id": "ED-3001",
+  "beneficiary": {
+    "name": "University of Westhaven",
+    "country": "GB",
+    "bank": {
+      "account_holder": "University of Westhaven",
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBMM",
+      "iban": "GB92NCBK37265167612220",
+      "sort_code": "19-75-59"
+    }
+  },
+  "amount": 20460.0,
+  "currency": "GBP",
+  "purpose_code": "EDU",
+  "invoice_reference": "W-FEE-221289"
+}

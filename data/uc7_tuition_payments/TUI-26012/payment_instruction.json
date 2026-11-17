@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26012",
+  "submitted_at": "2026-11-16T12:36:00Z",
+  "payer": {
+    "name": "Selim Karadag",
+    "country": "NG",
+    "relationship_to_student": "PARENT"
+  },
+  "student": {
+    "name": "Yuki Petrova",
+    "student_no": "W7270789"
+  },
+  "institution_id": "ED-3001",
+  "beneficiary": {
+    "name": "University of Westhaven",
+    "country": "GB",
+    "bank": {
+      "account_holder": "University of Westhaven",
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBMM",
+      "iban": "GB92NCBK37265167612220",
+      "sort_code": "19-75-59"
+    }
+  },
+  "amount": 20560.0,
+  "currency": "GBP",
+  "purpose_code": "EDU",
+  "invoice_reference": "W-FEE-181277"
+}

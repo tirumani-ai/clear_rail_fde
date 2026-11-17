@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26016",
+  "submitted_at": "2026-11-16T10:38:00Z",
+  "payer": {
+    "name": "Sara Ramirez",
+    "country": "CN",
+    "relationship_to_student": "SELF"
+  },
+  "student": {
+    "name": "Sara Ramirez",
+    "student_no": "W6458910"
+  },
+  "institution_id": "ED-3001",
+  "beneficiary": {
+    "name": "University of Westhaven",
+    "country": "GB",
+    "bank": {
+      "account_holder": "University of Westhaven",
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBMM",
+      "iban": "GB92NCBK37265167612220",
+      "sort_code": "19-75-59"
+    }
+  },
+  "amount": 15200.0,
+  "currency": "GBP",
+  "purpose_code": "EDU",
+  "invoice_reference": "W-FEE-635999"
+}

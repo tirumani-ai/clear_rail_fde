@@ -1,32 +1,35 @@
 {
   "application_id": "APP-26016",
-  "submitted_on": "2026-11-13",
-  "legal_name": "Silverbirch Supplies Ltd",
-  "trading_name": "Silverbirch",
-  "registration_number": "75084754",
+  "submitted_on": "2026-11-14",
+  "legal_name": "Meadowgate Supplies Ltd",
+  "trading_name": "Meadowgate",
+  "registration_number": "58746010",
   "country": "GB",
-  "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
-  "incorporation_date": "2018-10-16",
-  "industry": "Furniture import",
-  "expected_monthly_volume_usd": 50000,
+  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+  "incorporation_date": "2021-11-04",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 2500000,
   "corridors": [
     "IN",
-    "VN"
+    "MX"
   ],
   "directors": [
     {
-      "name": "Lakshmi Kapoor"
+      "name": "Lucia Haddad"
+    },
+    {
+      "name": "Felix Tanaka"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Lakshmi Kapoor",
-      "pct": 30
+      "name": "Lucia Haddad",
+      "pct": 60
     },
     {
-      "name": "Silverbirch Holdings Ltd",
-      "pct": 70
+      "name": "Felix Tanaka",
+      "pct": 40
     }
   ],
-  "contact_email": "finance@silverbirch.example"
+  "contact_email": "finance@meadowgate.example"
 }

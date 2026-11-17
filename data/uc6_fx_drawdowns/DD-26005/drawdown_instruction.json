@@ -1,0 +1,23 @@
+{
+  "drawdown_id": "DD-26005",
+  "submitted_at": "2026-11-15T16:32:00Z",
+  "client_id": "CL-1007",
+  "client_name": "Sunbeam Solar Systems LLC",
+  "deal_ref": "FWD-2026-79192",
+  "beneficiary": {
+    "beneficiary_id": "SP-2006",
+    "name": "Talleres Monterrey SA de CV",
+    "country": "MX",
+    "bank": {
+      "bank_name": "Banco Sierra Madre",
+      "bank_country": "MX",
+      "swift": "BSMXMXMM",
+      "clabe": "712768426846563216"
+    }
+  },
+  "amount": 4793893.67,
+  "currency": "MXN",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2006/2026/8950",
+  "purpose_code": "GDI"
+}

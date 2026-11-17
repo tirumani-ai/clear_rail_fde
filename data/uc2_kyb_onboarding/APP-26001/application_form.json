@@ -1,35 +1,32 @@
 {
   "application_id": "APP-26001",
-  "submitted_on": "2026-11-13",
-  "legal_name": "Redwood Crest Trading Ltd",
-  "trading_name": "Redwood Crest",
-  "registration_number": "10385302",
+  "submitted_on": "2026-11-12",
+  "legal_name": "Highmoor Trading Ltd",
+  "trading_name": "Highmoor",
+  "registration_number": "67488470",
   "country": "GB",
-  "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
-  "incorporation_date": "2022-08-23",
-  "industry": "Wholesale of household goods",
-  "expected_monthly_volume_usd": 50000,
+  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
+  "incorporation_date": "2020-01-03",
+  "industry": "Food ingredients trading",
+  "expected_monthly_volume_usd": 120000,
   "corridors": [
-    "IN",
-    "DE"
+    "MX",
+    "CN"
   ],
   "directors": [
     {
-      "name": "Grace Lin"
-    },
-    {
-      "name": "Elena Becker"
+      "name": "Hannah Whitfield"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Grace Lin",
-      "pct": 50
+      "name": "Hannah Whitfield",
+      "pct": 25
     },
     {
-      "name": "Elena Becker",
-      "pct": 40
+      "name": "Highmoor Holdings Ltd",
+      "pct": 75
     }
   ],
-  "contact_email": "finance@redwoodcrest.example"
+  "contact_email": "finance@highmoor.example"
 }

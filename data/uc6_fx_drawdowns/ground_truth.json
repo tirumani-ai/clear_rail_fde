@@ -1,0 +1,1027 @@
+[
+  {
+    "case_id": "DD-26001",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-41953",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-41953",
+      "drawdown_amount": 118354.32,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.921,
+      "confirmation_buy_amount": 435800.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-10-04",
+      "window_end": "2027-01-03",
+      "invoice_number": "2009/2026/2894",
+      "invoice_total": 118354.32,
+      "invoice_signatory": "Grace Whitfield",
+      "deal_remaining_before": 118354.32
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 128646.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26002",
+    "use_case": "UC6",
+    "client_id": "CL-1007",
+    "deal_ref": "FWD-2026-68054",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-68054",
+      "drawdown_amount": 60490.3,
+      "drawdown_currency": "GBP",
+      "confirmation_rate": 0.7981,
+      "confirmation_buy_amount": 224000.0,
+      "confirmation_buy_currency": "GBP",
+      "confirmation_client": "Sunbeam Solar Systems LLC",
+      "window_start": "2026-09-26",
+      "window_end": "2027-04-01",
+      "invoice_number": "2010/2026/1330",
+      "invoice_total": 60490.3,
+      "invoice_signatory": "Jonas Becker",
+      "deal_remaining_before": 179970.79
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 76570.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26003",
+    "use_case": "UC6",
+    "client_id": "CL-1006",
+    "deal_ref": "FWD-2026-14125",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-14125",
+      "drawdown_amount": 1040108.79,
+      "drawdown_currency": "USD",
+      "confirmation_rate": 7.1473,
+      "confirmation_buy_amount": 5025000.0,
+      "confirmation_buy_currency": "CNY",
+      "confirmation_client": "Northwind Auto Parts Inc",
+      "window_start": "2026-07-29",
+      "window_end": "2027-04-13",
+      "invoice_number": "2005/2026/5612",
+      "invoice_total": 1335824.64,
+      "invoice_signatory": "Mei Rao",
+      "deal_remaining_before": 5025000.0
+    },
+    "planted_problem": "CURRENCY_MISMATCH",
+    "expected_codes": [
+      "CURRENCY_MISMATCH"
+    ],
+    "payment_amount_usd": 1040108.79,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26004",
+    "use_case": "UC6",
+    "client_id": "CL-1002",
+    "deal_ref": "FWD-2026-28656",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-28656",
+      "drawdown_amount": 8266250.8,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 85.4317,
+      "confirmation_buy_amount": 43579300.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Granite Peak Outdoor LLC",
+      "window_start": "2026-08-14",
+      "window_end": "2026-12-06",
+      "invoice_number": "2003/2026/8878",
+      "invoice_total": 8266250.8,
+      "invoice_signatory": "Nadia Fischer",
+      "deal_remaining_before": 31046038.15
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 98174.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26005",
+    "use_case": "UC6",
+    "client_id": "CL-1007",
+    "deal_ref": "FWD-2026-79192",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-79192",
+      "drawdown_amount": 4793893.67,
+      "drawdown_currency": "MXN",
+      "confirmation_rate": 19.0321,
+      "confirmation_buy_amount": 13129800.0,
+      "confirmation_buy_currency": "MXN",
+      "confirmation_client": "Sunbeam Solar Systems LLC",
+      "window_start": "2026-07-03",
+      "window_end": "2027-03-30",
+      "invoice_number": "2006/2026/8950",
+      "invoice_total": 3694817.7,
+      "invoice_signatory": "Carlos Nasser",
+      "deal_remaining_before": 10678737.63
+    },
+    "planted_problem": "INVOICE_MISMATCH",
+    "expected_codes": [
+      "INVOICE_MISMATCH"
+    ],
+    "payment_amount_usd": 253645.17,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26006",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-71620",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-71620",
+      "drawdown_amount": 102192.32,
+      "drawdown_currency": "GBP",
+      "confirmation_rate": 0.7796,
+      "confirmation_buy_amount": 462800.0,
+      "confirmation_buy_currency": "GBP",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-11-18",
+      "window_end": "2026-11-18",
+      "invoice_number": "2010/2026/3066",
+      "invoice_total": 129311.15,
+      "invoice_signatory": "Lena Haddad",
+      "deal_remaining_before": 462800.0
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 129357.37,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26007",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-83318",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-83318",
+      "drawdown_amount": 14281277.71,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 82.9402,
+      "confirmation_buy_amount": 44512900.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-07-12",
+      "window_end": "2026-12-20",
+      "invoice_number": "2003/2026/2979",
+      "invoice_total": 16672947.2,
+      "invoice_signatory": "Lakshmi Reddy",
+      "deal_remaining_before": 42944290.82
+    },
+    "planted_problem": "DEAL_NOT_FUNDED",
+    "expected_codes": [
+      "DEAL_NOT_FUNDED"
+    ],
+    "payment_amount_usd": 169611.37,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26008",
+    "use_case": "UC6",
+    "client_id": "CL-1004",
+    "deal_ref": "FWD-2026-94445",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-94445",
+      "drawdown_amount": 76701.1,
+      "drawdown_currency": "GBP",
+      "confirmation_rate": 0.7833,
+      "confirmation_buy_amount": 320100.0,
+      "confirmation_buy_currency": "GBP",
+      "confirmation_client": "Tallgrass Apparel Inc",
+      "window_start": "2026-08-14",
+      "window_end": "2026-11-01",
+      "invoice_number": "2010/2026/2326",
+      "invoice_total": 76701.1,
+      "invoice_signatory": "Mei Kapoor",
+      "deal_remaining_before": 268580.71
+    },
+    "planted_problem": "OUTSIDE_WINDOW",
+    "expected_codes": [
+      "OUTSIDE_WINDOW"
+    ],
+    "payment_amount_usd": 97090.0,
+    "expected_route": "DEALER"
+  },
+  {
+    "case_id": "DD-26009",
+    "use_case": "UC6",
+    "client_id": "CL-1003",
+    "deal_ref": "FWD-2026-43519",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-43519",
+      "drawdown_amount": 598487.4,
+      "drawdown_currency": "MXN",
+      "confirmation_rate": 18.9222,
+      "confirmation_buy_amount": 1569000.0,
+      "confirmation_buy_currency": "MXN",
+      "confirmation_client": "Lakeside Medical Supply Co",
+      "window_start": "2026-09-09",
+      "window_end": "2027-04-08",
+      "invoice_number": "2006/2026/7948",
+      "invoice_total": 598487.4,
+      "invoice_signatory": "Vikram Tanaka",
+      "deal_remaining_before": 1142391.69
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 31666.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26010",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-21053",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-21053",
+      "drawdown_amount": 193472.3,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9247,
+      "confirmation_buy_amount": 1241200.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-10-19",
+      "window_end": "2027-03-19",
+      "invoice_number": "2007/2026/6546",
+      "invoice_total": 228060.36,
+      "invoice_signatory": "Mei Lin",
+      "deal_remaining_before": 561754.61
+    },
+    "planted_problem": "DUPLICATE_DRAWDOWN",
+    "expected_codes": [
+      "DUPLICATE_DRAWDOWN"
+    ],
+    "payment_amount_usd": 210295.98,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26011",
+    "use_case": "UC6",
+    "client_id": "CL-1004",
+    "deal_ref": "FWD-2026-34267",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-34267",
+      "drawdown_amount": 180270.1,
+      "drawdown_currency": "GBP",
+      "confirmation_rate": 0.7795,
+      "confirmation_buy_amount": 1014600.0,
+      "confirmation_buy_currency": "GBP",
+      "confirmation_client": "Tallgrass Apparel Inc",
+      "window_start": "2026-08-27",
+      "window_end": "2027-04-09",
+      "invoice_number": "2010/2026/9332",
+      "invoice_total": 180270.1,
+      "invoice_signatory": "Tom Nasser",
+      "deal_remaining_before": 761689.3
+    },
+    "planted_problem": "CONFIRMATION_MISMATCH",
+    "expected_codes": [
+      "CONFIRMATION_MISMATCH"
+    ],
+    "payment_amount_usd": 228190.0,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26012",
+    "use_case": "UC6",
+    "client_id": "CL-1007",
+    "deal_ref": "FWD-2026-29253",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-29253",
+      "drawdown_amount": 13294338.0,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 83.347,
+      "confirmation_buy_amount": 46700100.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Sunbeam Solar Systems LLC",
+      "window_start": "2026-10-23",
+      "window_end": "2027-01-18",
+      "invoice_number": "2011/2026/6162",
+      "invoice_total": 13294338.0,
+      "invoice_signatory": "Selim Karadag",
+      "deal_remaining_before": 37190582.7
+    },
+    "planted_problem": "SCREENING_HIT",
+    "expected_codes": [
+      "SCREENING_HIT"
+    ],
+    "payment_amount_usd": 157890.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "DD-26013",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-78328",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.xlsx",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "excel"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-78328",
+      "drawdown_amount": 11305360.91,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 83.7615,
+      "confirmation_buy_amount": 59110800.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-07-11",
+      "window_end": "2026-12-12",
+      "invoice_number": "2011/2026/2372",
+      "invoice_total": 19309586.0,
+      "invoice_signatory": "Elena Lin",
+      "deal_remaining_before": 59110800.0
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 134267.94,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26014",
+    "use_case": "UC6",
+    "client_id": "CL-1007",
+    "deal_ref": "FWD-2026-81934",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-81934",
+      "drawdown_amount": 50249.69,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9163,
+      "confirmation_buy_amount": 211000.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Sunbeam Solar Systems LLC",
+      "window_start": "2026-08-13",
+      "window_end": "2027-04-14",
+      "invoice_number": "2009/2026/9241",
+      "invoice_total": 64368.72,
+      "invoice_signatory": "Nadia Rao",
+      "deal_remaining_before": 138682.16
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 54619.23,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26015",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-71905",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-71905",
+      "drawdown_amount": 2537627.4,
+      "drawdown_currency": "MXN",
+      "confirmation_rate": 18.9455,
+      "confirmation_buy_amount": 9393600.0,
+      "confirmation_buy_currency": "MXN",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-09-06",
+      "window_end": "2027-01-15",
+      "invoice_number": "2006/2026/5417",
+      "invoice_total": 2537627.4,
+      "invoice_signatory": "Mei Okafor",
+      "deal_remaining_before": 9393600.0
+    },
+    "planted_problem": "SUSPICIOUS_CONTENT",
+    "expected_codes": [
+      "SUSPICIOUS_CONTENT"
+    ],
+    "payment_amount_usd": 134266.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "DD-26016",
+    "use_case": "UC6",
+    "client_id": "CL-1004",
+    "deal_ref": "FWD-2026-30797",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-30797",
+      "drawdown_amount": 82352.88,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9136,
+      "confirmation_buy_amount": 465600.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Tallgrass Apparel Inc",
+      "window_start": "2026-08-07",
+      "window_end": "2026-11-18",
+      "invoice_number": "2009/2026/4220",
+      "invoice_total": 82352.88,
+      "invoice_signatory": "Mei Torres",
+      "deal_remaining_before": 360629.0
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 89514.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26017",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-93264",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-93264",
+      "drawdown_amount": 32753.06,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9244,
+      "confirmation_buy_amount": 157100.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-08-19",
+      "window_end": "2027-01-02",
+      "invoice_number": "2007/2026/2210",
+      "invoice_total": 32753.06,
+      "invoice_signatory": "Priya Rao",
+      "deal_remaining_before": 22726.47
+    },
+    "planted_problem": "EXCEEDS_DEAL_BALANCE",
+    "expected_codes": [
+      "EXCEEDS_DEAL_BALANCE"
+    ],
+    "payment_amount_usd": 35601.15,
+    "expected_route": "DEALER"
+  },
+  {
+    "case_id": "DD-26018",
+    "use_case": "UC6",
+    "client_id": "CL-1004",
+    "deal_ref": "FWD-2026-56556",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation_scan.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-56556",
+      "drawdown_amount": 994049.09,
+      "drawdown_currency": "CNY",
+      "confirmation_rate": 7.2744,
+      "confirmation_buy_amount": 4593300.0,
+      "confirmation_buy_currency": "CNY",
+      "confirmation_client": "Tallgrass Apparel Inc",
+      "window_start": "2026-09-22",
+      "window_end": "2027-04-15",
+      "invoice_number": "2012/2026/7364",
+      "invoice_total": 1236647.3,
+      "invoice_signatory": "Aarav Whitfield",
+      "deal_remaining_before": 4593300.0
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 138446.95,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26019",
+    "use_case": "UC6",
+    "client_id": "CL-1002",
+    "deal_ref": "FWD-2026-39791",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation_scan.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-39791",
+      "drawdown_amount": 1151784.9,
+      "drawdown_currency": "MXN",
+      "confirmation_rate": 18.7722,
+      "confirmation_buy_amount": 3370400.0,
+      "confirmation_buy_currency": "MXN",
+      "confirmation_client": "Granite Peak Outdoor LLC",
+      "window_start": "2026-10-12",
+      "window_end": "2027-01-10",
+      "invoice_number": "2006/2026/9391",
+      "invoice_total": 1151784.9,
+      "invoice_signatory": "Lena Okafor",
+      "deal_remaining_before": 2837828.27
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 60941.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26020",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-90955",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-90955",
+      "drawdown_amount": 7031121.0,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 83.3607,
+      "confirmation_buy_amount": 34453000.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Blue Heron Home Goods Inc",
+      "window_start": "2026-10-24",
+      "window_end": "2026-12-20",
+      "invoice_number": "2011/2026/1699",
+      "invoice_total": 7031121.0,
+      "invoice_signatory": "Sara Kowalski",
+      "deal_remaining_before": 27233520.53
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 83505.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26021",
+    "use_case": "UC6",
+    "client_id": "CL-1002",
+    "deal_ref": "FWD-2026-24351",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-24351",
+      "drawdown_amount": 18198.85,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9308,
+      "confirmation_buy_amount": 89900.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Granite Peak Outdoor LLC",
+      "window_start": "2026-10-18",
+      "window_end": "2027-03-26",
+      "invoice_number": null,
+      "invoice_total": null,
+      "invoice_signatory": null,
+      "deal_remaining_before": 65955.16
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 19781.36,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "DD-26022",
+    "use_case": "UC6",
+    "client_id": "CL-1005",
+    "deal_ref": "FWD-2026-51492",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-51942",
+      "drawdown_amount": 171881.76,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 1.1808,
+      "confirmation_buy_amount": 643800.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Copperleaf Kitchenware Ltd",
+      "window_start": "2026-10-07",
+      "window_end": "2027-01-24",
+      "invoice_number": "2009/2026/9200",
+      "invoice_total": 171881.76,
+      "invoice_signatory": "Samuel Whitfield",
+      "deal_remaining_before": 532689.77
+    },
+    "planted_problem": "UNKNOWN_DEAL_REF",
+    "expected_codes": [
+      "UNKNOWN_DEAL_REF"
+    ],
+    "payment_amount_usd": 186828.0,
+    "expected_route": "TREASURY_OPS_ANALYST"
+  },
+  {
+    "case_id": "DD-26023",
+    "use_case": "UC6",
+    "client_id": "CL-1001",
+    "deal_ref": "FWD-2026-35620",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation_scan.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-35620",
+      "drawdown_amount": 189071.04,
+      "drawdown_currency": "EUR",
+      "confirmation_rate": 0.9119,
+      "confirmation_buy_amount": 1091400.0,
+      "confirmation_buy_currency": "EUR",
+      "confirmation_client": "Tallgrass Apparel Inc",
+      "window_start": "2026-07-19",
+      "window_end": "2027-01-23",
+      "invoice_number": "2009/2026/2903",
+      "invoice_total": 189071.04,
+      "invoice_signatory": "Hannah Reddy",
+      "deal_remaining_before": 763549.39
+    },
+    "planted_problem": "DEAL_CLIENT_MISMATCH",
+    "expected_codes": [
+      "DEAL_CLIENT_MISMATCH"
+    ],
+    "payment_amount_usd": 205512.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "DD-26024",
+    "use_case": "UC6",
+    "client_id": "CL-1006",
+    "deal_ref": "FWD-2026-28857",
+    "files": [
+      {
+        "file": "drawdown_instruction.json",
+        "doc_type": "DRAWDOWN_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "deal_confirmation_scan.pdf",
+        "doc_type": "DEAL_CONFIRMATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "deal_ref_on_instruction": "FWD-2026-28857",
+      "drawdown_amount": 9640234.65,
+      "drawdown_currency": "INR",
+      "confirmation_rate": 83.6296,
+      "confirmation_buy_amount": 33348300.0,
+      "confirmation_buy_currency": "INR",
+      "confirmation_client": "Northwind Auto Parts Inc",
+      "window_start": "2026-10-18",
+      "window_end": "2026-12-13",
+      "invoice_number": "2003/2026/6645",
+      "invoice_total": 16295731.2,
+      "invoice_signatory": "Wei Ramirez",
+      "deal_remaining_before": 30448751.05
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 114492.1,
+    "expected_route": "AUTO_CLEAR"
+  }
+]

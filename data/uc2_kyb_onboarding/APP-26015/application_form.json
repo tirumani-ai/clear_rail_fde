@@ -1,35 +1,35 @@
 {
   "application_id": "APP-26015",
   "submitted_on": "2026-11-16",
-  "legal_name": "Harborpoint Supplies Ltd",
-  "trading_name": "Harborpoint",
-  "registration_number": "78960007",
+  "legal_name": "Cedarline Trading Ltd",
+  "trading_name": "Cedarline",
+  "registration_number": "51765925",
   "country": "GB",
-  "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
-  "incorporation_date": "2017-08-09",
+  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
+  "incorporation_date": "2023-05-27",
   "industry": "Medical equipment distribution",
   "expected_monthly_volume_usd": 900000,
   "corridors": [
-    "DE",
-    "MX"
+    "MX",
+    "TR"
   ],
   "directors": [
     {
-      "name": "Vikram Rao"
+      "name": "Mei Wagner"
     },
     {
-      "name": "Omar Haddad"
+      "name": "Lakshmi Nasser"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Vikram Rao",
-      "pct": 50
+      "name": "Mei Wagner",
+      "pct": 40
     },
     {
-      "name": "Omar Haddad",
-      "pct": 50
+      "name": "Lakshmi Nasser",
+      "pct": 40
     }
   ],
-  "contact_email": "finance@harborpoint.example"
+  "contact_email": "finance@cedarline.example"
 }

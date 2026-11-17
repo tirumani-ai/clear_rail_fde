@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611005",
+  "submitted_at": "2026-11-15T17:18:00Z",
+  "client_id": "CL-1008",
+  "client_name": "Oakridge Furniture Imports Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2006",
+    "name": "Talleres Monterrey SA de CV",
+    "address": "Av. Constitucion 1200, Monterrey, NL 64000, Mexico",
+    "country": "MX",
+    "bank": {
+      "bank_name": "Gulf Horizon Bank",
+      "bank_country": "AE",
+      "swift": "GHBKAEAD",
+      "account_number": "9122063214623"
+    }
+  },
+  "amount": 308448.0,
+  "currency": "MXN",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2006/2026/7750"
+  ],
+  "remittance_info": "INV 2006/2026/7750",
+  "requested_value_date": "2026-11-18"
+}

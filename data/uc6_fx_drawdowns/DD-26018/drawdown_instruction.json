@@ -1,0 +1,24 @@
+{
+  "drawdown_id": "DD-26018",
+  "submitted_at": "2026-11-14T12:20:00Z",
+  "client_id": "CL-1004",
+  "client_name": "Tallgrass Apparel Inc",
+  "deal_ref": "FWD-2026-56556",
+  "beneficiary": {
+    "beneficiary_id": "SP-2012",
+    "name": "Hangzhou Cloudpeak Software Co Ltd",
+    "country": "CN",
+    "bank": {
+      "bank_name": "Eastern Harbour Bank",
+      "bank_country": "CN",
+      "swift": "EHBKCNBB",
+      "account_number": "148525388853",
+      "cnaps": "735379907511"
+    }
+  },
+  "amount": 994049.09,
+  "currency": "CNY",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2012/2026/7364",
+  "purpose_code": "SVC"
+}

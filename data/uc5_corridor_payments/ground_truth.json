@@ -1,0 +1,1298 @@
+[
+  {
+    "case_id": "CRP-26001",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2012",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 404485.3,
+      "payment_currency": "CNY",
+      "purpose_code": "SVC",
+      "routing_code": "735379907511",
+      "invoice_number": "2012/2026/7894",
+      "invoice_total": 404485.3,
+      "invoice_currency": "CNY",
+      "seller": "Hangzhou Cloudpeak Software Co Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Anita Rao",
+      "contract_number": "SA-CN-5329",
+      "contract_value": 1213455.9,
+      "declaration_number": "ORD-CN-752631",
+      "declaration_amount": 404485.3,
+      "declaration_purpose": "SVC",
+      "declaration_date_signed": "2026-10-31",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 56335.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26002",
+    "use_case": "UC5",
+    "client_id": "CL-1006",
+    "supplier_id": "SP-2003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_photo.png",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 7816454.4,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "MLTB0955597",
+      "invoice_number": "2003/2026/2672",
+      "invoice_total": 7816454.4,
+      "invoice_currency": "INR",
+      "seller": "Nilgiri Spice Exports Pvt Ltd",
+      "buyer": "Northwind Auto Parts Inc",
+      "invoice_signatory": "Jonas Whitfield",
+      "contract_number": "SC-IN-3854",
+      "contract_value": 7816454.4,
+      "declaration_number": "ORD-IN-272848",
+      "declaration_amount": 7816454.4,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-10-30",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 92832.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26003",
+    "use_case": "UC5",
+    "client_id": "CL-1002",
+    "supplier_id": "SP-2005",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "PROFORMA_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 609635.1,
+      "payment_currency": "CNY",
+      "purpose_code": "ADV",
+      "routing_code": "743957551313",
+      "invoice_number": "2005/2026/3784",
+      "invoice_total": 609635.1,
+      "invoice_currency": "CNY",
+      "seller": "Shenzhen Lumen Solar Tech Co Ltd",
+      "buyer": "Granite Peak Outdoor LLC",
+      "invoice_signatory": "Vikram Reddy",
+      "contract_number": "SC-CN-4541",
+      "contract_value": 1828905.3,
+      "declaration_number": "ORD-CN-921091",
+      "declaration_amount": 609635.1,
+      "declaration_purpose": "ADV",
+      "declaration_date_signed": "2026-11-10",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 84907.4,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26004",
+    "use_case": "UC5",
+    "client_id": "CL-1006",
+    "supplier_id": "SP-2011",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_scan.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 2335708.0,
+      "payment_currency": "INR",
+      "purpose_code": "SVC",
+      "routing_code": "DCBK0852808",
+      "invoice_number": "2011/2026/7872",
+      "invoice_total": 2335708.0,
+      "invoice_currency": "INR",
+      "seller": "Kaveri Digital Solutions Pvt Ltd",
+      "buyer": "Northwind Auto Parts Inc",
+      "invoice_signatory": "Mei Petrova",
+      "contract_number": "SA-IN-4445",
+      "contract_value": 2335708.0,
+      "declaration_number": "ORD-IN-183962",
+      "declaration_amount": 2335708.0,
+      "declaration_purpose": "SVC",
+      "declaration_date_signed": "2026-11-01",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 27740.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26005",
+    "use_case": "UC5",
+    "client_id": "CL-1005",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "PROFORMA_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation_photo.png",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 668474.4,
+      "payment_currency": "CNY",
+      "purpose_code": "ADV",
+      "routing_code": "933633875004",
+      "invoice_number": "2004/2026/4324",
+      "invoice_total": 668474.4,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Copperleaf Kitchenware Ltd",
+      "invoice_signatory": "Mei Brennan",
+      "contract_number": "SC-CN-6873",
+      "contract_value": 668474.4,
+      "declaration_number": "ORD-CN-152752",
+      "declaration_amount": 668474.4,
+      "declaration_purpose": "ADV",
+      "declaration_date_signed": "2026-11-14",
+      "declaration_signed": true,
+      "bank_letter_holder": "Ningbo Brightway Housewares Co Ltd"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 93102.28,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26006",
+    "use_case": "UC5",
+    "client_id": "CL-1005",
+    "supplier_id": "SP-2011",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_photo.png",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 8614923.0,
+      "payment_currency": "INR",
+      "purpose_code": "CTR",
+      "routing_code": "DCBK0852808",
+      "invoice_number": "2011/2026/8371",
+      "invoice_total": 8614923.0,
+      "invoice_currency": "INR",
+      "seller": "Kaveri Digital Solutions Pvt Ltd",
+      "buyer": "Copperleaf Kitchenware Ltd",
+      "invoice_signatory": "Aarav Pillai",
+      "contract_number": "SA-IN-6223",
+      "contract_value": 8614923.0,
+      "declaration_number": "ORD-IN-411900",
+      "declaration_amount": 8614923.0,
+      "declaration_purpose": "CTR",
+      "declaration_date_signed": "2026-11-03",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 102315.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26007",
+    "use_case": "UC5",
+    "client_id": "CL-1007",
+    "supplier_id": "SP-2003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_photo.png",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 10494688.0,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "MLTB0955597",
+      "invoice_number": "2003/2026/6954",
+      "invoice_total": 10494688.0,
+      "invoice_currency": "INR",
+      "seller": "Nilgiri Spice Exports Pvt Ltd",
+      "buyer": "Sunbeam Solar Systems LLC",
+      "invoice_signatory": "Priya Haddad",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-507876",
+      "declaration_amount": 10494688.0,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-10-28",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 124640.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26008",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 9063961.6,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "DCBK0351819",
+      "invoice_number": "2001/2026/2004",
+      "invoice_total": 9063961.6,
+      "invoice_currency": "INR",
+      "seller": "Shakti Textiles Pvt Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Samuel Haddad",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-839419",
+      "declaration_amount": 9063961.6,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-13",
+      "declaration_signed": true,
+      "bank_letter_holder": "Shakti Textiles Pvt Ltd"
+    },
+    "planted_problem": "SUSPICIOUS_CONTENT",
+    "expected_codes": [
+      "SUSPICIOUS_CONTENT"
+    ],
+    "payment_amount_usd": 107648.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "CRP-26009",
+    "use_case": "UC5",
+    "client_id": "CL-1007",
+    "supplier_id": "SP-2012",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract_scan.pdf",
+        "doc_type": "CONTRACT",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 847850.3,
+      "payment_currency": "CNY",
+      "purpose_code": "SVC",
+      "routing_code": "735379907511",
+      "invoice_number": "2012/2026/4934",
+      "invoice_total": 847850.3,
+      "invoice_currency": "CNY",
+      "seller": "Hangzhou Cloudpeak Software Co Ltd",
+      "buyer": "Sunbeam Solar Systems LLC",
+      "invoice_signatory": "Jun-ho Pak",
+      "contract_number": "SA-CN-6181",
+      "contract_value": 1695700.6,
+      "declaration_number": "ORD-CN-632492",
+      "declaration_amount": 847850.3,
+      "declaration_purpose": "SVC",
+      "declaration_date_signed": "2026-10-29",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "SCREENING_HIT",
+    "expected_codes": [
+      "SCREENING_HIT"
+    ],
+    "payment_amount_usd": 118085.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "CRP-26010",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2011",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_scan.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 11566554.0,
+      "payment_currency": "INR",
+      "purpose_code": "CTR",
+      "routing_code": "DCBK0852808",
+      "invoice_number": "2011/2026/1918",
+      "invoice_total": 11566554.0,
+      "invoice_currency": "INR",
+      "seller": "Kaveri Digital Solutions Pvt Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Priya Petrova",
+      "contract_number": "SA-IN-1046",
+      "contract_value": 23133108.0,
+      "declaration_number": "ORD-IN-691754",
+      "declaration_amount": 11566554.0,
+      "declaration_purpose": "CTR",
+      "declaration_date_signed": "2026-10-30",
+      "declaration_signed": true,
+      "bank_letter_holder": "Kaveri Digital Solutions Pvt Ltd"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 137370.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26011",
+    "use_case": "UC5",
+    "client_id": "CL-1006",
+    "supplier_id": "SP-2002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.xlsx",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "excel"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 5741177.0,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "DCBK0194875",
+      "invoice_number": "2002/2026/9160",
+      "invoice_total": 5741177.0,
+      "invoice_currency": "INR",
+      "seller": "Godavari Engineering Works Pvt Ltd",
+      "buyer": "Northwind Auto Parts Inc",
+      "invoice_signatory": "Vikram Rao",
+      "contract_number": "SC-IN-6830",
+      "contract_value": 5741177.0,
+      "declaration_number": "ORD-IN-950667",
+      "declaration_amount": 5741177.0,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-03",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 68185.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26012",
+    "use_case": "UC5",
+    "client_id": "CL-1006",
+    "supplier_id": "SP-2011",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_photo.png",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 18932662.47,
+      "payment_currency": "INR",
+      "purpose_code": "CTR",
+      "routing_code": "DCBK0852808",
+      "invoice_number": "2011/2026/3225",
+      "invoice_total": 15046119.0,
+      "invoice_currency": "INR",
+      "seller": "Kaveri Digital Solutions Pvt Ltd",
+      "buyer": "Northwind Auto Parts Inc",
+      "invoice_signatory": "Lucia Mehta",
+      "contract_number": "SA-IN-2320",
+      "contract_value": 15046119.0,
+      "declaration_number": "ORD-IN-360231",
+      "declaration_amount": 18932662.47,
+      "declaration_purpose": "CTR",
+      "declaration_date_signed": "2026-11-11",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "AMOUNT_EXCEEDS_SUPPORT",
+    "expected_codes": [
+      "AMOUNT_EXCEEDS_SUPPORT"
+    ],
+    "payment_amount_usd": 224853.47,
+    "expected_route": "PAYMENTS_OPS_TEAM_LEAD"
+  },
+  {
+    "case_id": "CRP-26013",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 1191656.12,
+      "payment_currency": "CNY",
+      "purpose_code": "GDI",
+      "routing_code": "933633875004",
+      "invoice_number": "2004/2026/8922",
+      "invoice_total": 1191656.12,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Elena Tanaka",
+      "contract_number": "SC-CN-2638",
+      "contract_value": 3574968.36,
+      "declaration_number": "ORD-CN-427370",
+      "declaration_amount": 1191656.12,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-10-29",
+      "declaration_signed": true,
+      "bank_letter_holder": "Ningbo Brightway Housewares Co Ltd"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 165968.82,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26014",
+    "use_case": "UC5",
+    "client_id": "CL-1005",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 404398.72,
+      "payment_currency": "CNY",
+      "purpose_code": "GDI",
+      "routing_code": "933633875004",
+      "invoice_number": "2004/2026/7030",
+      "invoice_total": 404398.72,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Copperleaf Kitchenware Ltd",
+      "invoice_signatory": "Felix Sato",
+      "contract_number": "SC-CN-2219",
+      "contract_value": 1213196.16,
+      "declaration_number": "ORD-CN-375896",
+      "declaration_amount": 404398.72,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-15",
+      "declaration_signed": true,
+      "bank_letter_holder": "R. Mehta (personal account)"
+    },
+    "planted_problem": "BANK_HOLDER_MISMATCH",
+    "expected_codes": [
+      "BANK_HOLDER_MISMATCH"
+    ],
+    "payment_amount_usd": 56322.94,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "CRP-26015",
+    "use_case": "UC5",
+    "client_id": "CL-1004",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 851014.94,
+      "payment_currency": "CNY",
+      "purpose_code": "GDI",
+      "routing_code": "933633875004",
+      "invoice_number": "2004/2026/4172",
+      "invoice_total": 851014.94,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Tallgrass Apparel Inc",
+      "invoice_signatory": "Tom Whitfield",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-CN-906367",
+      "declaration_amount": 851014.94,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-16",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "MISSING_REQUIRED_DOC",
+    "expected_codes": [
+      "MISSING_REQUIRED_DOC"
+    ],
+    "payment_amount_usd": 118525.76,
+    "expected_route": "PAYMENTS_OPS_TEAM_LEAD"
+  },
+  {
+    "case_id": "CRP-26016",
+    "use_case": "UC5",
+    "client_id": "CL-1005",
+    "supplier_id": "SP-2003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 1756748.8,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "MLTB0955597",
+      "invoice_number": "2003/2026/3309",
+      "invoice_total": 1756748.8,
+      "invoice_currency": "INR",
+      "seller": "Nilgiri Spice Exports Pvt Ltd",
+      "buyer": "Copperleaf Kitchenware Ltd",
+      "invoice_signatory": "Anita Pillai",
+      "contract_number": "SC-IN-3842",
+      "contract_value": 3513497.6,
+      "declaration_number": "ORD-IN-504861",
+      "declaration_amount": 1124704.58,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-07",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "DECLARATION_MISMATCH",
+    "expected_codes": [
+      "DECLARATION_MISMATCH"
+    ],
+    "payment_amount_usd": 20864.0,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "CRP-26017",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "PROFORMA_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 13668775.4,
+      "payment_currency": "INR",
+      "purpose_code": "ADV",
+      "routing_code": "DCBK0194875",
+      "invoice_number": "2002/2026/1245",
+      "invoice_total": 13668775.4,
+      "invoice_currency": "INR",
+      "seller": "Godavari Engineering Works Pvt Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Aarav Whitfield",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-762796",
+      "declaration_amount": 13668775.4,
+      "declaration_purpose": "ADV",
+      "declaration_date_signed": null,
+      "declaration_signed": false,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "DECLARATION_INVALID",
+    "expected_codes": [
+      "DECLARATION_INVALID"
+    ],
+    "payment_amount_usd": 162337.0,
+    "expected_route": "PAYMENTS_OPS_TEAM_LEAD"
+  },
+  {
+    "case_id": "CRP-26018",
+    "use_case": "UC5",
+    "client_id": "CL-1005",
+    "supplier_id": "SP-2005",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 1032356.56,
+      "payment_currency": "CNY",
+      "purpose_code": "",
+      "routing_code": "743957551313",
+      "invoice_number": "2005/2026/9081",
+      "invoice_total": 1032356.56,
+      "invoice_currency": "CNY",
+      "seller": "Shenzhen Lumen Solar Tech Co Ltd",
+      "buyer": "Copperleaf Kitchenware Ltd",
+      "invoice_signatory": "Omar Haddad",
+      "contract_number": "SC-CN-5100",
+      "contract_value": 1032356.56,
+      "declaration_number": "ORD-CN-753656",
+      "declaration_amount": 1032356.56,
+      "declaration_purpose": "",
+      "declaration_date_signed": "2026-11-08",
+      "declaration_signed": true,
+      "bank_letter_holder": "Shenzhen Lumen Solar Tech Co Ltd"
+    },
+    "planted_problem": "MISSING_PURPOSE_CODE",
+    "expected_codes": [
+      "MISSING_PURPOSE_CODE"
+    ],
+    "payment_amount_usd": 143782.25,
+    "expected_route": "PAYMENTS_OPS_TEAM_LEAD"
+  },
+  {
+    "case_id": "CRP-26019",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "PROFORMA_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_scan.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 672629.58,
+      "payment_currency": "CNY",
+      "purpose_code": "ADV",
+      "routing_code": "93363387500",
+      "invoice_number": "2004/2026/1240",
+      "invoice_total": 672629.58,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Grace Morales",
+      "contract_number": "SC-CN-7709",
+      "contract_value": 672629.58,
+      "declaration_number": "ORD-CN-205117",
+      "declaration_amount": 672629.58,
+      "declaration_purpose": "ADV",
+      "declaration_date_signed": "2026-11-08",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "INVALID_ROUTING_CODE",
+    "expected_codes": [
+      "INVALID_ROUTING_CODE"
+    ],
+    "payment_amount_usd": 93681.0,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "CRP-26020",
+    "use_case": "UC5",
+    "client_id": "CL-1008",
+    "supplier_id": "SP-2004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice_scan.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "contract.pdf",
+        "doc_type": "CONTRACT",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration_scan.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "CN",
+      "payment_amount": 739091.64,
+      "payment_currency": "CNY",
+      "purpose_code": "GDI",
+      "routing_code": "933633875004",
+      "invoice_number": "2004/2026/6055",
+      "invoice_total": 739091.64,
+      "invoice_currency": "CNY",
+      "seller": "Ningbo Brightway Housewares Co Ltd",
+      "buyer": "Oakridge Furniture Imports Inc",
+      "invoice_signatory": "Hannah Mehta",
+      "contract_number": "SC-CN-5307",
+      "contract_value": 739091.64,
+      "declaration_number": "ORD-CN-543078",
+      "declaration_amount": 739091.64,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-08-20",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "DECLARATION_INVALID",
+    "expected_codes": [
+      "DECLARATION_INVALID"
+    ],
+    "payment_amount_usd": 102937.55,
+    "expected_route": "PAYMENTS_OPS_TEAM_LEAD"
+  },
+  {
+    "case_id": "CRP-26021",
+    "use_case": "UC5",
+    "client_id": "CL-1004",
+    "supplier_id": "SP-2001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 29450600.32,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "DCBK0351819",
+      "invoice_number": "2001/2026/5454",
+      "invoice_total": 29450600.32,
+      "invoice_currency": "INR",
+      "seller": "Shakti Textiles Pvt Ltd",
+      "buyer": "Tallgrass Apparel Inc",
+      "invoice_signatory": "Vikram Kowalski",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-498142",
+      "declaration_amount": 29450600.32,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-10-28",
+      "declaration_signed": true,
+      "bank_letter_holder": "Shakti Textiles Pvt Ltd"
+    },
+    "planted_problem": "OVER_CORRIDOR_LIMIT",
+    "expected_codes": [
+      "OVER_CORRIDOR_LIMIT"
+    ],
+    "payment_amount_usd": 349769.6,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "CRP-26022",
+    "use_case": "UC5",
+    "client_id": "CL-1007",
+    "supplier_id": "SP-2003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.xlsx",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "excel"
+      },
+      {
+        "file": "remittance_declaration_scan.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "scanned_pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 5345689.6,
+      "payment_currency": "INR",
+      "purpose_code": "GDI",
+      "routing_code": "MLTB0955597",
+      "invoice_number": "2003/2026/7818",
+      "invoice_total": 5345689.6,
+      "invoice_currency": "INR",
+      "seller": "Nilgiri Spice Exports Pvt Ltd",
+      "buyer": "Sunbeam Solar Systems LLC",
+      "invoice_signatory": "Lakshmi Reddy",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-184099",
+      "declaration_amount": 5345689.6,
+      "declaration_purpose": "GDI",
+      "declaration_date_signed": "2026-11-05",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 63488.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "CRP-26023",
+    "use_case": "UC5",
+    "client_id": "CL-1001",
+    "supplier_id": "SP-2001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "remittance_declaration.pdf",
+        "doc_type": "REMITTANCE_DECLARATION",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 10052267.52,
+      "payment_currency": "INR",
+      "purpose_code": "SAL",
+      "routing_code": "DCBK0351819",
+      "invoice_number": "2001/2026/3820",
+      "invoice_total": 10052267.52,
+      "invoice_currency": "INR",
+      "seller": "Shakti Textiles Pvt Ltd",
+      "buyer": "Blue Heron Home Goods Inc",
+      "invoice_signatory": "Kenji Rao",
+      "contract_number": null,
+      "contract_value": null,
+      "declaration_number": "ORD-IN-491875",
+      "declaration_amount": 10052267.52,
+      "declaration_purpose": "SAL",
+      "declaration_date_signed": "2026-11-03",
+      "declaration_signed": true,
+      "bank_letter_holder": null
+    },
+    "planted_problem": "PURPOSE_NOT_ALLOWED",
+    "expected_codes": [
+      "PURPOSE_NOT_ALLOWED"
+    ],
+    "payment_amount_usd": 119385.6,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "CRP-26024",
+    "use_case": "UC5",
+    "client_id": "CL-1008",
+    "supplier_id": "SP-2011",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "invoice.pdf",
+        "doc_type": "COMMERCIAL_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "contract_scan.pdf",
+        "doc_type": "CONTRACT",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "bank_confirmation.pdf",
+        "doc_type": "BANK_CONFIRMATION_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "corridor": "IN",
+      "payment_amount": 607924.0,
+      "payment_currency": "INR",
+      "purpose_code": "CTR",
+      "routing_code": "DCBK0852808",
+      "invoice_number": "2011/2026/4890",
+      "invoice_total": 607924.0,
+      "invoice_currency": "INR",
+      "seller": "Kaveri Digital Solutions Pvt Ltd",
+      "buyer": "Oakridge Furniture Imports Inc",
+      "invoice_signatory": "Anita Kapoor",
+      "contract_number": "SA-IN-2760",
+      "contract_value": 1215848.0,
+      "declaration_number": null,
+      "declaration_amount": null,
+      "declaration_purpose": null,
+      "declaration_date_signed": null,
+      "declaration_signed": null,
+      "bank_letter_holder": "Kaveri Digital Solutions Pvt Ltd"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 7220.0,
+    "expected_route": "AUTO_CLEAR"
+  }
+]

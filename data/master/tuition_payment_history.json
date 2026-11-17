@@ -1,0 +1,42 @@
+[
+  {
+    "payment_id": "TUI-266757",
+    "student_no": "SC5677218",
+    "institution_id": "ED-3004",
+    "invoice_reference": "SC-FEE-684410",
+    "amount": 28240.0,
+    "currency": "AUD",
+    "amount_usd": 18578.95,
+    "paid_on": "2026-11-05"
+  },
+  {
+    "payment_id": "TUI-258426",
+    "student_no": "NB1770476",
+    "institution_id": "ED-3002",
+    "invoice_reference": "NB-FEE-429015",
+    "amount": 48400.0,
+    "currency": "USD",
+    "amount_usd": 48400.0,
+    "paid_on": "2026-05-06"
+  },
+  {
+    "payment_id": "TUI-256709",
+    "student_no": "NB1770476",
+    "institution_id": "ED-3002",
+    "invoice_reference": "NB-FEE-589401",
+    "amount": 39600.0,
+    "currency": "USD",
+    "amount_usd": 39600.0,
+    "paid_on": "2026-07-22"
+  },
+  {
+    "payment_id": "TUI-258492",
+    "student_no": "NB5574917",
+    "institution_id": "ED-3002",
+    "invoice_reference": "NB-FEE-900851",
+    "amount": 15959.45,
+    "currency": "USD",
+    "amount_usd": 15959.45,
+    "paid_on": "2026-07-13"
+  }
+]

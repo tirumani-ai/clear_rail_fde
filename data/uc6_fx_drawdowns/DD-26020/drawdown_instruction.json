@@ -1,0 +1,24 @@
+{
+  "drawdown_id": "DD-26020",
+  "submitted_at": "2026-11-14T09:52:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "deal_ref": "FWD-2026-90955",
+  "beneficiary": {
+    "beneficiary_id": "SP-2011",
+    "name": "Kaveri Digital Solutions Pvt Ltd",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKINMM",
+      "account_number": "77741215472803",
+      "ifsc": "DCBK0852808"
+    }
+  },
+  "amount": 7031121.0,
+  "currency": "INR",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2011/2026/1699",
+  "purpose_code": "SVC"
+}
