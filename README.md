@@ -35,17 +35,20 @@ You cannot build on what you cannot run. Before any agent, any check or any matc
 
 ```mermaid
 graph LR
-    S0["Step 0<br/>(you are here)"] --> S1[UC4 bulk payee files<br/>plain code first]
-    S1 --> S2[UC1 supplier payments<br/>classifier, extractors,<br/>exception agent]
-    S2 --> S3[UC5 corridor payments<br/>corridor rules,<br/>declarations]
-    S3 --> S4[UC3 incoming funds<br/>camt.053, combined/split]
-    S4 --> S5[UC6 FX drawdowns<br/>deal ledger, windows]
-    S5 --> S6[UC2 KYB onboarding<br/>pgvector past cases]
-    S6 --> S7[UC7 tuition payments<br/>name and ID matching]
-    S7 --> S8[Guardrails + eval]
-    S8 --> S9[Scaled load test]
+    S0["Step 0<br/>(you are here)"] --> S1[UC1 supplier payments<br/>classifier, extractors,<br/>exception agent]
+    S1 --> S2[UC1 cloud deployment]
+    S2 --> S3[UC4 bulk payee files<br/>plain code]
+    S3 --> S4[UC5 corridor payments<br/>corridor rules,<br/>declarations]
+    S4 --> S5[UC3 incoming funds<br/>camt.053, combined/split]
+    S5 --> S6[UC6 FX drawdowns<br/>deal ledger, windows]
+    S6 --> S7[UC2 KYB onboarding<br/>pgvector past cases]
+    S7 --> S8[UC7 tuition payments<br/>name and ID matching]
+    S8 --> S9[Guardrails + eval]
+    S9 --> S10[Scaled load test]
     style S0 fill:#2459A6,stroke:#173F78,color:#fff
 ```
+
+UC1 goes first and all the way to a cloud deployment before any other use case starts.
 
 ## What happens inside this step
 
