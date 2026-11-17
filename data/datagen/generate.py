@@ -60,38 +60,38 @@ CLIENTS = [
 ]
 
 SUPPLIERS = [  # id, name, country, city address, invoice currency, bank name, bank code
-    ("SP-2001", "Shakti Textiles Pvt Ltd", "IN", "Plot 22, Ring Road, Surat, Gujarat 395002, India", "INR", "Deccan Commerce Bank", "DCBK"),
-    ("SP-2002", "Godavari Engineering Works Pvt Ltd", "IN", "14 Industrial Estate, Rajahmundry, AP 533101, India", "USD", "Deccan Commerce Bank", "DCBK"),
-    ("SP-2003", "Nilgiri Spice Exports Pvt Ltd", "IN", "8 Spice Market Rd, Kochi, Kerala 682002, India", "INR", "Malabar Trade Bank", "MLTB"),
-    ("SP-2004", "Ningbo Brightway Housewares Co Ltd", "CN", "No. 18 Jiangnan Road, Ningbo, Zhejiang, China", "USD", "Eastern Harbour Bank", "EHBK"),
-    ("SP-2005", "Shenzhen Lumen Solar Tech Co Ltd", "CN", "Bldg 5, Hi-Tech Park, Shenzhen, Guangdong, China", "CNY", "Eastern Harbour Bank", "EHBK"),
-    ("SP-2006", "Talleres Monterrey SA de CV", "MX", "Av. Constitucion 1200, Monterrey, NL 64000, Mexico", "MXN", "Banco Sierra Madre", "BSMX"),
-    ("SP-2007", "Rheinwerk Komponenten GmbH", "DE", "Industriestrasse 9, 50667 Koeln, Germany", "EUR", "Rheinland Handelsbank", "RHHB"),
-    ("SP-2008", "Saigon Bamboo Crafts JSC", "VN", "45 Le Loi St, District 1, Ho Chi Minh City, Vietnam", "USD", "Mekong Commercial Bank", "MKCB"),
-    ("SP-2009", "Anatolia Ceramics AS", "TR", "Organize Sanayi Bolgesi 3, Kutahya, Turkey", "EUR", "Bosphorus Trade Bank", "BSPT"),
-    ("SP-2010", "Pennine Software Services Ltd", "GB", "22 Mill Lane, Manchester M1 2AB, UK", "GBP", "Northern Counties Bank", "NCBK"),
-    ("SP-2011", "Kaveri Digital Solutions Pvt Ltd", "IN", "5th Floor, Orion Tech Park, Bengaluru, Karnataka 560066, India", "INR", "Deccan Commerce Bank", "DCBK"),
-    ("SP-2012", "Hangzhou Cloudpeak Software Co Ltd", "CN", "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China", "CNY", "Eastern Harbour Bank", "EHBK"),
+    ("VN-2001", "Shakti Textiles Pvt Ltd", "IN", "Plot 22, Ring Road, Surat, Gujarat 395002, India", "INR", "Deccan Commerce Bank", "DCBK"),
+    ("VN-2002", "Godavari Engineering Works Pvt Ltd", "IN", "14 Industrial Estate, Rajahmundry, AP 533101, India", "USD", "Deccan Commerce Bank", "DCBK"),
+    ("VN-2003", "Nilgiri Spice Exports Pvt Ltd", "IN", "8 Spice Market Rd, Kochi, Kerala 682002, India", "INR", "Malabar Trade Bank", "MLTB"),
+    ("VN-2004", "Ningbo Brightway Housewares Co Ltd", "CN", "No. 18 Jiangnan Road, Ningbo, Zhejiang, China", "USD", "Eastern Harbour Bank", "EHBK"),
+    ("VN-2005", "Shenzhen Lumen Solar Tech Co Ltd", "CN", "Bldg 5, Hi-Tech Park, Shenzhen, Guangdong, China", "CNY", "Eastern Harbour Bank", "EHBK"),
+    ("VN-2006", "Talleres Monterrey SA de CV", "MX", "Av. Constitucion 1200, Monterrey, NL 64000, Mexico", "MXN", "Banco Sierra Madre", "BSMX"),
+    ("VN-2007", "Rheinwerk Komponenten GmbH", "DE", "Industriestrasse 9, 50667 Koeln, Germany", "EUR", "Rheinland Handelsbank", "RHHB"),
+    ("VN-2008", "Saigon Bamboo Crafts JSC", "VN", "45 Le Loi St, District 1, Ho Chi Minh City, Vietnam", "USD", "Mekong Commercial Bank", "MKCB"),
+    ("VN-2009", "Anatolia Ceramics AS", "TR", "Organize Sanayi Bolgesi 3, Kutahya, Turkey", "EUR", "Bosphorus Trade Bank", "BSPT"),
+    ("VN-2010", "Pennine Software Services Ltd", "GB", "22 Mill Lane, Manchester M1 2AB, UK", "GBP", "Northern Counties Bank", "NCBK"),
+    ("VN-2011", "Kaveri Digital Solutions Pvt Ltd", "IN", "5th Floor, Orion Tech Park, Bengaluru, Karnataka 560066, India", "INR", "Deccan Commerce Bank", "DCBK"),
+    ("VN-2012", "Hangzhou Cloudpeak Software Co Ltd", "CN", "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China", "CNY", "Eastern Harbour Bank", "EHBK"),
 ]
-SERVICE_SUPPLIERS = {"SP-2010", "SP-2011", "SP-2012"}
+SERVICE_SUPPLIERS = {"VN-2010", "VN-2011", "VN-2012"}
 
 GOODS = {  # supplier id -> list of (description, unit, unit price in USD)
-    "SP-2001": [("Cotton bedsheet set, queen", "set", 14.5), ("Cotton towel, bath", "pcs", 3.2)],
-    "SP-2002": [("Cast iron pump housing", "pcs", 62.0), ("Steel flange DN100", "pcs", 9.8)],
-    "SP-2003": [("Black pepper, whole, 25 kg bag", "bag", 128.0), ("Cardamom, green, 10 kg", "box", 210.0)],
-    "SP-2004": [("Stainless steel cookware set", "set", 21.0), ("Glass storage jar 1L", "pcs", 1.9)],
-    "SP-2005": [("Monocrystalline solar panel 400W", "pcs", 96.0), ("MC4 connector pair", "pair", 1.1)],
-    "SP-2006": [("Brake disc, front", "pcs", 34.0), ("Alloy wheel 17in", "pcs", 71.0)],
-    "SP-2007": [("Hydraulic valve block", "pcs", 145.0), ("Precision bearing 6205", "pcs", 6.4)],
-    "SP-2008": [("Bamboo side table", "pcs", 38.0), ("Rattan storage basket", "pcs", 7.5)],
-    "SP-2009": [("Porcelain floor tile 60x60, box", "box", 18.0), ("Ceramic vase", "pcs", 12.0)],
+    "VN-2001": [("Cotton bedsheet set, queen", "set", 14.5), ("Cotton towel, bath", "pcs", 3.2)],
+    "VN-2002": [("Cast iron pump housing", "pcs", 62.0), ("Steel flange DN100", "pcs", 9.8)],
+    "VN-2003": [("Black pepper, whole, 25 kg bag", "bag", 128.0), ("Cardamom, green, 10 kg", "box", 210.0)],
+    "VN-2004": [("Stainless steel cookware set", "set", 21.0), ("Glass storage jar 1L", "pcs", 1.9)],
+    "VN-2005": [("Monocrystalline solar panel 400W", "pcs", 96.0), ("MC4 connector pair", "pair", 1.1)],
+    "VN-2006": [("Brake disc, front", "pcs", 34.0), ("Alloy wheel 17in", "pcs", 71.0)],
+    "VN-2007": [("Hydraulic valve block", "pcs", 145.0), ("Precision bearing 6205", "pcs", 6.4)],
+    "VN-2008": [("Bamboo side table", "pcs", 38.0), ("Rattan storage basket", "pcs", 7.5)],
+    "VN-2009": [("Porcelain floor tile 60x60, box", "box", 18.0), ("Ceramic vase", "pcs", 12.0)],
 }
-SERVICES = {"SP-2010": "Software development services", "SP-2011": "Software development services",
-            "SP-2012": "Cloud platform engineering services"}
+SERVICES = {"VN-2010": "Software development services", "VN-2011": "Software development services",
+            "VN-2012": "Cloud platform engineering services"}
 FX_TO = {"USD": 1.0, "INR": 84.2, "CNY": 7.18, "MXN": 18.9, "EUR": 0.92, "GBP": 0.79, "CAD": 1.37, "AUD": 1.52}
 
 WATCHLIST = {  # fictional - not a real sanctions list
-    "entities": ["Black Tide Maritime Holdings", "Crescent Ridge Trading FZE", "Volkov Arms Logistics"],
+    "entities": ["Obsidian Peak Capital Holdings", "Crescent Ridge Trading FZE", "Volkov Defence Industries"],
     "people": ["Dmitri Varenko", "Selim Karadag", "Jun-ho Pak"],
 }
 
@@ -401,7 +401,7 @@ def build_master(out: Path) -> dict:
             acct |= {"iban": iban(ctry, code)}
         else:
             acct |= {"account_number": account_no(12)}
-        suppliers.append({"supplier_id": sid, "legal_name": name, "country": ctry, "address": addr,
+        suppliers.append({"vendor_id": sid, "legal_name": name, "country": ctry, "address": addr,
                           "invoice_currency": cur, "bank": acct})
     # everything below draws after the values above, so adding to it never changes them
     for s in suppliers:
@@ -676,7 +676,7 @@ UC1_COVERAGE = [
 def uc1(out: Path, master: dict, n: int) -> None:
     base = out / "uc1_supplier_payments"
     clients = master["clients"]
-    sups = {s["supplier_id"]: s for s in master["beneficiaries"]}
+    sups = {s["vendor_id"]: s for s in master["beneficiaries"]}
     truth, history = [], []
     bundle_done = False
     plan = plan_cases(UC1_PROBLEMS, UC1_COVERAGE, n, {"BANK_DETAILS_CHANGED": {"bank_letter": "pdf"}})
@@ -728,7 +728,7 @@ def uc1(out: Path, master: dict, n: int) -> None:
         if partial:  # an earlier 30% advance on the same invoice was already released
             paid_before = round(total * 0.3, 2)
             history.append({"payment_id": f"PAY-2026-09{rng.randint(100, 999)}", "client_id": cli["client_id"],
-                            "invoice_number": inv["number"], "supplier_id": sid, "amount": paid_before,
+                            "invoice_number": inv["number"], "vendor_id": sid, "amount": paid_before,
                             "currency": cur, "status": "RELEASED",
                             "released_on": iso(inv_date + timedelta(days=5))})
             amount = round(total - paid_before, 2)
@@ -737,7 +737,7 @@ def uc1(out: Path, master: dict, n: int) -> None:
         if problem == "INVOICE_REUSED":
             paid_before = total
             history.append({"payment_id": f"PAY-2026-09{rng.randint(100, 999)}", "client_id": cli["client_id"],
-                            "invoice_number": inv["number"], "supplier_id": sid, "amount": total,
+                            "invoice_number": inv["number"], "vendor_id": sid, "amount": total,
                             "currency": cur, "status": "RELEASED",
                             "released_on": iso(inv_date + timedelta(days=12))})
         if problem == "CURRENCY_MISMATCH":
@@ -803,7 +803,7 @@ def uc1(out: Path, master: dict, n: int) -> None:
             files.append({"file": "invoice_copy_scan.pdf", "doc_type": inv_type, "format": "scanned_pdf",
                           "duplicate_of": files[1]["file"]})
         truth.append({
-            "case_id": pid, "use_case": "UC1", "client_id": cli["client_id"], "supplier_id": sid, "files": files,
+            "case_id": pid, "use_case": "UC1", "client_id": cli["client_id"], "vendor_id": sid, "files": files,
             "expected_fields": {
                 "invoice_number": inv["number"], "invoice_date": inv["date"], "due_date": inv["due_date"],
                 "invoice_total": total, "invoice_currency": cur, "seller": sup["legal_name"],
@@ -1303,7 +1303,7 @@ def bank_confirmation_doc(bank: dict, holder: str, when: date) -> dict:
 def uc5(out: Path, master: dict, n: int) -> None:
     base = out / "uc5_corridor_payments"
     clients = master["clients"]
-    sups = {s["supplier_id"]: s for s in master["beneficiaries"]}
+    sups = {s["vendor_id"]: s for s in master["beneficiaries"]}
     truth = []
     for i, (problem, v) in enumerate(plan_cases(UC5_PROBLEMS, UC5_COVERAGE, n, UC5_DEFAULTS)):
         cid = f"CRP-{26000 + i + 1}"
@@ -1407,7 +1407,7 @@ def uc5(out: Path, master: dict, n: int) -> None:
             files.append({"file": write_doc(folder, "bank_confirmation", bank_confirmation_doc(ben_bank, holder, when),
                                             letter_fmt), "doc_type": "BANK_CONFIRMATION_LETTER", "format": letter_fmt})
         truth.append({
-            "case_id": cid, "use_case": "UC5", "client_id": cli["client_id"], "supplier_id": sid, "files": files,
+            "case_id": cid, "use_case": "UC5", "client_id": cli["client_id"], "vendor_id": sid, "files": files,
             "expected_fields": {
                 "corridor": corr, "payment_amount": amount, "payment_currency": cur, "purpose_code": stated,
                 "routing_code": ben_bank.get("ifsc") or ben_bank.get("cnaps"),
@@ -1489,7 +1489,7 @@ def uc6(out: Path, master: dict, n: int) -> None:
         if v.get("small"):
             amount = round(rng.uniform(3000, min_invoice * 0.8) * FX_TO[buy], 2)
         else:
-            sid = sup["supplier_id"]
+            sid = sup["vendor_id"]
             target = rng.uniform(30000, 250000)
             lines = service_lines(sid, buy, target) if sid in SERVICE_SUPPLIERS else goods_lines(sid, buy, target)
             inv_date = TODAY - timedelta(days=rng.randint(5, 60))
@@ -1573,7 +1573,7 @@ def uc6(out: Path, master: dict, n: int) -> None:
             "drawdown_id": did,
             "submitted_at": f"{iso(TODAY - timedelta(days=rng.randint(0, 2)))}T{rng.randint(8, 18):02d}:{rng.randint(0, 59):02d}:00Z",
             "client_id": cli["client_id"], "client_name": cli["legal_name"], "deal_ref": ref,
-            "beneficiary": {"beneficiary_id": sup["supplier_id"], "name": sup["legal_name"],
+            "beneficiary": {"beneficiary_id": sup["vendor_id"], "name": sup["legal_name"],
                             "country": sup["country"], "bank": sup["bank"]},
             "amount": amount, "currency": pay_cur, "value_date": iso(TODAY + timedelta(days=2)),
             "invoice_reference": inv["number"] if inv else None, "purpose_code": "SVC" if inv and inv["services"] else "GDI",
