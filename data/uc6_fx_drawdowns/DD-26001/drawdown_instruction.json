@@ -1,0 +1,23 @@
+{
+  "drawdown_id": "DD-26001",
+  "submitted_at": "2026-11-14T17:29:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "deal_ref": "FWD-2026-41953",
+  "beneficiary": {
+    "beneficiary_id": "SP-2009",
+    "name": "Anatolia Ceramics AS",
+    "country": "TR",
+    "bank": {
+      "bank_name": "Bosphorus Trade Bank",
+      "bank_country": "TR",
+      "swift": "BSPTTR3M",
+      "account_number": "721590109281"
+    }
+  },
+  "amount": 118354.32,
+  "currency": "EUR",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2009/2026/2894",
+  "purpose_code": "GDI"
+}

@@ -1,0 +1,23 @@
+{
+  "drawdown_id": "DD-26017",
+  "submitted_at": "2026-11-16T15:49:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "deal_ref": "FWD-2026-93264",
+  "beneficiary": {
+    "beneficiary_id": "SP-2007",
+    "name": "Rheinwerk Komponenten GmbH",
+    "country": "DE",
+    "bank": {
+      "bank_name": "Rheinland Handelsbank",
+      "bank_country": "DE",
+      "swift": "RHHBDE3M",
+      "iban": "DE68233079244026859952"
+    }
+  },
+  "amount": 32753.06,
+  "currency": "EUR",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2007/2026/2210",
+  "purpose_code": "GDI"
+}

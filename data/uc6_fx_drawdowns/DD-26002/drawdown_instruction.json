@@ -1,0 +1,23 @@
+{
+  "drawdown_id": "DD-26002",
+  "submitted_at": "2026-11-16T18:23:00Z",
+  "client_id": "CL-1007",
+  "client_name": "Sunbeam Solar Systems LLC",
+  "deal_ref": "FWD-2026-68054",
+  "beneficiary": {
+    "beneficiary_id": "SP-2010",
+    "name": "Pennine Software Services Ltd",
+    "country": "GB",
+    "bank": {
+      "bank_name": "Northern Counties Bank",
+      "bank_country": "GB",
+      "swift": "NCBKGBBB",
+      "iban": "GB48NCBK90139624595711"
+    }
+  },
+  "amount": 60490.3,
+  "currency": "GBP",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2010/2026/1330",
+  "purpose_code": "SVC"
+}

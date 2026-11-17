@@ -1,0 +1,26 @@
+{
+  "payment_id": "CRP-26001",
+  "submitted_at": "2026-11-13T17:39:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2012",
+    "name": "Hangzhou Cloudpeak Software Co Ltd",
+    "address": "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China",
+    "country": "CN",
+    "bank": {
+      "bank_name": "Eastern Harbour Bank",
+      "bank_country": "CN",
+      "swift": "EHBKCNBB",
+      "account_number": "148525388853",
+      "cnaps": "735379907511"
+    }
+  },
+  "amount": 404485.3,
+  "currency": "CNY",
+  "purpose_code": "SVC",
+  "invoice_references": [
+    "2012/2026/7894"
+  ],
+  "requested_value_date": "2026-11-18"
+}

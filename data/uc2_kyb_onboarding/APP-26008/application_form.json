@@ -1,32 +1,42 @@
 {
   "application_id": "APP-26008",
-  "submitted_on": "2026-11-12",
-  "legal_name": "Northgate Imports Ltd",
-  "trading_name": "Northgate",
-  "registration_number": "92210966",
+  "submitted_on": "2026-11-14",
+  "legal_name": "Fairhaven Solutions Ltd",
+  "trading_name": "Fairhaven",
+  "registration_number": "44407429",
   "country": "GB",
   "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
-  "incorporation_date": "2025-04-09",
-  "industry": "Wholesale of household goods",
-  "expected_monthly_volume_usd": 400000,
+  "incorporation_date": "2022-05-19",
+  "industry": "Software consulting",
+  "expected_monthly_volume_usd": 900000,
   "corridors": [
-    "VN",
-    "CN"
+    "CN",
+    "DE"
   ],
   "directors": [
     {
-      "name": "Aarav Adeyemi"
+      "name": "Diego Becker"
+    },
+    {
+      "name": "Lakshmi Brennan"
+    },
+    {
+      "name": "Carlos Okafor"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Aarav Adeyemi",
+      "name": "Diego Becker",
+      "pct": 25
+    },
+    {
+      "name": "Lakshmi Brennan",
       "pct": 40
     },
     {
-      "name": "Northgate Holdings Ltd",
-      "pct": 60
+      "name": "Carlos Okafor",
+      "pct": 35
     }
   ],
-  "contact_email": "finance@northgate.example"
+  "contact_email": "finance@fairhaven.example"
 }

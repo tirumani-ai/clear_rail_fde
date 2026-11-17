@@ -1,0 +1,1146 @@
+[
+  {
+    "case_id": "TUI-26001",
+    "use_case": "UC7",
+    "institution_id": "ED-3001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Grace Wagner",
+      "payer_relationship": "PARENT",
+      "student": "Anita Wagner",
+      "student_no": "W9388769",
+      "invoice_number": "W-FEE-129749",
+      "invoice_balance_due": 13570.0,
+      "invoice_currency": "GBP",
+      "invoice_due_date": "2026-12-20",
+      "term": "Spring term 2027",
+      "offer_letter_name": "Anita Wagner",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 13570.0,
+      "payment_currency": "USD",
+      "beneficiary": "University of Westhaven"
+    },
+    "planted_problem": "CURRENCY_MISMATCH",
+    "expected_codes": [
+      "CURRENCY_MISMATCH"
+    ],
+    "payment_amount_usd": 13570.0,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26002",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Felix Rao",
+      "payer_relationship": "PARENT",
+      "student": "Elena Rao",
+      "student_no": "NB9940822",
+      "invoice_number": "NB-FEE-260295",
+      "invoice_balance_due": 21090.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2027-01-13",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Elena Rao",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 21090.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 21090.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26003",
+    "use_case": "UC7",
+    "institution_id": "ED-3001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Lotus Scholars Foundation",
+      "payer_relationship": "SPONSOR",
+      "student": "Grace Sato",
+      "student_no": "W5027243",
+      "invoice_number": "W-FEE-221289",
+      "invoice_balance_due": 20460.0,
+      "invoice_currency": "GBP",
+      "invoice_due_date": "2027-01-07",
+      "term": "Spring term 2027",
+      "offer_letter_name": "Grace Sato",
+      "id_card_name": "Grace Sato",
+      "id_card_student_no": "W5027243",
+      "payment_amount": 20460.0,
+      "payment_currency": "GBP",
+      "beneficiary": "University of Westhaven"
+    },
+    "planted_problem": "UNSUPPORTED_THIRD_PARTY_PAYER",
+    "expected_codes": [
+      "UNSUPPORTED_THIRD_PARTY_PAYER"
+    ],
+    "payment_amount_usd": 25898.73,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "TUI-26004",
+    "use_case": "UC7",
+    "institution_id": "ED-3004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Jonas Chen",
+      "payer_relationship": "SELF",
+      "student": "Jonas Chen",
+      "student_no": "SC7191741",
+      "invoice_number": "SC-FEE-130878",
+      "invoice_balance_due": 33170.0,
+      "invoice_currency": "AUD",
+      "invoice_due_date": "2026-12-01",
+      "term": "Semester 1 2027",
+      "offer_letter_name": "Jonas Chen",
+      "id_card_name": "CHEN Jonas",
+      "id_card_student_no": "SC7191741",
+      "payment_amount": 33170.0,
+      "payment_currency": "AUD",
+      "beneficiary": "Southern Cross Metropolitan University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 21822.37,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26005",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Hannah Torres",
+      "payer_relationship": "PARENT",
+      "student": "Tom Torres",
+      "student_no": "NB6059173",
+      "invoice_number": "NB-FEE-608641",
+      "invoice_balance_due": 23220.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2026-12-10",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Tom Torres",
+      "id_card_name": "Tom Torres",
+      "id_card_student_no": "NB6059173",
+      "payment_amount": 27968.08,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": "AMOUNT_EXCEEDS_FEES",
+    "expected_codes": [
+      "AMOUNT_EXCEEDS_FEES"
+    ],
+    "payment_amount_usd": 27968.08,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26006",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Grace Ramirez",
+      "payer_relationship": "SELF",
+      "student": "Grace Ramirez",
+      "student_no": "MR9615292",
+      "invoice_number": "MR-FEE-522987",
+      "invoice_balance_due": 30820.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2026-12-18",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Grace Ramirez",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 30820.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 22496.35,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26007",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      },
+      {
+        "file": "sponsor_letter.pdf",
+        "doc_type": "SPONSOR_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Meridian Engineering Pvt Ltd",
+      "payer_relationship": "SPONSOR",
+      "student": "Grace Iyer",
+      "student_no": "NB3608851",
+      "invoice_number": "NB-FEE-674137",
+      "invoice_balance_due": 18080.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2026-12-01",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Grace Iyer",
+      "id_card_name": "Grace Iyer",
+      "id_card_student_no": "NB3608851",
+      "payment_amount": 18080.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 18080.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26008",
+    "use_case": "UC7",
+    "institution_id": "ED-3004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Lakshmi Sato",
+      "payer_relationship": "PARENT",
+      "student": "Elena Sato",
+      "student_no": "SC9490781",
+      "invoice_number": "SC-FEE-615993",
+      "invoice_balance_due": 23390.0,
+      "invoice_currency": "AUD",
+      "invoice_due_date": "2026-12-06",
+      "term": "Semester 1 2027",
+      "offer_letter_name": "Elena Sato",
+      "id_card_name": "Elena Sato",
+      "id_card_student_no": "SC9490781",
+      "payment_amount": 23390.0,
+      "payment_currency": "AUD",
+      "beneficiary": "Southern Cross Metropolitan University"
+    },
+    "planted_problem": "SUSPICIOUS_CONTENT",
+    "expected_codes": [
+      "SUSPICIOUS_CONTENT"
+    ],
+    "payment_amount_usd": 15388.16,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "TUI-26009",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Wei Rao",
+      "payer_relationship": "PARENT",
+      "student": "Vikram Rao",
+      "student_no": "MR4630002",
+      "invoice_number": "MR-FEE-250722",
+      "invoice_balance_due": 20370.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2027-01-09",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Vikram Rao",
+      "id_card_name": "Vikram Rao",
+      "id_card_student_no": "MR7315977",
+      "payment_amount": 20370.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": "STUDENT_ID_MISMATCH",
+    "expected_codes": [
+      "STUDENT_ID_MISMATCH"
+    ],
+    "payment_amount_usd": 14868.61,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26010",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Diego Brennan",
+      "payer_relationship": "PARENT",
+      "student": "Aarav Brennan",
+      "student_no": "MR1921254",
+      "invoice_number": "MR-FEE-187246",
+      "invoice_balance_due": 21050.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2026-12-16",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Aarav Brennan",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 21050.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 15364.96,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26011",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      },
+      {
+        "file": "sponsor_letter.pdf",
+        "doc_type": "SPONSOR_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Lotus Scholars Foundation",
+      "payer_relationship": "SPONSOR",
+      "student": "Grace Mehta",
+      "student_no": "NB9479979",
+      "invoice_number": "NB-FEE-849957",
+      "invoice_balance_due": 26690.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2027-01-06",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Priya Mehta",
+      "id_card_name": "Grace Mehta",
+      "id_card_student_no": "NB9479979",
+      "payment_amount": 26690.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": "STUDENT_NAME_MISMATCH",
+    "expected_codes": [
+      "STUDENT_NAME_MISMATCH"
+    ],
+    "payment_amount_usd": 26690.0,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26012",
+    "use_case": "UC7",
+    "institution_id": "ED-3001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Selim Karadag",
+      "payer_relationship": "PARENT",
+      "student": "Yuki Petrova",
+      "student_no": "W7270789",
+      "invoice_number": "W-FEE-181277",
+      "invoice_balance_due": 20560.0,
+      "invoice_currency": "GBP",
+      "invoice_due_date": "2026-12-11",
+      "term": "Spring term 2027",
+      "offer_letter_name": "Yuki Petrova",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 20560.0,
+      "payment_currency": "GBP",
+      "beneficiary": "University of Westhaven"
+    },
+    "planted_problem": "SCREENING_HIT",
+    "expected_codes": [
+      "SCREENING_HIT"
+    ],
+    "payment_amount_usd": 26025.32,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "TUI-26013",
+    "use_case": "UC7",
+    "institution_id": "ED-3004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Sara Petrova",
+      "payer_relationship": "PARENT",
+      "student": "Samuel Petrova",
+      "student_no": "SC5677218",
+      "invoice_number": "SC-FEE-684410",
+      "invoice_balance_due": 28240.0,
+      "invoice_currency": "AUD",
+      "invoice_due_date": "2027-01-12",
+      "term": "Semester 1 2027",
+      "offer_letter_name": "Samuel Petrova",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 28240.0,
+      "payment_currency": "AUD",
+      "beneficiary": "Southern Cross Metropolitan University"
+    },
+    "planted_problem": "DUPLICATE_PAYMENT",
+    "expected_codes": [
+      "DUPLICATE_PAYMENT"
+    ],
+    "payment_amount_usd": 18578.95,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26014",
+    "use_case": "UC7",
+    "institution_id": "ED-3004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Mei Ramirez",
+      "payer_relationship": "PARENT",
+      "student": "Nadia Ramirez",
+      "student_no": "SC8492001",
+      "invoice_number": "SC-FEE-517874",
+      "invoice_balance_due": 25720.0,
+      "invoice_currency": "AUD",
+      "invoice_due_date": "2026-12-12",
+      "term": "Semester 1 2027",
+      "offer_letter_name": "Nadia Ramirez",
+      "id_card_name": "Nadia Ramirez",
+      "id_card_student_no": "SC8492001",
+      "payment_amount": 25720.0,
+      "payment_currency": "AUD",
+      "beneficiary": "Southern Student Fee Services Ltd"
+    },
+    "planted_problem": "BENEFICIARY_NOT_INSTITUTION",
+    "expected_codes": [
+      "BENEFICIARY_NOT_INSTITUTION"
+    ],
+    "payment_amount_usd": 16921.05,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "TUI-26015",
+    "use_case": "UC7",
+    "institution_id": "ED-3001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Samuel Nasser",
+      "payer_relationship": "SELF",
+      "student": "Samuel Nasser",
+      "student_no": "W5062056",
+      "invoice_number": "W-FEE-510607",
+      "invoice_balance_due": 20140.0,
+      "invoice_currency": "GBP",
+      "invoice_due_date": "2026-11-30",
+      "term": "Spring term 2027",
+      "offer_letter_name": "Samuel Nasser",
+      "id_card_name": "Samuel Nasser",
+      "id_card_student_no": "W5062056",
+      "payment_amount": 20140.0,
+      "payment_currency": "GBP",
+      "beneficiary": "University of Westhaven"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 25493.67,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26016",
+    "use_case": "UC7",
+    "institution_id": "ED-3001",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Sara Ramirez",
+      "payer_relationship": "SELF",
+      "student": "Sara Ramirez",
+      "student_no": "W6458910",
+      "invoice_number": "W-FEE-635999",
+      "invoice_balance_due": 15200.0,
+      "invoice_currency": "GBP",
+      "invoice_due_date": "2027-01-11",
+      "term": "Spring term 2027",
+      "offer_letter_name": "Sara Ramirez",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 15200.0,
+      "payment_currency": "GBP",
+      "beneficiary": "University of Westhaven"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 19240.51,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26017",
+    "use_case": "UC7",
+    "institution_id": "ED-3004",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Yuki Reddy",
+      "payer_relationship": "PARENT",
+      "student": "Elena Reddy",
+      "student_no": "SC9152354",
+      "invoice_number": "SC-FEE-692516",
+      "invoice_balance_due": 22450.0,
+      "invoice_currency": "AUD",
+      "invoice_due_date": "2025-09-22",
+      "term": "Semester 1 2025",
+      "offer_letter_name": "Elena Reddy",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 22450.0,
+      "payment_currency": "AUD",
+      "beneficiary": "Southern Cross Metropolitan University"
+    },
+    "planted_problem": "STALE_DOCUMENT",
+    "expected_codes": [
+      "STALE_DOCUMENT"
+    ],
+    "payment_amount_usd": 14769.74,
+    "expected_route": "PAYMENTS_OPS_ANALYST"
+  },
+  {
+    "case_id": "TUI-26018",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Kenji Haddad",
+      "payer_relationship": "PARENT",
+      "student": "Sara Haddad",
+      "student_no": "NB2859962",
+      "invoice_number": "NB-FEE-707931",
+      "invoice_balance_due": 29450.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2026-12-10",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Sara Haddad",
+      "id_card_name": "Sara Haddad",
+      "id_card_student_no": "NB2859962",
+      "payment_amount": 14725.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 14725.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26019",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Hannah Brennan",
+      "payer_relationship": "SELF",
+      "student": "Hannah Brennan",
+      "student_no": "MR8458745",
+      "invoice_number": "MR-FEE-949695",
+      "invoice_balance_due": 34120.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2026-12-04",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Hannah Brennan",
+      "id_card_name": "Hannah Brennan",
+      "id_card_student_no": "MR8458745",
+      "payment_amount": 34120.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 24905.11,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26020",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Anita Pillai",
+      "payer_relationship": "PARENT",
+      "student": "Vikram Pillai",
+      "student_no": "MR4920631",
+      "invoice_number": "MR-FEE-649581",
+      "invoice_balance_due": 20870.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2027-01-02",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Vikram Pillai",
+      "id_card_name": "Vikram Pillai",
+      "id_card_student_no": "MR4920631",
+      "payment_amount": 20870.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 15233.58,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26021",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Omar Brennan",
+      "payer_relationship": "PARENT",
+      "student": "Anita Brennan",
+      "student_no": "NB6598396",
+      "invoice_number": "NB-FEE-725874",
+      "invoice_balance_due": 16870.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2027-01-06",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Anita Brennan",
+      "id_card_name": null,
+      "id_card_student_no": null,
+      "payment_amount": 16870.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 16870.0,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26022",
+    "use_case": "UC7",
+    "institution_id": "ED-3003",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Tom Rao",
+      "payer_relationship": "PARENT",
+      "student": "Samuel Rao",
+      "student_no": "MR6169739",
+      "invoice_number": "MR-FEE-509843",
+      "invoice_balance_due": 34420.0,
+      "invoice_currency": "CAD",
+      "invoice_due_date": "2027-01-11",
+      "term": "Winter term 2027",
+      "offer_letter_name": "Samuel Rao",
+      "id_card_name": "Samuel Rao",
+      "id_card_student_no": "MR6169739",
+      "payment_amount": 34420.0,
+      "payment_currency": "CAD",
+      "beneficiary": "Maple Ridge Institute of Technology"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 25124.09,
+    "expected_route": "AUTO_CLEAR"
+  },
+  {
+    "case_id": "TUI-26023",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice_scan.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "scanned_pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      },
+      {
+        "file": "sponsor_letter.pdf",
+        "doc_type": "SPONSOR_LETTER",
+        "format": "pdf"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Lotus Scholars Foundation",
+      "payer_relationship": "SPONSOR",
+      "student": "Nadia Wagner",
+      "student_no": "NB1770476",
+      "invoice_number": "NB-FEE-729981",
+      "invoice_balance_due": 30000.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2026-11-29",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Nadia Wagner",
+      "id_card_name": "Nadia Wagner",
+      "id_card_student_no": "NB1770476",
+      "payment_amount": 30000.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": "OVER_ANNUAL_LIMIT",
+    "expected_codes": [
+      "OVER_ANNUAL_LIMIT"
+    ],
+    "payment_amount_usd": 30000.0,
+    "expected_route": "COMPLIANCE_OFFICER"
+  },
+  {
+    "case_id": "TUI-26024",
+    "use_case": "UC7",
+    "institution_id": "ED-3002",
+    "files": [
+      {
+        "file": "payment_instruction.json",
+        "doc_type": "PAYMENT_INSTRUCTION",
+        "format": "json"
+      },
+      {
+        "file": "fee_invoice.pdf",
+        "doc_type": "FEE_INVOICE",
+        "format": "pdf"
+      },
+      {
+        "file": "offer_letter.pdf",
+        "doc_type": "OFFER_LETTER",
+        "format": "pdf"
+      },
+      {
+        "file": "student_id.png",
+        "doc_type": "STUDENT_ID",
+        "format": "image"
+      }
+    ],
+    "expected_fields": {
+      "payer": "Mei Sato",
+      "payer_relationship": "SELF",
+      "student": "Mei Sato",
+      "student_no": "NB5574917",
+      "invoice_number": "NB-FEE-901671",
+      "invoice_balance_due": 11440.0,
+      "invoice_currency": "USD",
+      "invoice_due_date": "2026-12-08",
+      "term": "Spring semester 2027",
+      "offer_letter_name": "Mei Sato",
+      "id_card_name": "Mei Sato",
+      "id_card_student_no": "NB5574917",
+      "payment_amount": 11440.0,
+      "payment_currency": "USD",
+      "beneficiary": "Northbridge State University"
+    },
+    "planted_problem": null,
+    "expected_codes": [],
+    "payment_amount_usd": 11440.0,
+    "expected_route": "AUTO_CLEAR"
+  }
+]

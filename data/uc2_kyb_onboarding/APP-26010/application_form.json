@@ -1,42 +1,35 @@
 {
   "application_id": "APP-26010",
-  "submitted_on": "2026-11-12",
-  "legal_name": "Brightline Solutions Ltd",
-  "trading_name": "Brightline",
-  "registration_number": "49677040",
+  "submitted_on": "2026-11-14",
+  "legal_name": "Summitview Imports Ltd",
+  "trading_name": "Summitview",
+  "registration_number": "33727470",
   "country": "GB",
-  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
-  "incorporation_date": "2023-05-08",
-  "industry": "Wholesale of household goods",
-  "expected_monthly_volume_usd": 120000,
+  "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
+  "incorporation_date": "2022-03-29",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 50000,
   "corridors": [
-    "DE",
-    "VN"
+    "TR",
+    "DE"
   ],
   "directors": [
     {
-      "name": "Aarav Torres"
+      "name": "Anita Fischer"
     },
     {
-      "name": "Omar Wagner"
-    },
-    {
-      "name": "Felix Becker"
+      "name": "Selim Karadag"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Aarav Torres",
-      "pct": 30
-    },
-    {
-      "name": "Omar Wagner",
+      "name": "Anita Fischer",
       "pct": 40
     },
     {
-      "name": "Felix Becker",
-      "pct": 30
+      "name": "Priya Kapoor",
+      "pct": 40
     }
   ],
-  "contact_email": "finance@brightline.example"
+  "contact_email": "finance@summitview.example"
 }

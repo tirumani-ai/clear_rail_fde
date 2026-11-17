@@ -1,0 +1,29 @@
+{
+  "payment_id": "TUI-26014",
+  "submitted_at": "2026-11-16T12:15:00Z",
+  "payer": {
+    "name": "Mei Ramirez",
+    "country": "CN",
+    "relationship_to_student": "PARENT"
+  },
+  "student": {
+    "name": "Nadia Ramirez",
+    "student_no": "SC8492001"
+  },
+  "institution_id": "ED-3004",
+  "beneficiary": {
+    "name": "Southern Student Fee Services Ltd",
+    "country": "AE",
+    "bank": {
+      "account_holder": "Southern Student Fee Services Ltd",
+      "bank_name": "Gulf Horizon Bank",
+      "bank_country": "AE",
+      "swift": "GHBKAEAD",
+      "account_number": "3734616756392"
+    }
+  },
+  "amount": 25720.0,
+  "currency": "AUD",
+  "purpose_code": "EDU",
+  "invoice_reference": "SC-FEE-517874"
+}

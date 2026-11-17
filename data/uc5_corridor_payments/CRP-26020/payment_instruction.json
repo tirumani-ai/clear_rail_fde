@@ -1,0 +1,26 @@
+{
+  "payment_id": "CRP-26020",
+  "submitted_at": "2026-11-15T10:58:00Z",
+  "client_id": "CL-1008",
+  "client_name": "Oakridge Furniture Imports Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2004",
+    "name": "Ningbo Brightway Housewares Co Ltd",
+    "address": "No. 18 Jiangnan Road, Ningbo, Zhejiang, China",
+    "country": "CN",
+    "bank": {
+      "bank_name": "Eastern Harbour Bank",
+      "bank_country": "CN",
+      "swift": "EHBKCNMM",
+      "account_number": "114710497465",
+      "cnaps": "933633875004"
+    }
+  },
+  "amount": 739091.64,
+  "currency": "CNY",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2004/2026/6055"
+  ],
+  "requested_value_date": "2026-11-18"
+}

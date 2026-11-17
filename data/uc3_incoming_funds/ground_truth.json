@@ -5,13 +5,13 @@
     "credit_ids": [
       "CR-20261116-0001"
     ],
-    "planted_problem": null,
-    "expected_deal_refs": [
-      "DL-2026-40001"
+    "planted_problem": "UNKNOWN_DEAL_REF",
+    "expected_deal_refs": [],
+    "expected_codes": [
+      "UNKNOWN_DEAL_REF"
     ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
-    "remittance_advice": "remittance_advices/advice_CR-20261116-0001.eml"
+    "expected_route": "CASH_OPS_ANALYST",
+    "remittance_advice": null
   },
   {
     "case_id": "CR-20261116-0002",
@@ -19,30 +19,45 @@
     "credit_ids": [
       "CR-20261116-0002"
     ],
-    "planted_problem": null,
+    "planted_problem": "CURRENCY_MISMATCH",
     "expected_deal_refs": [
       "DL-2026-40002"
     ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
+    "expected_codes": [
+      "CURRENCY_MISMATCH"
+    ],
+    "expected_route": "CASH_OPS_ANALYST",
     "remittance_advice": null
   },
   {
     "case_id": "CR-20261116-0003",
     "use_case": "UC3",
     "credit_ids": [
-      "CR-20261116-0003",
-      "CR-20261116-0004"
+      "CR-20261116-0003"
     ],
-    "planted_problem": "DUPLICATE_CREDIT",
+    "planted_problem": "AMOUNT_SHORT",
     "expected_deal_refs": [
       "DL-2026-40003"
     ],
     "expected_codes": [
-      "DUPLICATE_CREDIT"
+      "AMOUNT_SHORT"
     ],
     "expected_route": "CASH_OPS_ANALYST",
     "remittance_advice": null
+  },
+  {
+    "case_id": "CR-20261116-0004",
+    "use_case": "UC3",
+    "credit_ids": [
+      "CR-20261116-0004"
+    ],
+    "planted_problem": null,
+    "expected_deal_refs": [
+      "DL-2026-40004"
+    ],
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
+    "remittance_advice": "remittance_advices/advice_CR-20261116-0004.eml"
   },
   {
     "case_id": "CR-20261116-0005",
@@ -52,7 +67,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40004"
+      "DL-2026-40005"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -66,7 +81,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40005"
+      "DL-2026-40006"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -78,13 +93,13 @@
     "credit_ids": [
       "CR-20261116-0007"
     ],
-    "planted_problem": null,
+    "planted_problem": "NO_REFERENCE_WITH_ADVICE",
     "expected_deal_refs": [
-      "DL-2026-40006"
+      "DL-2026-40007"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
-    "remittance_advice": null
+    "remittance_advice": "remittance_advices/advice_CR-20261116-0007.pdf"
   },
   {
     "case_id": "CR-20261116-0008",
@@ -94,7 +109,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40007"
+      "DL-2026-40008"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -106,12 +121,12 @@
     "credit_ids": [
       "CR-20261116-0009"
     ],
-    "planted_problem": "UNKNOWN_DEAL_REF",
-    "expected_deal_refs": [],
-    "expected_codes": [
-      "UNKNOWN_DEAL_REF"
+    "planted_problem": null,
+    "expected_deal_refs": [
+      "DL-2026-40009"
     ],
-    "expected_route": "CASH_OPS_ANALYST",
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
     "remittance_advice": null
   },
   {
@@ -119,20 +134,6 @@
     "use_case": "UC3",
     "credit_ids": [
       "CR-20261116-0010"
-    ],
-    "planted_problem": "NO_REFERENCE_WITH_ADVICE",
-    "expected_deal_refs": [
-      "DL-2026-40009"
-    ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
-    "remittance_advice": "remittance_advices/advice_CR-20261116-0010.pdf"
-  },
-  {
-    "case_id": "CR-20261116-0011",
-    "use_case": "UC3",
-    "credit_ids": [
-      "CR-20261116-0011"
     ],
     "planted_problem": null,
     "expected_deal_refs": [
@@ -143,15 +144,44 @@
     "remittance_advice": null
   },
   {
+    "case_id": "CR-20261116-0011",
+    "use_case": "UC3",
+    "credit_ids": [
+      "CR-20261116-0011"
+    ],
+    "planted_problem": "AMOUNT_OVER",
+    "expected_deal_refs": [
+      "DL-2026-40011"
+    ],
+    "expected_codes": [
+      "AMOUNT_OVER"
+    ],
+    "expected_route": "CASH_OPS_ANALYST",
+    "remittance_advice": null
+  },
+  {
     "case_id": "CR-20261116-0012",
     "use_case": "UC3",
     "credit_ids": [
-      "CR-20261116-0012",
+      "CR-20261116-0012"
+    ],
+    "planted_problem": null,
+    "expected_deal_refs": [
+      "DL-2026-40012"
+    ],
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
+    "remittance_advice": null
+  },
+  {
+    "case_id": "CR-20261116-0013",
+    "use_case": "UC3",
+    "credit_ids": [
       "CR-20261116-0013"
     ],
-    "planted_problem": "SPLIT_PAYMENT",
+    "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40011"
+      "DL-2026-40013"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -165,7 +195,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40012"
+      "DL-2026-40014"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -179,7 +209,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40013"
+      "DL-2026-40015"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -191,9 +221,9 @@
     "credit_ids": [
       "CR-20261116-0016"
     ],
-    "planted_problem": null,
+    "planted_problem": "FEE_SHORT_WITHIN_TOLERANCE",
     "expected_deal_refs": [
-      "DL-2026-40014"
+      "DL-2026-40016"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -207,7 +237,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40015"
+      "DL-2026-40017"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -221,7 +251,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40016"
+      "DL-2026-40018"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -235,7 +265,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40017"
+      "DL-2026-40019"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -245,28 +275,17 @@
     "case_id": "CR-20261116-0020",
     "use_case": "UC3",
     "credit_ids": [
-      "CR-20261116-0020"
-    ],
-    "planted_problem": "FEE_SHORT_WITHIN_TOLERANCE",
-    "expected_deal_refs": [
-      "DL-2026-40018"
-    ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
-    "remittance_advice": null
-  },
-  {
-    "case_id": "CR-20261116-0021",
-    "use_case": "UC3",
-    "credit_ids": [
+      "CR-20261116-0020",
       "CR-20261116-0021"
     ],
-    "planted_problem": null,
+    "planted_problem": "DUPLICATE_CREDIT",
     "expected_deal_refs": [
-      "DL-2026-40019"
+      "DL-2026-40020"
     ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
+    "expected_codes": [
+      "DUPLICATE_CREDIT"
+    ],
+    "expected_route": "CASH_OPS_ANALYST",
     "remittance_advice": null
   },
   {
@@ -275,14 +294,12 @@
     "credit_ids": [
       "CR-20261116-0022"
     ],
-    "planted_problem": "NO_REFERENCE",
+    "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40020"
+      "DL-2026-40021"
     ],
-    "expected_codes": [
-      "NO_REFERENCE"
-    ],
-    "expected_route": "CASH_OPS_ANALYST",
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
     "remittance_advice": null
   },
   {
@@ -293,7 +310,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40021"
+      "DL-2026-40022"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -307,7 +324,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40022"
+      "DL-2026-40023"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -319,9 +336,8 @@
     "credit_ids": [
       "CR-20261116-0025"
     ],
-    "planted_problem": "COMBINED_PAYMENT",
+    "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40023",
       "DL-2026-40024"
     ],
     "expected_codes": [],
@@ -332,25 +348,12 @@
     "case_id": "CR-20261116-0026",
     "use_case": "UC3",
     "credit_ids": [
-      "CR-20261116-0026"
-    ],
-    "planted_problem": null,
-    "expected_deal_refs": [
-      "DL-2026-40025"
-    ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
-    "remittance_advice": null
-  },
-  {
-    "case_id": "CR-20261116-0027",
-    "use_case": "UC3",
-    "credit_ids": [
+      "CR-20261116-0026",
       "CR-20261116-0027"
     ],
-    "planted_problem": null,
+    "planted_problem": "SPLIT_PAYMENT",
     "expected_deal_refs": [
-      "DL-2026-40026"
+      "DL-2026-40025"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -364,7 +367,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40027"
+      "DL-2026-40026"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -378,7 +381,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40028"
+      "DL-2026-40027"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -390,14 +393,12 @@
     "credit_ids": [
       "CR-20261116-0030"
     ],
-    "planted_problem": "AMOUNT_OVER",
+    "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40029"
+      "DL-2026-40028"
     ],
-    "expected_codes": [
-      "AMOUNT_OVER"
-    ],
-    "expected_route": "CASH_OPS_ANALYST",
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
     "remittance_advice": null
   },
   {
@@ -408,7 +409,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40030"
+      "DL-2026-40029"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -420,12 +421,14 @@
     "credit_ids": [
       "CR-20261116-0032"
     ],
-    "planted_problem": null,
+    "planted_problem": "NO_REFERENCE",
     "expected_deal_refs": [
-      "DL-2026-40031"
+      "DL-2026-40030"
     ],
-    "expected_codes": [],
-    "expected_route": "AUTO_MATCH",
+    "expected_codes": [
+      "NO_REFERENCE"
+    ],
+    "expected_route": "CASH_OPS_ANALYST",
     "remittance_advice": null
   },
   {
@@ -433,6 +436,22 @@
     "use_case": "UC3",
     "credit_ids": [
       "CR-20261116-0033"
+    ],
+    "planted_problem": "THIRD_PARTY_PAYER",
+    "expected_deal_refs": [
+      "DL-2026-40031"
+    ],
+    "expected_codes": [
+      "THIRD_PARTY_PAYER"
+    ],
+    "expected_route": "COMPLIANCE_OFFICER",
+    "remittance_advice": null
+  },
+  {
+    "case_id": "CR-20261116-0034",
+    "use_case": "UC3",
+    "credit_ids": [
+      "CR-20261116-0034"
     ],
     "planted_problem": null,
     "expected_deal_refs": [
@@ -443,22 +462,6 @@
     "remittance_advice": null
   },
   {
-    "case_id": "CR-20261116-0034",
-    "use_case": "UC3",
-    "credit_ids": [
-      "CR-20261116-0034"
-    ],
-    "planted_problem": "AMOUNT_SHORT",
-    "expected_deal_refs": [
-      "DL-2026-40033"
-    ],
-    "expected_codes": [
-      "AMOUNT_SHORT"
-    ],
-    "expected_route": "CASH_OPS_ANALYST",
-    "remittance_advice": null
-  },
-  {
     "case_id": "CR-20261116-0035",
     "use_case": "UC3",
     "credit_ids": [
@@ -466,7 +469,7 @@
     ],
     "planted_problem": null,
     "expected_deal_refs": [
-      "DL-2026-40034"
+      "DL-2026-40033"
     ],
     "expected_codes": [],
     "expected_route": "AUTO_MATCH",
@@ -478,8 +481,9 @@
     "credit_ids": [
       "CR-20261116-0036"
     ],
-    "planted_problem": null,
+    "planted_problem": "COMBINED_PAYMENT",
     "expected_deal_refs": [
+      "DL-2026-40034",
       "DL-2026-40035"
     ],
     "expected_codes": [],
@@ -492,14 +496,12 @@
     "credit_ids": [
       "CR-20261116-0037"
     ],
-    "planted_problem": "CURRENCY_MISMATCH",
+    "planted_problem": null,
     "expected_deal_refs": [
       "DL-2026-40036"
     ],
-    "expected_codes": [
-      "CURRENCY_MISMATCH"
-    ],
-    "expected_route": "CASH_OPS_ANALYST",
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
     "remittance_advice": null
   },
   {
@@ -550,14 +552,12 @@
     "credit_ids": [
       "CR-20261116-0041"
     ],
-    "planted_problem": "THIRD_PARTY_PAYER",
+    "planted_problem": null,
     "expected_deal_refs": [
       "DL-2026-40040"
     ],
-    "expected_codes": [
-      "THIRD_PARTY_PAYER"
-    ],
-    "expected_route": "COMPLIANCE_OFFICER",
+    "expected_codes": [],
+    "expected_route": "AUTO_MATCH",
     "remittance_advice": null
   },
   {

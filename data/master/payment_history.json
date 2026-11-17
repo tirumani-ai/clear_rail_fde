@@ -1,12 +1,32 @@
 [
   {
-    "payment_id": "PAY-2026-09724",
-    "client_id": "CL-1002",
-    "invoice_number": "2006/2026/4348",
-    "supplier_id": "SP-2006",
-    "amount": 643885.2,
-    "currency": "MXN",
+    "payment_id": "PAY-2026-09618",
+    "client_id": "CL-1006",
+    "invoice_number": "2008/2026/5654",
+    "supplier_id": "SP-2008",
+    "amount": 14788.5,
+    "currency": "USD",
     "status": "RELEASED",
-    "released_on": "2026-10-21"
+    "released_on": "2026-10-28"
+  },
+  {
+    "payment_id": "PAY-2026-09315",
+    "client_id": "CL-1004",
+    "invoice_number": "2003/2026/7402",
+    "supplier_id": "SP-2003",
+    "amount": 1489329.6,
+    "currency": "INR",
+    "status": "RELEASED",
+    "released_on": "2026-08-24"
+  },
+  {
+    "payment_id": "PAY-2026-09914",
+    "client_id": "CL-1006",
+    "invoice_number": "2007/2026/2455",
+    "supplier_id": "SP-2007",
+    "amount": 9044.52,
+    "currency": "EUR",
+    "status": "RELEASED",
+    "released_on": "2026-08-29"
   }
 ]

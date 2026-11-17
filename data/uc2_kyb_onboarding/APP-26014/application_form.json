@@ -1,42 +1,38 @@
 {
   "application_id": "APP-26014",
-  "submitted_on": "2026-11-16",
-  "legal_name": "Foxglove Supplies Ltd",
-  "trading_name": "Foxglove",
-  "registration_number": "40677423",
+  "submitted_on": "2026-11-15",
+  "legal_name": "Amberfield Imports Ltd",
+  "trading_name": "Amberfield",
+  "registration_number": "93461755",
   "country": "GB",
-  "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
-  "incorporation_date": "2017-09-06",
-  "industry": "Furniture import",
-  "expected_monthly_volume_usd": 900000,
+  "registered_address": "2 Albion Street, Leeds LS1 6AA, UK",
+  "incorporation_date": "2018-11-06",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 50000,
   "corridors": [
     "CN",
     "DE"
   ],
   "directors": [
     {
-      "name": "Hannah Adeyemi"
+      "name": "Kenji Sato"
     },
     {
-      "name": "Lena Pillai"
+      "name": "Ravi Tanaka"
     },
     {
-      "name": "Lucia Reddy"
+      "name": "Hannah Petrova"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Hannah Adeyemi",
-      "pct": 25
+      "name": "Kenji Sato",
+      "pct": 60
     },
     {
-      "name": "Lena Pillai",
-      "pct": 50
-    },
-    {
-      "name": "Lucia Reddy",
-      "pct": 25
+      "name": "Ravi Tanaka",
+      "pct": 40
     }
   ],
-  "contact_email": "finance@foxglove.example"
+  "contact_email": "finance@amberfield.example"
 }

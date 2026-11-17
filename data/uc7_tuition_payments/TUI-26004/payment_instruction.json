@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26004",
+  "submitted_at": "2026-11-16T12:37:00Z",
+  "payer": {
+    "name": "Jonas Chen",
+    "country": "IN",
+    "relationship_to_student": "SELF"
+  },
+  "student": {
+    "name": "Jonas Chen",
+    "student_no": "SC7191741"
+  },
+  "institution_id": "ED-3004",
+  "beneficiary": {
+    "name": "Southern Cross Metropolitan University",
+    "country": "AU",
+    "bank": {
+      "account_holder": "Southern Cross Metropolitan University",
+      "bank_name": "Coral Coast Bank",
+      "bank_country": "AU",
+      "swift": "CCBKAU3M",
+      "bsb": "828-807",
+      "account_number": "290222791"
+    }
+  },
+  "amount": 33170.0,
+  "currency": "AUD",
+  "purpose_code": "EDU",
+  "invoice_reference": "SC-FEE-130878"
+}

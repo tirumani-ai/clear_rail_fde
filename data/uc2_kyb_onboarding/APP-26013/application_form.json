@@ -1,35 +1,38 @@
 {
   "application_id": "APP-26013",
-  "submitted_on": "2026-11-11",
-  "legal_name": "Larkspur Supplies Ltd",
-  "trading_name": "Larkspur",
-  "registration_number": "44522530",
+  "submitted_on": "2026-11-12",
+  "legal_name": "Stonebridge Trading Ltd",
+  "trading_name": "Stonebridge",
+  "registration_number": "96345664",
   "country": "GB",
-  "registered_address": "31 High Street, Oxford OX1 4AH, UK",
-  "incorporation_date": "2023-03-11",
-  "industry": "Import of auto parts",
-  "expected_monthly_volume_usd": 2500000,
+  "registered_address": "77 Castle Street, Edinburgh EH2 3AH, UK",
+  "incorporation_date": "2021-04-27",
+  "industry": "Wholesale of household goods",
+  "expected_monthly_volume_usd": 120000,
   "corridors": [
-    "CN",
+    "MX",
     "TR"
   ],
   "directors": [
     {
-      "name": "Kenji Reddy"
+      "name": "Felix Tanaka"
     },
     {
-      "name": "Hannah Wagner"
+      "name": "Aarav Okafor"
+    },
+    {
+      "name": "Jonas Becker"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Kenji Reddy",
-      "pct": 60
+      "name": "Felix Tanaka",
+      "pct": 50
     },
     {
-      "name": "Hannah Wagner",
+      "name": "Aarav Okafor",
       "pct": 30
     }
   ],
-  "contact_email": "finance@larkspur.example"
+  "contact_email": "finance@stonebridge.example"
 }

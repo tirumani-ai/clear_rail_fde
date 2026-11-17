@@ -1,0 +1,24 @@
+{
+  "drawdown_id": "DD-26004",
+  "submitted_at": "2026-11-16T08:35:00Z",
+  "client_id": "CL-1002",
+  "client_name": "Granite Peak Outdoor LLC",
+  "deal_ref": "FWD-2026-28656",
+  "beneficiary": {
+    "beneficiary_id": "SP-2003",
+    "name": "Nilgiri Spice Exports Pvt Ltd",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Malabar Trade Bank",
+      "bank_country": "IN",
+      "swift": "MLTBINMM",
+      "account_number": "49118625276018",
+      "ifsc": "MLTB0955597"
+    }
+  },
+  "amount": 8266250.8,
+  "currency": "INR",
+  "value_date": "2026-11-18",
+  "invoice_reference": "2003/2026/8878",
+  "purpose_code": "GDI"
+}

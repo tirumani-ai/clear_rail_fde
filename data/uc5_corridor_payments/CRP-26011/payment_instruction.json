@@ -1,0 +1,26 @@
+{
+  "payment_id": "CRP-26011",
+  "submitted_at": "2026-11-15T08:07:00Z",
+  "client_id": "CL-1006",
+  "client_name": "Northwind Auto Parts Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2002",
+    "name": "Godavari Engineering Works Pvt Ltd",
+    "address": "14 Industrial Estate, Rajahmundry, AP 533101, India",
+    "country": "IN",
+    "bank": {
+      "bank_name": "Deccan Commerce Bank",
+      "bank_country": "IN",
+      "swift": "DCBKIN2X",
+      "account_number": "93786579754323",
+      "ifsc": "DCBK0194875"
+    }
+  },
+  "amount": 5741177.0,
+  "currency": "INR",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2002/2026/9160"
+  ],
+  "requested_value_date": "2026-11-18"
+}

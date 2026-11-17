@@ -160,7 +160,8 @@
         "bank_name": "Eastern Harbour Bank",
         "bank_country": "CN",
         "swift": "EHBKCNMM",
-        "account_number": "114710497465"
+        "account_number": "114710497465",
+        "cnaps": "933633875004"
       }
     },
     {
@@ -173,7 +174,8 @@
         "bank_name": "Eastern Harbour Bank",
         "bank_country": "CN",
         "swift": "EHBKCN2X",
-        "account_number": "752917034236"
+        "account_number": "752917034236",
+        "cnaps": "743957551313"
       }
     },
     {
@@ -240,22 +242,170 @@
         "swift": "NCBKGBBB",
         "iban": "GB48NCBK90139624595711"
       }
+    },
+    {
+      "supplier_id": "SP-2011",
+      "legal_name": "Kaveri Digital Solutions Pvt Ltd",
+      "country": "IN",
+      "address": "5th Floor, Orion Tech Park, Bengaluru, Karnataka 560066, India",
+      "invoice_currency": "INR",
+      "bank": {
+        "bank_name": "Deccan Commerce Bank",
+        "bank_country": "IN",
+        "swift": "DCBKINMM",
+        "account_number": "77741215472803",
+        "ifsc": "DCBK0852808"
+      }
+    },
+    {
+      "supplier_id": "SP-2012",
+      "legal_name": "Hangzhou Cloudpeak Software Co Ltd",
+      "country": "CN",
+      "address": "No. 66 Wenyi West Road, Hangzhou, Zhejiang, China",
+      "invoice_currency": "CNY",
+      "bank": {
+        "bank_name": "Eastern Harbour Bank",
+        "bank_country": "CN",
+        "swift": "EHBKCNBB",
+        "account_number": "148525388853",
+        "cnaps": "735379907511"
+      }
     }
   ],
   "purpose_codes": {
-    "GDI": "Payment for imported goods (needs invoice + transport or customs doc)",
-    "ADV": "Advance payment for goods (needs proforma invoice or contract)",
-    "SVC": "Payment for services (needs service invoice or contract)",
-    "CTR": "Contractor or freelancer fees",
-    "SAL": "Payroll / salary"
+    "GDI": "Payment for goods (needs invoice + purchase order or sales contract)",
+    "ADV": "Advance payment for goods (needs proforma invoice)",
+    "SVC": "Payment for services (needs invoice + services contract)",
+    "CTR": "Contractor or freelancer fees (needs invoice + contract)",
+    "SAL": "Payroll / salary",
+    "EDU": "Education / tuition fees (needs fee invoice from the institution)"
   },
-  "restricted_hs_prefixes": {
-    "9306": "Ammunition",
-    "9301": "Military weapons",
-    "2844": "Radioactive material",
-    "8401": "Nuclear reactors and parts",
-    "9302": "Revolvers and pistols"
+  "restricted_corridors": {
+    "IN": {
+      "currency": "INR",
+      "routing_code": "IFSC",
+      "allowed_purposes": [
+        "GDI",
+        "ADV",
+        "SVC",
+        "CTR"
+      ],
+      "required_docs": {
+        "GDI": [
+          "INVOICE"
+        ],
+        "ADV": [
+          "PROFORMA_INVOICE"
+        ],
+        "SVC": [
+          "INVOICE",
+          "CONTRACT"
+        ],
+        "CTR": [
+          "INVOICE",
+          "CONTRACT"
+        ]
+      },
+      "declaration_required_over_usd": 10000,
+      "per_payment_limit_usd": 250000
+    },
+    "CN": {
+      "currency": "CNY",
+      "routing_code": "CNAPS",
+      "allowed_purposes": [
+        "GDI",
+        "ADV",
+        "SVC"
+      ],
+      "required_docs": {
+        "GDI": [
+          "INVOICE",
+          "CONTRACT"
+        ],
+        "ADV": [
+          "PROFORMA_INVOICE",
+          "CONTRACT"
+        ],
+        "SVC": [
+          "INVOICE",
+          "CONTRACT"
+        ]
+      },
+      "declaration_required_over_usd": 0,
+      "per_payment_limit_usd": 500000
+    }
   },
+  "institutions": [
+    {
+      "institution_id": "ED-3001",
+      "legal_name": "University of Westhaven",
+      "country": "GB",
+      "address": "Westhaven Campus, Bristol BS8 1TH, UK",
+      "fee_currency": "GBP",
+      "student_no_prefix": "W",
+      "current_term": "Spring term 2027",
+      "collection_account": {
+        "account_holder": "University of Westhaven",
+        "bank_name": "Northern Counties Bank",
+        "bank_country": "GB",
+        "swift": "NCBKGBMM",
+        "iban": "GB92NCBK37265167612220",
+        "sort_code": "19-75-59"
+      }
+    },
+    {
+      "institution_id": "ED-3002",
+      "legal_name": "Northbridge State University",
+      "country": "US",
+      "address": "400 College Avenue, Northbridge, MA 01534, USA",
+      "fee_currency": "USD",
+      "student_no_prefix": "NB",
+      "current_term": "Spring semester 2027",
+      "collection_account": {
+        "account_holder": "Northbridge State University",
+        "bank_name": "First Coastal Bank",
+        "bank_country": "US",
+        "swift": "FCBKUS3M",
+        "aba": "997528828",
+        "account_number": "0018263304"
+      }
+    },
+    {
+      "institution_id": "ED-3003",
+      "legal_name": "Maple Ridge Institute of Technology",
+      "country": "CA",
+      "address": "1200 Ridge Road NW, Calgary, AB T2N 1N4, Canada",
+      "fee_currency": "CAD",
+      "student_no_prefix": "MR",
+      "current_term": "Winter term 2027",
+      "collection_account": {
+        "account_holder": "Maple Ridge Institute of Technology",
+        "bank_name": "Laurentian Trust Bank",
+        "bank_country": "CA",
+        "swift": "LTBKCA3M",
+        "transit": "48395",
+        "institution_no": "486",
+        "account_number": "2057986"
+      }
+    },
+    {
+      "institution_id": "ED-3004",
+      "legal_name": "Southern Cross Metropolitan University",
+      "country": "AU",
+      "address": "90 Harbour Street, Sydney NSW 2000, Australia",
+      "fee_currency": "AUD",
+      "student_no_prefix": "SC",
+      "current_term": "Semester 1 2027",
+      "collection_account": {
+        "account_holder": "Southern Cross Metropolitan University",
+        "bank_name": "Coral Coast Bank",
+        "bank_country": "AU",
+        "swift": "CCBKAU3M",
+        "bsb": "828-807",
+        "account_number": "290222791"
+      }
+    }
+  ],
   "watchlist": {
     "entities": [
       "Black Tide Maritime Holdings",
@@ -266,13 +416,6 @@
       "Dmitri Varenko",
       "Selim Karadag",
       "Jun-ho Pak"
-    ],
-    "vessels": [
-      "MV Northern Lantern",
-      "MV Silent Marlin"
-    ],
-    "ports": [
-      "Port Kestrel"
     ]
   },
   "corridor_rules": {
@@ -333,12 +476,17 @@
     "CNY": 7.18,
     "MXN": 18.9,
     "EUR": 0.92,
-    "GBP": 0.79
+    "GBP": 0.79,
+    "CAD": 1.37,
+    "AUD": 1.52
   },
   "approval_limits_usd": {
     "payments_ops_analyst": 100000,
     "payments_ops_team_lead": 1000000,
     "compliance_officer": null
+  },
+  "routes": {
+    "UC6_dealer": "Dealing desk: extends a deal window or books a top-up deal; ops cannot"
   },
   "tolerances": {
     "uc1_name_match_min": 0.85,
@@ -347,7 +495,13 @@
     "uc2_address_proof_max_age_days": 90,
     "uc2_ubo_threshold_pct": 25,
     "uc3_fee_short_usd": 50,
-    "uc3_fee_short_pct": 0.1
+    "uc3_fee_short_pct": 0.1,
+    "uc5_declaration_max_age_days": 30,
+    "uc6_invoice_required_over_usd": 25000,
+    "uc7_name_match_min": 0.9,
+    "uc7_annual_limit_usd": 100000,
+    "uc7_duplicate_window_days": 30,
+    "uc7_invoice_max_overdue_days": 180
   },
   "high_risk_industries": [
     "Cryptocurrency exchange",

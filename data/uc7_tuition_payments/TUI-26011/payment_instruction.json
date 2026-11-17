@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26011",
+  "submitted_at": "2026-11-15T15:16:00Z",
+  "payer": {
+    "name": "Lotus Scholars Foundation",
+    "country": "CN",
+    "relationship_to_student": "SPONSOR"
+  },
+  "student": {
+    "name": "Grace Mehta",
+    "student_no": "NB9479979"
+  },
+  "institution_id": "ED-3002",
+  "beneficiary": {
+    "name": "Northbridge State University",
+    "country": "US",
+    "bank": {
+      "account_holder": "Northbridge State University",
+      "bank_name": "First Coastal Bank",
+      "bank_country": "US",
+      "swift": "FCBKUS3M",
+      "aba": "997528828",
+      "account_number": "0018263304"
+    }
+  },
+  "amount": 26690.0,
+  "currency": "USD",
+  "purpose_code": "EDU",
+  "invoice_reference": "NB-FEE-849957"
+}

@@ -1,0 +1,31 @@
+{
+  "payment_id": "TUI-26020",
+  "submitted_at": "2026-11-13T17:14:00Z",
+  "payer": {
+    "name": "Anita Pillai",
+    "country": "CN",
+    "relationship_to_student": "PARENT"
+  },
+  "student": {
+    "name": "Vikram Pillai",
+    "student_no": "MR4920631"
+  },
+  "institution_id": "ED-3003",
+  "beneficiary": {
+    "name": "Maple Ridge Institute of Technology",
+    "country": "CA",
+    "bank": {
+      "account_holder": "Maple Ridge Institute of Technology",
+      "bank_name": "Laurentian Trust Bank",
+      "bank_country": "CA",
+      "swift": "LTBKCA3M",
+      "transit": "48395",
+      "institution_no": "486",
+      "account_number": "2057986"
+    }
+  },
+  "amount": 20870.0,
+  "currency": "CAD",
+  "purpose_code": "EDU",
+  "invoice_reference": "MR-FEE-649581"
+}

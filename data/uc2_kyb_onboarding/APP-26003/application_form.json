@@ -1,46 +1,32 @@
 {
   "application_id": "APP-26003",
-  "submitted_on": "2026-11-14",
-  "legal_name": "Highmoor Solutions Ltd",
-  "trading_name": "Highmoor",
-  "registration_number": "18697858",
+  "submitted_on": "2026-11-13",
+  "legal_name": "Tidewater Supplies Ltd",
+  "trading_name": "Tidewater",
+  "registration_number": "31951681",
   "country": "GB",
-  "registered_address": "9 Queen Square, Bristol BS1 4JQ, UK",
-  "incorporation_date": "2022-12-17",
-  "industry": "Import of auto parts",
-  "expected_monthly_volume_usd": 50000,
+  "registered_address": "14 Kings Road, Reading RG1 3AA, UK",
+  "incorporation_date": "2021-10-27",
+  "industry": "Apparel retail (online)",
+  "expected_monthly_volume_usd": 400000,
   "corridors": [
-    "MX",
-    "CN"
+    "TR",
+    "IN"
   ],
   "directors": [
     {
-      "name": "Diego Wagner"
-    },
-    {
-      "name": "Vikram Lin"
-    },
-    {
-      "name": "Vikram Tanaka"
+      "name": "Yuki Mehta"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Diego Wagner",
-      "pct": 25
+      "name": "Yuki Mehta",
+      "pct": 30
     },
     {
-      "name": "Vikram Lin",
-      "pct": 25
-    },
-    {
-      "name": "Vikram Tanaka",
-      "pct": 25
-    },
-    {
-      "name": "Highmoor Holdings Ltd",
-      "pct": 25
+      "name": "Tidewater Holdings Ltd",
+      "pct": 70
     }
   ],
-  "contact_email": "finance@highmoor.example"
+  "contact_email": "finance@tidewater.example"
 }

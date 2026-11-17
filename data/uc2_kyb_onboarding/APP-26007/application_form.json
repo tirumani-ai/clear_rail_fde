@@ -1,38 +1,38 @@
 {
   "application_id": "APP-26007",
-  "submitted_on": "2026-11-15",
-  "legal_name": "Meadowgate Supplies Ltd",
-  "trading_name": "Meadowgate",
-  "registration_number": "37960685",
+  "submitted_on": "2026-11-11",
+  "legal_name": "Foxglove Trading Ltd",
+  "trading_name": "Foxglove",
+  "registration_number": "34220698",
   "country": "GB",
   "registered_address": "31 High Street, Oxford OX1 4AH, UK",
-  "incorporation_date": "2022-11-01",
-  "industry": "Medical equipment distribution",
-  "expected_monthly_volume_usd": 400000,
+  "incorporation_date": "2017-08-25",
+  "industry": "Import of auto parts",
+  "expected_monthly_volume_usd": 50000,
   "corridors": [
     "IN",
-    "VN"
+    "TR"
   ],
   "directors": [
     {
-      "name": "Lena Iyer"
+      "name": "Diego Whitfield"
     },
     {
-      "name": "Anita Rao"
+      "name": "Omar Pillai"
     },
     {
-      "name": "Jonas Torres"
+      "name": "Ravi Adeyemi"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Lena Iyer",
-      "pct": 50
+      "name": "Diego Whitfield",
+      "pct": 40
     },
     {
-      "name": "Anita Rao",
-      "pct": 30
+      "name": "Omar Pillai",
+      "pct": 50
     }
   ],
-  "contact_email": "finance@meadowgate.example"
+  "contact_email": "finance@foxglove.example"
 }

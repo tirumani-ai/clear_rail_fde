@@ -1,0 +1,30 @@
+{
+  "payment_id": "TUI-26018",
+  "submitted_at": "2026-11-14T11:18:00Z",
+  "payer": {
+    "name": "Kenji Haddad",
+    "country": "NG",
+    "relationship_to_student": "PARENT"
+  },
+  "student": {
+    "name": "Sara Haddad",
+    "student_no": "NB2859962"
+  },
+  "institution_id": "ED-3002",
+  "beneficiary": {
+    "name": "Northbridge State University",
+    "country": "US",
+    "bank": {
+      "account_holder": "Northbridge State University",
+      "bank_name": "First Coastal Bank",
+      "bank_country": "US",
+      "swift": "FCBKUS3M",
+      "aba": "997528828",
+      "account_number": "0018263304"
+    }
+  },
+  "amount": 14725.0,
+  "currency": "USD",
+  "purpose_code": "EDU",
+  "invoice_reference": "NB-FEE-707931"
+}

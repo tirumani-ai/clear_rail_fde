@@ -1,0 +1,26 @@
+{
+  "payment_id": "PAY-202611017",
+  "submitted_at": "2026-11-14T10:54:00Z",
+  "client_id": "CL-1001",
+  "client_name": "Blue Heron Home Goods Inc",
+  "beneficiary": {
+    "beneficiary_id": "SP-2009",
+    "name": "Anatolia Ceramics AS",
+    "address": "Organize Sanayi Bolgesi 3, Kutahya, Turkey",
+    "country": "TR",
+    "bank": {
+      "bank_name": "Bosphorus Trade Bank",
+      "bank_country": "TR",
+      "swift": "BSPTTR3M",
+      "account_number": "721590109281"
+    }
+  },
+  "amount": 12850.56,
+  "currency": "EUR",
+  "purpose_code": "GDI",
+  "invoice_references": [
+    "2009/2026/3473"
+  ],
+  "remittance_info": "INV 2009/2026/3473",
+  "requested_value_date": "2026-11-18"
+}

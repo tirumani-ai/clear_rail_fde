@@ -1,0 +1,701 @@
+[
+  {
+    "deal_ref": "FWD-2026-41953",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-20",
+    "window_start": "2026-10-04",
+    "window_end": "2027-01-03",
+    "buy_currency": "EUR",
+    "buy_amount": 435800.0,
+    "sell_currency": "USD",
+    "sell_amount": 473181.32,
+    "rate": 0.921,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-259661",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 148891.39,
+        "currency": "EUR",
+        "value_date": "2026-10-05",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-255813",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 168554.29,
+        "currency": "EUR",
+        "value_date": "2026-10-15",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-68054",
+    "client_id": "CL-1007",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-16",
+    "window_start": "2026-09-26",
+    "window_end": "2027-04-01",
+    "buy_currency": "GBP",
+    "buy_amount": 224000.0,
+    "sell_currency": "USD",
+    "sell_amount": 280666.58,
+    "rate": 0.7981,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-257931",
+        "beneficiary": "Pennine Software Services Ltd",
+        "amount": 44029.21,
+        "currency": "GBP",
+        "value_date": "2026-10-09",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-14125",
+    "client_id": "CL-1006",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-10",
+    "window_start": "2026-07-29",
+    "window_end": "2027-04-13",
+    "buy_currency": "CNY",
+    "buy_amount": 5025000.0,
+    "sell_currency": "USD",
+    "sell_amount": 703062.7,
+    "rate": 7.1473,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-256302",
+        "beneficiary": "Shenzhen Lumen Solar Tech Co Ltd",
+        "amount": 0.0,
+        "currency": "CNY",
+        "value_date": "2026-08-18",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-28656",
+    "client_id": "CL-1002",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-29",
+    "window_start": "2026-08-14",
+    "window_end": "2026-12-06",
+    "buy_currency": "INR",
+    "buy_amount": 43579300.0,
+    "sell_currency": "USD",
+    "sell_amount": 510106.9,
+    "rate": 85.4317,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-252102",
+        "beneficiary": "Shakti Textiles Pvt Ltd",
+        "amount": 4548298.95,
+        "currency": "INR",
+        "value_date": "2026-10-30",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-254256",
+        "beneficiary": "Kaveri Digital Solutions Pvt Ltd",
+        "amount": 799577.18,
+        "currency": "INR",
+        "value_date": "2026-09-08",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-254276",
+        "beneficiary": "Kaveri Digital Solutions Pvt Ltd",
+        "amount": 7185385.72,
+        "currency": "INR",
+        "value_date": "2026-11-02",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-79192",
+    "client_id": "CL-1007",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-06-23",
+    "window_start": "2026-07-03",
+    "window_end": "2027-03-30",
+    "buy_currency": "MXN",
+    "buy_amount": 13129800.0,
+    "sell_currency": "USD",
+    "sell_amount": 689876.58,
+    "rate": 19.0321,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-255240",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 2451062.37,
+        "currency": "MXN",
+        "value_date": "2026-10-02",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-71620",
+    "client_id": "CL-1001",
+    "product": "FORWARD",
+    "trade_date": "2026-10-10",
+    "window_start": "2026-11-18",
+    "window_end": "2026-11-18",
+    "buy_currency": "GBP",
+    "buy_amount": 462800.0,
+    "sell_currency": "USD",
+    "sell_amount": 593637.76,
+    "rate": 0.7796,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-253642",
+        "beneficiary": "Pennine Software Services Ltd",
+        "amount": 0.0,
+        "currency": "GBP",
+        "value_date": "2026-11-18",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-83318",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-06-30",
+    "window_start": "2026-07-12",
+    "window_end": "2026-12-20",
+    "buy_currency": "INR",
+    "buy_amount": 44512900.0,
+    "sell_currency": "USD",
+    "sell_amount": 536686.67,
+    "rate": 82.9402,
+    "funding_status": "AWAITING_FUNDS",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-251182",
+        "beneficiary": "Nilgiri Spice Exports Pvt Ltd",
+        "amount": 800051.17,
+        "currency": "INR",
+        "value_date": "2026-09-03",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-257894",
+        "beneficiary": "Shakti Textiles Pvt Ltd",
+        "amount": 768558.01,
+        "currency": "INR",
+        "value_date": "2026-09-23",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-94445",
+    "client_id": "CL-1004",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-26",
+    "window_start": "2026-08-14",
+    "window_end": "2026-11-01",
+    "buy_currency": "GBP",
+    "buy_amount": 320100.0,
+    "sell_currency": "USD",
+    "sell_amount": 408655.69,
+    "rate": 0.7833,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-254338",
+        "beneficiary": "Pennine Software Services Ltd",
+        "amount": 51519.29,
+        "currency": "GBP",
+        "value_date": "2026-10-09",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-43519",
+    "client_id": "CL-1003",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-08-21",
+    "window_start": "2026-09-09",
+    "window_end": "2027-04-08",
+    "buy_currency": "MXN",
+    "buy_amount": 1569000.0,
+    "sell_currency": "USD",
+    "sell_amount": 82918.48,
+    "rate": 18.9222,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-259880",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 64398.08,
+        "currency": "MXN",
+        "value_date": "2026-09-19",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-253860",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 362210.23,
+        "currency": "MXN",
+        "value_date": "2026-10-16",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-21053",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-10-11",
+    "window_start": "2026-10-19",
+    "window_end": "2027-03-19",
+    "buy_currency": "EUR",
+    "buy_amount": 1241200.0,
+    "sell_currency": "USD",
+    "sell_amount": 1342273.17,
+    "rate": 0.9247,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-257349",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 183279.87,
+        "currency": "EUR",
+        "value_date": "2026-10-19",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-258495",
+        "beneficiary": "Anatolia Ceramics AS",
+        "amount": 302693.22,
+        "currency": "EUR",
+        "value_date": "2026-10-21",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-258097",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 193472.3,
+        "currency": "EUR",
+        "value_date": "2026-11-10",
+        "invoice_reference": "2007/2026/6546",
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-34267",
+    "client_id": "CL-1004",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-08-12",
+    "window_start": "2026-08-27",
+    "window_end": "2027-04-09",
+    "buy_currency": "GBP",
+    "buy_amount": 811700.0,
+    "sell_currency": "USD",
+    "sell_amount": 1028770.6,
+    "rate": 0.789,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-257003",
+        "beneficiary": "Pennine Software Services Ltd",
+        "amount": 50010.7,
+        "currency": "GBP",
+        "value_date": "2026-09-21",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-29253",
+    "client_id": "CL-1007",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-10-03",
+    "window_start": "2026-10-23",
+    "window_end": "2027-01-18",
+    "buy_currency": "INR",
+    "buy_amount": 46700100.0,
+    "sell_currency": "USD",
+    "sell_amount": 560309.31,
+    "rate": 83.347,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-255544",
+        "beneficiary": "Nilgiri Spice Exports Pvt Ltd",
+        "amount": 9509517.3,
+        "currency": "INR",
+        "value_date": "2026-10-30",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-78328",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-06-21",
+    "window_start": "2026-07-11",
+    "window_end": "2026-12-12",
+    "buy_currency": "INR",
+    "buy_amount": 59110800.0,
+    "sell_currency": "USD",
+    "sell_amount": 705703.69,
+    "rate": 83.7615,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-255703",
+        "beneficiary": "Shakti Textiles Pvt Ltd",
+        "amount": 0.0,
+        "currency": "INR",
+        "value_date": "2026-08-15",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-81934",
+    "client_id": "CL-1007",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-27",
+    "window_start": "2026-08-13",
+    "window_end": "2027-04-14",
+    "buy_currency": "EUR",
+    "buy_amount": 211000.0,
+    "sell_currency": "USD",
+    "sell_amount": 230273.93,
+    "rate": 0.9163,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-254391",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 72317.84,
+        "currency": "EUR",
+        "value_date": "2026-08-14",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-71905",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-08-28",
+    "window_start": "2026-09-06",
+    "window_end": "2027-01-15",
+    "buy_currency": "MXN",
+    "buy_amount": 9393600.0,
+    "sell_currency": "USD",
+    "sell_amount": 495822.23,
+    "rate": 18.9455,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-251167",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 0.0,
+        "currency": "MXN",
+        "value_date": "2026-10-26",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-30797",
+    "client_id": "CL-1004",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-30",
+    "window_start": "2026-08-07",
+    "window_end": "2026-11-18",
+    "buy_currency": "EUR",
+    "buy_amount": 465600.0,
+    "sell_currency": "USD",
+    "sell_amount": 509632.22,
+    "rate": 0.9136,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-254035",
+        "beneficiary": "Anatolia Ceramics AS",
+        "amount": 104971.0,
+        "currency": "EUR",
+        "value_date": "2026-08-22",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-93264",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-08-01",
+    "window_start": "2026-08-19",
+    "window_end": "2027-01-02",
+    "buy_currency": "EUR",
+    "buy_amount": 157100.0,
+    "sell_currency": "USD",
+    "sell_amount": 169948.07,
+    "rate": 0.9244,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-259915",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 16160.65,
+        "currency": "EUR",
+        "value_date": "2026-11-15",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-256965",
+        "beneficiary": "Rheinwerk Komponenten GmbH",
+        "amount": 118212.88,
+        "currency": "EUR",
+        "value_date": "2026-08-23",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-56556",
+    "client_id": "CL-1004",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-11",
+    "window_start": "2026-09-22",
+    "window_end": "2027-04-15",
+    "buy_currency": "CNY",
+    "buy_amount": 4593300.0,
+    "sell_currency": "USD",
+    "sell_amount": 631433.52,
+    "rate": 7.2744,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-256167",
+        "beneficiary": "Shenzhen Lumen Solar Tech Co Ltd",
+        "amount": 0.0,
+        "currency": "CNY",
+        "value_date": "2026-11-04",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-39791",
+    "client_id": "CL-1002",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-27",
+    "window_start": "2026-10-12",
+    "window_end": "2027-01-10",
+    "buy_currency": "MXN",
+    "buy_amount": 3370400.0,
+    "sell_currency": "USD",
+    "sell_amount": 179542.09,
+    "rate": 18.7722,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-259315",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 76842.55,
+        "currency": "MXN",
+        "value_date": "2026-10-18",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-253171",
+        "beneficiary": "Talleres Monterrey SA de CV",
+        "amount": 455729.18,
+        "currency": "MXN",
+        "value_date": "2026-10-18",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-90955",
+    "client_id": "CL-1001",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-10-06",
+    "window_start": "2026-10-24",
+    "window_end": "2026-12-20",
+    "buy_currency": "INR",
+    "buy_amount": 34453000.0,
+    "sell_currency": "USD",
+    "sell_amount": 413300.27,
+    "rate": 83.3607,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-252669",
+        "beneficiary": "Shakti Textiles Pvt Ltd",
+        "amount": 3382134.97,
+        "currency": "INR",
+        "value_date": "2026-11-01",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-253411",
+        "beneficiary": "Kaveri Digital Solutions Pvt Ltd",
+        "amount": 3837344.5,
+        "currency": "INR",
+        "value_date": "2026-11-14",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-24351",
+    "client_id": "CL-1002",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-29",
+    "window_start": "2026-10-18",
+    "window_end": "2027-03-26",
+    "buy_currency": "EUR",
+    "buy_amount": 89900.0,
+    "sell_currency": "USD",
+    "sell_amount": 96583.58,
+    "rate": 0.9308,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-258318",
+        "beneficiary": "Anatolia Ceramics AS",
+        "amount": 23944.84,
+        "currency": "EUR",
+        "value_date": "2026-10-21",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-51492",
+    "client_id": "CL-1005",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-09-17",
+    "window_start": "2026-10-07",
+    "window_end": "2027-01-24",
+    "buy_currency": "EUR",
+    "buy_amount": 643800.0,
+    "sell_currency": "GBP",
+    "sell_amount": 545223.58,
+    "rate": 1.1808,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-256145",
+        "beneficiary": "Anatolia Ceramics AS",
+        "amount": 111110.23,
+        "currency": "EUR",
+        "value_date": "2026-11-14",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-35620",
+    "client_id": "CL-1004",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-07-01",
+    "window_start": "2026-07-19",
+    "window_end": "2027-01-23",
+    "buy_currency": "EUR",
+    "buy_amount": 1091400.0,
+    "sell_currency": "USD",
+    "sell_amount": 1196841.76,
+    "rate": 0.9119,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-259462",
+        "beneficiary": "Anatolia Ceramics AS",
+        "amount": 327850.61,
+        "currency": "EUR",
+        "value_date": "2026-08-03",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  },
+  {
+    "deal_ref": "FWD-2026-28857",
+    "client_id": "CL-1006",
+    "product": "WINDOW_FORWARD",
+    "trade_date": "2026-10-03",
+    "window_start": "2026-10-18",
+    "window_end": "2026-12-13",
+    "buy_currency": "INR",
+    "buy_amount": 33348300.0,
+    "sell_currency": "USD",
+    "sell_amount": 398761.92,
+    "rate": 83.6296,
+    "funding_status": "FUNDED",
+    "drawdowns": [
+      {
+        "drawdown_id": "DD-253199",
+        "beneficiary": "Shakti Textiles Pvt Ltd",
+        "amount": 2660592.22,
+        "currency": "INR",
+        "value_date": "2026-10-19",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      },
+      {
+        "drawdown_id": "DD-253893",
+        "beneficiary": "Nilgiri Spice Exports Pvt Ltd",
+        "amount": 238956.73,
+        "currency": "INR",
+        "value_date": "2026-10-26",
+        "invoice_reference": null,
+        "status": "SETTLED"
+      }
+    ]
+  }
+]

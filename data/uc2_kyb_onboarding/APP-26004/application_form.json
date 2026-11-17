@@ -1,38 +1,39 @@
 {
   "application_id": "APP-26004",
   "submitted_on": "2026-11-16",
-  "legal_name": "Bluestone Trading Ltd",
-  "trading_name": "Bluestone",
-  "registration_number": "63055826",
+  "legal_name": "Redwood Crest Imports Ltd",
+  "trading_name": "Redwood Crest",
+  "registration_number": "61368315",
   "country": "GB",
   "registered_address": "120 Deansgate, Manchester M3 2GQ, UK",
-  "incorporation_date": "2019-08-12",
-  "industry": "Import of auto parts",
+  "incorporation_date": "2017-11-28",
+  "industry": "Software consulting",
   "expected_monthly_volume_usd": 400000,
   "corridors": [
-    "TR",
-    "VN"
+    "VN",
+    "CN"
   ],
   "directors": [
     {
-      "name": "Elena Chen"
+      "name": "Yuki Fischer"
     },
     {
-      "name": "Vikram Torres"
-    },
-    {
-      "name": "Tom Fischer"
+      "name": "Tom Morales"
     }
   ],
   "beneficial_owners": [
     {
-      "name": "Elena Chen",
-      "pct": 40
+      "name": "Yuki Fischer",
+      "pct": 25
     },
     {
-      "name": "Vikram Torres",
+      "name": "Tom Morales",
       "pct": 50
+    },
+    {
+      "name": "Redwood Crest Holdings Ltd",
+      "pct": 25
     }
   ],
-  "contact_email": "finance@bluestone.example"
+  "contact_email": "finance@redwoodcrest.example"
 }
