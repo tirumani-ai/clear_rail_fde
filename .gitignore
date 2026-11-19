@@ -3,3 +3,4 @@
 .DS_Store
 __pycache__/
 ladder/results.jsonl
+data/cache/
